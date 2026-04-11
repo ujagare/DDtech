@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DD Tech | Engineering Permanent Solutions</title>
+<link href="images/Favicon/favicon.ico?v=2" rel="icon" sizes="any"/>
+<link href="images/Favicon/favicon-32x32.png?v=2" rel="icon" sizes="32x32" type="image/png"/>
+<link href="images/Favicon/favicon-16x16.png?v=2" rel="icon" sizes="16x16" type="image/png"/>
+<link href="images/Favicon/apple-touch-icon.png?v=2" rel="apple-touch-icon"/>
+<link href="images/Favicon/site.webmanifest?v=2" rel="manifest"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+<link href="dist/styles.css" rel="stylesheet"/>
+<link href="dist/social-ui.css" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2rem;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+        }
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: #7d0a0a #efe3e0;
+        }
+        *::-webkit-scrollbar {
+            width: 12px;
+            height: 12px;
+        }
+        *::-webkit-scrollbar-track {
+            background: linear-gradient(180deg, #f7efed 0%, #efe3e0 100%);
+            border-radius: 999px;
+        }
+        *::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #a61a1a 0%, #7d0a0a 58%, #4f0606 100%);
+            border: 3px solid #f5ece9;
+            border-radius: 999px;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.35), 0 10px 24px rgba(125, 10, 10, 0.18);
+        }
+        *::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #ba2222 0%, #8d0f0f 58%, #5c0707 100%);
+        }
+        *::-webkit-scrollbar-corner {
+            background: #efe3e0;
+        }
+        .text-vertical {
+            writing-mode: vertical-rl;
+        }
+        .hero-swiper {
+            width: 100%;
+            max-width: 100%;
+            min-height: calc(100vh - 76px);
+        }
+        .hero-swiper .swiper-wrapper,
+        .hero-swiper .swiper-slide {
+            width: 100%;
+        }
+        .hero-swiper .swiper-slide {
+            min-height: calc(100vh - 76px);
+        }
+        .hero-swiper .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .hero-slide-content {
+            max-width: 52rem;
+            padding-right: 1rem;
+        }
+        .hero-slide-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.85rem;
+            margin-bottom: 1rem;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.76);
+        }
+        .hero-slide-kicker::before {
+            content: "";
+            width: 4rem;
+            height: 2px;
+            background: #7D0A0A;
+        }
+        .hero-swiper .swiper-pagination {
+            bottom: 2.2rem !important;
+            left: 1.25rem !important;
+            right: auto !important;
+            width: auto !important;
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+        }
+        .hero-swiper .swiper-pagination-bullet {
+            width: 0.85rem;
+            height: 0.85rem;
+            background: rgba(255, 255, 255, 0.4);
+            opacity: 1;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        .hero-swiper .swiper-pagination-bullet-active {
+            background: #7D0A0A;
+            border-color: #7D0A0A;
+        }
+        .hero-swiper .swiper-button-next,
+        .hero-swiper .swiper-button-prev {
+            display: none;
+        }
+        @media (min-width: 768px) {
+            .hero-swiper,
+            .hero-swiper .swiper-slide {
+                min-height: calc(100vh - 89px);
+            }
+            .hero-swiper .swiper-pagination {
+                left: 2rem !important;
+                bottom: 2.25rem !important;
+            }
+        }
+        @media (max-width: 767px) {
+            .hero-slide-title {
+                font-size: 2.45rem;
+                line-height: 1;
+            }
+            .hero-swiper .swiper-pagination {
+                left: 1rem;
+                bottom: 1.5rem !important;
+            }
+            .hero-slide-content {
+                padding-right: 0;
+            }
+            .hero-slide-kicker {
+                font-size: 0.62rem;
+                letter-spacing: 0.24em;
+            }
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-stone-200/60">
+<div class="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-3 md:py-4 max-w-screen-2xl mx-auto gap-4">
+<a class="flex items-center" href="index.html">
+<img alt="DD Steel Logo" class="h-14 md:h-20 w-auto object-contain" src="images/DD%20Steel%20logo.png"/>
+</a>
+<nav aria-label="Primary" class="hidden md:flex items-center gap-10">
+<a class="text-red-900 border-b-2 border-red-900 pb-1 font-bold uppercase tracking-widest text-xs transition-colors duration-200" href="index.html">Home</a>
+<a class="text-stone-600 font-medium hover:text-red-800 transition-colors duration-200 uppercase tracking-widest text-xs" href="about.html">About</a>
+<a class="text-stone-600 font-medium hover:text-red-800 transition-colors duration-200 uppercase tracking-widest text-xs" href="service.html">Services</a>
+<a class="text-stone-600 font-medium hover:text-red-800 transition-colors duration-200 uppercase tracking-widest text-xs" href="project.html">Project</a>
+<a class="text-stone-600 font-medium hover:text-red-800 transition-colors duration-200 uppercase tracking-widest text-xs" href="contact.html">Contact</a>
+</nav>
+<div class="flex items-center gap-3">
+<a class="hidden md:inline-flex bg-[#7d0a0a] hover:bg-[#5f0707] text-white px-8 py-3 font-bold uppercase tracking-[0.18em] text-xs transition-all duration-200 rounded-full" href="contact.html">Request Consultation</a>
+<button aria-expanded="false" aria-label="Open menu" class="md:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-stone-200 text-stone-700" data-mobile-menu-button type="button">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+<nav aria-label="Mobile" class="md:hidden hidden border-t border-stone-200/70 bg-white" data-mobile-menu>
+<div class="px-4 py-4 flex flex-col gap-3">
+<a class="text-sm font-bold uppercase tracking-[0.18em] text-stone-800" href="index.html">Home</a>
+<a class="text-sm font-bold uppercase tracking-[0.18em] text-stone-700" href="about.html">About</a>
+<a class="text-sm font-bold uppercase tracking-[0.18em] text-stone-700" href="service.html">Services</a>
+<a class="text-sm font-bold uppercase tracking-[0.18em] text-stone-700" href="project.html">Project</a>
+<a class="text-sm font-bold uppercase tracking-[0.18em] text-stone-700" href="contact.html">Contact</a>
+<a class="mt-2 inline-flex items-center justify-center rounded-full bg-[#7d0a0a] px-6 py-3 text-xs font-bold uppercase tracking-[0.18em] text-white" href="contact.html">Request Consultation</a>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section: The Architectural Monolith -->
+<section class="relative overflow-hidden bg-[#120d0d] text-white">
+<div class="swiper hero-swiper relative overflow-hidden">
+<div class="swiper-wrapper">
+<div class="swiper-slide relative">
+<picture>
+<source media="(max-width: 767px)" srcset="images/mobile/9a0d9b6e-3cdf-4d98-8671-0c196e8a862e.png"/>
+<img alt="DD Tech precision-finished rebar couplers arranged in production-ready batches" class="absolute inset-0 h-full w-full object-cover" src="images/e3745b05-7665-4446-86ac-41405bb20cc8.jpg"/>
+</picture>
+<div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.78) 42%, rgba(0, 0, 0, 0.62) 100%);"></div>
+<div class="relative max-w-screen-2xl mx-auto min-h-[calc(100vh-76px)] md:min-h-[calc(100vh-89px)] px-4 sm:px-6 lg:px-8 py-8 md:py-12 flex items-center">
+<div class="hero-slide-content w-full">
+<span class="hero-slide-kicker">Coupler Manufacturing</span>
+<h1 class="hero-slide-title font-headline text-[2.85rem] sm:text-[3rem] md:text-6xl xl:text-[5.2rem] font-black leading-[0.92] tracking-tighter mb-5 text-[#7D0A0A]">Precision-machined couplers built for strength, fit, and reliable connection.</h1>
+<p class="max-w-2xl text-sm sm:text-base md:text-lg text-white/78 leading-relaxed mb-8">Finished with consistent internal threading and ready for demanding reinforcement work, our couplers are manufactured to support confident site performance.</p>
+<div class="grid grid-cols-1 sm:grid-cols-[auto_auto] gap-3 sm:w-fit">
+<a class="inline-flex items-center justify-center rounded-full bg-[#7D0A0A] text-white px-8 py-4 font-bold uppercase tracking-[0.2em] text-xs hover:bg-[#5f0707] transition-colors" href="contact.html">Request Consultation</a>
+<a class="inline-flex items-center justify-center rounded-full border border-white bg-white px-8 py-4 font-bold uppercase tracking-[0.2em] text-xs text-[#801B1B] hover:bg-[#F4F4F4] transition-colors" href="service.html">Explore Services</a>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide relative">
+<picture>
+<source media="(max-width: 767px)" srcset="images/mobile/1.jpg"/>
+<img alt="Prepared reinforcement bars with couplers installed and aligned for structural work" class="absolute inset-0 h-full w-full object-cover" src="images/9e0d0bc2-b186-48cd-9c48-d5ce8268907d.jpg"/>
+</picture>
+<div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.78) 42%, rgba(0, 0, 0, 0.62) 100%);"></div>
+<div class="relative max-w-screen-2xl mx-auto min-h-[calc(100vh-76px)] md:min-h-[calc(100vh-89px)] px-4 sm:px-6 lg:px-8 py-8 md:py-12 flex items-center">
+<div class="hero-slide-content w-full">
+<span class="hero-slide-kicker">Rebar Preparation</span>
+<h2 class="hero-slide-title font-headline text-[2.85rem] sm:text-[3rem] md:text-6xl xl:text-[5.2rem] font-black leading-[0.92] tracking-tighter mb-5 text-[#7D0A0A]">Threaded bars and coupler-ready assemblies prepared for faster site installation.</h2>
+<p class="max-w-2xl text-sm sm:text-base md:text-lg text-white/78 leading-relaxed mb-8">Our rebar preparation process helps teams move into installation with better alignment, reduced delay, and dependable continuity across active projects.</p>
+<div class="grid grid-cols-1 sm:grid-cols-[auto_auto] gap-3 sm:w-fit">
+<a class="inline-flex items-center justify-center rounded-full bg-[#7D0A0A] text-white px-8 py-4 font-bold uppercase tracking-[0.2em] text-xs hover:bg-[#5f0707] transition-colors" href="project.html">View Projects</a>
+<a class="inline-flex items-center justify-center rounded-full border border-white bg-white px-8 py-4 font-bold uppercase tracking-[0.2em] text-xs text-[#801B1B] hover:bg-[#F4F4F4] transition-colors" href="about.html">Know DD Tech</a>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-slide relative">
+<picture>
+<source media="(max-width: 767px)" srcset="images/mobile/ab4864de-328d-490c-b286-c4f11375c118.jpg"/>
+<img alt="On-site rebar threading and processing machine in active DD Tech field operation" class="absolute inset-0 h-full w-full object-cover" src="images/a0a0a23c-85c7-430e-9185-2fb487c0d9a8.jpg"/>
+</picture>
+<div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.78) 42%, rgba(0, 0, 0, 0.62) 100%);"></div>
+<div class="relative max-w-screen-2xl mx-auto min-h-[calc(100vh-76px)] md:min-h-[calc(100vh-89px)] px-4 sm:px-6 lg:px-8 py-8 md:py-12 flex items-center">
+<div class="hero-slide-content w-full">
+<span class="hero-slide-kicker">On-Site Threading</span>
+<h2 class="hero-slide-title font-headline text-[2.85rem] sm:text-[3rem] md:text-6xl xl:text-[5.2rem] font-black leading-[0.92] tracking-tighter mb-5 text-[#7D0A0A]">Field-ready threading support that keeps reinforcement work moving on schedule.</h2>
+<p class="max-w-2xl text-sm sm:text-base md:text-lg text-white/78 leading-relaxed mb-8">With practical machine setup and skilled on-site handling, DD Tech supports accurate threading operations directly where execution matters most.</p>
+<div class="grid grid-cols-1 sm:grid-cols-[auto_auto] gap-3 sm:w-fit">
+<a class="inline-flex items-center justify-center rounded-full bg-[#7D0A0A] text-white px-8 py-4 font-bold uppercase tracking-[0.2em] text-xs hover:bg-[#5f0707] transition-colors" href="contact.html">Start Your Project</a>
+<a class="inline-flex items-center justify-center rounded-full border border-white bg-white px-8 py-4 font-bold uppercase tracking-[0.2em] text-xs text-[#801B1B] hover:bg-[#F4F4F4] transition-colors" href="about.html">Why Choose Us</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="swiper-pagination"></div>
+</div>
+</section>
+<!-- Technical Excellence: The Spec Sheet Grid -->
+<section class="py-16 md:py-24 xl:py-32 px-4 sm:px-6 lg:px-8 bg-[linear-gradient(180deg,#f4f4f4_0%,#fbf8f7_100%)]">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 xl:grid-cols-[0.95fr_1.05fr] gap-10 mb-14">
+<div class="rounded-[2rem] bg-[#1f1a1a] text-white p-6 sm:p-8 md:p-12 shadow-[0_30px_80px_rgba(96,1,8,0.16)]">
+<span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.3em] font-bold text-white/65 mb-8">Core Systems</span>
+<h2 class="font-headline text-3xl sm:text-4xl md:text-6xl font-black leading-[0.95] tracking-tighter mb-6 md:mb-8">Technical Excellence</h2>
+<p class="text-white/70 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl mb-8 md:mb-10">Mechanical splicing systems engineered for full-strength joints, dependable elongation control, and practical installation across demanding infrastructure and building applications.</p>
+<div class="grid grid-cols-2 gap-3 md:gap-4">
+<div class="rounded-2xl border border-white/10 bg-[#801B1B] px-4 py-5 md:px-5 md:py-6">
+<div class="text-2xl sm:text-3xl md:text-4xl font-headline font-black text-white">125%</div>
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/65 mt-2">Yield Development</div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 md:px-5 md:py-6">
+<div class="text-2xl sm:text-3xl md:text-4xl font-headline font-black text-[#ffb3ad]">575</div>
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/50 mt-2">Min Yield N/mm2</div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 md:px-5 md:py-6">
+<div class="text-2xl sm:text-3xl md:text-4xl font-headline font-black text-[#ffb3ad]">800</div>
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/50 mt-2">Min Tensile N/mm2</div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 md:px-5 md:py-6">
+<div class="text-2xl sm:text-3xl md:text-4xl font-headline font-black text-[#ffb3ad]">&lt;0.1</div>
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/50 mt-2">Permanent Elongation</div>
+</div>
+</div>
+</div>
+<div class="rounded-[2rem] border border-[#d8b7b1] bg-white p-6 sm:p-8 md:p-10 shadow-[0_30px_80px_rgba(0,0,0,0.07)]">
+<div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+<div>
+<p class="text-[10px] uppercase tracking-[0.3em] text-primary font-bold mb-4">Mechanical Splicing &amp; Structural Components</p>
+<h3 class="font-headline text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter text-on-surface">Systems Built for Critical Performance.</h3>
+<p class="mt-4 md:mt-5 max-w-2xl text-on-surface-variant text-sm sm:text-base md:text-lg leading-relaxed">Our mechanical splicing system is built around full-strength joint performance, preserved bar cross-section area, and practical site installation without torque wrenching.</p>
+</div>
+<div class="rounded-full border border-[#ead8d4] bg-[#faf4f3] px-5 py-3 text-[10px] uppercase tracking-[0.24em] font-bold text-primary">Logo Palette Applied</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] gap-4 mb-6">
+<div class="rounded-2xl border border-[#ead8d4] bg-[linear-gradient(135deg,#fff7f6_0%,#f7ecea_100%)] px-6 py-6">
+<div class="text-[10px] uppercase tracking-[0.24em] text-primary font-bold mb-3">Performance Insight</div>
+<p class="text-on-surface leading-relaxed">Designed to reduce site risk, improve load transfer continuity, and maintain engineering confidence across bridge decks, high-rise cores and geotechnical stabilization programs.</p>
+</div>
+<div class="rounded-2xl border border-[#ead8d4] bg-[#fbf5f4] px-6 py-6">
+<div class="text-[10px] uppercase tracking-[0.24em] text-on-surface-variant mb-3">Core Advantages</div>
+<div class="space-y-3 text-sm text-on-surface">
+<div class="flex items-center gap-3"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span><span>High-strength material grades</span></div>
+<div class="flex items-center gap-3"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span><span>Code-ready design logic</span></div>
+<div class="flex items-center gap-3"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span><span>Fast execution on site</span></div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="rounded-2xl border border-[#ead8d4] bg-[#fbf5f4] px-5 py-5">
+<div class="text-[10px] uppercase tracking-[0.24em] text-on-surface-variant mb-2">Strength Range</div>
+<div class="font-headline text-2xl font-black text-primary">16-40</div>
+</div>
+<div class="rounded-2xl border border-[#ead8d4] bg-[#fbf5f4] px-5 py-5">
+<div class="text-[10px] uppercase tracking-[0.24em] text-on-surface-variant mb-2">Design Focus</div>
+<div class="font-headline text-2xl font-black text-primary">Type H &amp; F</div>
+</div>
+<div class="rounded-2xl border border-[#ead8d4] bg-[#fbf5f4] px-5 py-5">
+<div class="text-[10px] uppercase tracking-[0.24em] text-on-surface-variant mb-2">Application Range</div>
+<div class="font-headline text-2xl font-black text-primary">Site to Plant</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Service 1: Rebar Coupler Manufacturing -->
+<article class="rounded-[2rem] border border-[#dec0bb] bg-white p-8 md:p-10 shadow-[0_24px_60px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.12)] transition-all group">
+<div class="flex flex-col h-full">
+<div class="mb-8 overflow-hidden h-64 rounded-[1.5rem] bg-surface">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="DD Tech rebar coupler product close-up" src="images/8fbe942b-5562-4d45-8299-eacd2ec39d6c.jpg"/>
+</div>
+<div class="flex gap-4 mb-4">
+<span class="bg-[#373A3C] text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase">High Strength</span>
+<span class="bg-[#70777A] text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase">Precision Built</span>
+</div>
+<h3 class="font-headline text-3xl font-extrabold text-on-surface mb-4">Rebar Coupler Manufacturing</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">
+                                We manufacture all types of rebar couplers with high strength, precise finishing, and reliable performance while maintaining full compliance with industry standards.
+                            </p>
+<div class="pt-6 border-t border-[#ead8d4] flex justify-between items-center">
+<span class="font-bold text-xs uppercase tracking-widest">Manufacturing Excellence</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Service 2: On-Site Threading Services -->
+<article class="rounded-[2rem] border border-[#dec0bb] bg-white p-8 md:p-10 shadow-[0_24px_60px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.12)] transition-all group">
+<div class="flex flex-col h-full">
+<div class="mb-8 overflow-hidden h-64 rounded-[1.5rem] bg-surface">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="DD Tech rebar threading machine setup" src="images/DSC06904.jpg"/>
+</div>
+<div class="flex gap-4 mb-4">
+<span class="bg-[#373A3C] text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase">On-Site Execution</span>
+<span class="bg-[#70777A] text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase">Fast Turnaround</span>
+</div>
+<h3 class="font-headline text-3xl font-extrabold text-on-surface mb-4">On-Site Threading Services</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">
+                                Our team provides rebar threading services directly at construction sites to help projects move faster with efficient execution, reduced delays, and dependable quality.
+                            </p>
+<div class="pt-6 border-t border-[#ead8d4] flex justify-between items-center">
+<span class="font-bold text-xs uppercase tracking-widest">Site-Ready Service</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Service 3: TMT Transport Vehicle Rental -->
+<article class="rounded-[2rem] border border-[#dec0bb] bg-white p-8 md:p-10 shadow-[0_24px_60px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.12)] transition-all group">
+<div class="flex flex-col h-full">
+<div class="mb-8 overflow-hidden h-64 rounded-[1.5rem] bg-surface">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="DD Tech construction site and transport context" src="images/banner-1.jpg"/>
+</div>
+<div class="flex gap-4 mb-4">
+<span class="bg-[#373A3C] text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase">Rental Fleet</span>
+<span class="bg-[#70777A] text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase">Timely Movement</span>
+</div>
+<h3 class="font-headline text-3xl font-extrabold text-on-surface mb-4">TMT Transport Vehicle Rental</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">
+                                We offer TMT transport vehicles on rent for RMC plants and construction operations, supporting timely and smooth movement of materials across active project sites.
+                            </p>
+<div class="pt-6 border-t border-[#ead8d4] flex justify-between items-center">
+<span class="font-bold text-xs uppercase tracking-widest">Reliable Logistics Support</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Service 4: Construction Technical Support & Guidance -->
+<article class="rounded-[2rem] border border-[#dec0bb] bg-white p-8 md:p-10 shadow-[0_24px_60px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.12)] transition-all group">
+<div class="flex flex-col h-full">
+<div class="mb-8 overflow-hidden h-64 rounded-[1.5rem] bg-surface">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="DD Tech coupler assembly and application image" src="images/22new.png"/>
+</div>
+<div class="flex gap-4 mb-4">
+<span class="bg-[#373A3C] text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase">Expert Guidance</span>
+<span class="bg-[#70777A] text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase">Installation Support</span>
+</div>
+<h3 class="font-headline text-3xl font-extrabold text-on-surface mb-4">Construction Technical Support &amp; Guidance</h3>
+<p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">
+                                We provide technical support and practical guidance to help clients choose the right solution, understand application needs, and ensure proper installation at site.
+                            </p>
+<div class="pt-6 border-t border-[#ead8d4] flex justify-between items-center">
+<span class="font-bold text-xs uppercase tracking-widest">Engineering Assistance</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- About / Legacy: The Monolith Statement -->
+<section class="py-16 md:py-24 xl:py-32 bg-[linear-gradient(180deg,#ffffff_0%,#f6efed_100%)] overflow-hidden">
+<div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 xl:grid-cols-[0.9fr_1.1fr] gap-10 items-stretch">
+<div class="rounded-[2rem] bg-[#1f1a1a] text-white p-6 sm:p-8 md:p-12 shadow-[0_30px_80px_rgba(96,1,8,0.18)]">
+<span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.3em] font-bold text-white/65 mb-8">Legacy of Precision</span>
+<h2 class="font-headline text-3xl sm:text-4xl md:text-6xl font-black leading-[0.98] tracking-tighter mb-6 md:mb-8">Professionalism<br/>Built into Every<br/><span class="text-[#ffb3ad]">Structure.</span></h2>
+<div class="space-y-4 md:space-y-6 text-white/72 text-sm sm:text-base md:text-lg leading-relaxed">
+<p>DD Tech began its journey in 2018 as DD Enterprises and has grown into a trusted construction support company focused on rebar couplers, threading services, transport support, and practical technical guidance.</p>
+<p>The brochure positions DD Tech around dependable execution, customer-focused service, and standards-conscious manufacturing for projects that need reliable on-site coordination.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 md:mt-10">
+<div class="rounded-2xl border border-white/10 bg-[#801B1B] px-5 py-6">
+<div class="text-3xl md:text-4xl font-black text-white font-headline mb-2">2018</div>
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/65">Journey Began</div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-6">
+<div class="text-3xl md:text-4xl font-black text-[#ffb3ad] font-headline mb-2">4</div>
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/50">Core Services</div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-6">
+<div class="text-3xl md:text-4xl font-black text-[#ffb3ad] font-headline mb-2">IS | BS | ISO</div>
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/50">Standards Focus</div>
+</div>
+</div>
+</div>
+<div class="relative rounded-[2rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.12)] min-h-[540px] md:min-h-[680px]">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="High-contrast architectural photograph of a steel girder fabrication facility with golden hour light streaming through industrial windows" src="images/15.jpg"/>
+<div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,17,17,0.18)_0%,rgba(17,17,17,0.72)_100%)]"></div>
+<div class="absolute top-4 left-4 right-4 md:top-8 md:left-8 md:right-8 flex flex-col md:flex-row md:items-start md:justify-between gap-3 md:gap-4 z-10">
+<div class="rounded-2xl border border-white/10 bg-black/20 backdrop-blur-sm px-4 py-4 md:px-6 md:py-5 max-w-[240px] sm:max-w-xs md:max-w-sm">
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mb-2">Operational Standard</div>
+<div class="font-headline text-xl sm:text-2xl md:text-3xl font-black text-white">Precision is our baseline.</div>
+</div>
+<div class="hidden sm:block rounded-2xl border border-white/10 bg-white/10 backdrop-blur-sm px-5 py-4 md:px-6 md:py-5 min-w-[180px] md:min-w-[200px]">
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mb-2">Factory Network</div>
+<div class="font-headline text-3xl md:text-4xl font-black text-[#ffb3ad]">Pune</div>
+<div class="text-xs uppercase tracking-[0.22em] text-white/55 mt-2">Operating Base</div>
+</div>
+</div>
+<div class="absolute bottom-8 left-8 right-8 z-10">
+<div class="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4">
+<div class="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-sm px-4 py-4 md:px-6 md:py-5">
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mb-2">Manufacturing Discipline</div>
+<div class="text-white text-sm sm:text-base md:text-lg leading-relaxed">Workshop-to-site support from bar preparation and threading to final coupler delivery.</div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/10 backdrop-blur-sm px-4 py-4 md:px-6 md:py-5">
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mb-2">Quality Assurance</div>
+<div class="text-white text-sm sm:text-base md:text-lg leading-relaxed">Quality checks aligned with project expectations and recognized industry standards.</div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-[#801B1B]/90 backdrop-blur-sm px-4 py-4 md:px-6 md:py-5">
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/65 mb-2">Client Promise</div>
+<div class="text-white text-sm sm:text-base md:text-lg leading-relaxed">Practical guidance for coupler selection, installation understanding, and execution planning.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Foundations: Portfolio -->
+<section class="py-16 md:py-24 xl:py-32 bg-[linear-gradient(180deg,#1f1a1a_0%,#111111_100%)] text-white overflow-hidden">
+<div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
+<div>
+<span class="inline-block text-[10px] uppercase tracking-[0.35em] font-bold text-[#ffb3ad] mb-4">Signature Works</span>
+<h2 class="font-headline text-3xl sm:text-4xl md:text-6xl font-black uppercase tracking-tighter">Global Foundations Portfolio</h2>
+</div>
+<p class="max-w-2xl text-white/65 text-sm sm:text-base md:text-lg leading-relaxed">A curated selection of infrastructure programs where DD Tech components delivered structural confidence, accelerated execution, and long-span reliability across extreme engineering conditions.</p>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-[0.9fr_1.1fr] gap-8 mb-10">
+<div class="rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-sm p-8 md:p-10 shadow-[0_30px_80px_rgba(0,0,0,0.18)]">
+<div class="grid grid-cols-2 gap-4">
+<div class="rounded-2xl border border-white/10 bg-[#801B1B] px-5 py-6">
+<div class="text-4xl font-headline font-black text-white">2018</div>
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/65 mt-2">Journey Began</div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-6">
+<div class="text-4xl font-headline font-black text-[#ffb3ad]">4</div>
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mt-2">Core Services</div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-6">
+<div class="text-4xl font-headline font-black text-[#ffb3ad]">125%</div>
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mt-2">Yield Development</div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-6">
+<div class="text-4xl font-headline font-black text-[#ffb3ad]">IS | BS | ISO</div>
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mt-2">Standards Focus</div>
+</div>
+</div>
+</div>
+<div class="rounded-[2rem] border border-[#b87d7d]/20 bg-[linear-gradient(135deg,rgba(128,27,27,0.22),rgba(255,255,255,0.04))] p-8 md:p-10">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+<div>
+<p class="text-[10px] uppercase tracking-[0.3em] text-white/45 font-bold mb-3">Highlighted Program</p>
+<h3 class="font-headline text-4xl md:text-5xl font-black tracking-tighter mb-4">Built for Complex Terrain and Critical Loads.</h3>
+<p class="text-white/65 text-lg leading-relaxed max-w-2xl">The brochure highlights applications across heavy reinforcement zones, staged bridge work, starter bars, diaphragm walls, micropiles, and precast-to-cast-in-site connections.</p>
+</div>
+<div class="rounded-2xl border border-white/10 bg-black/20 px-6 py-5 min-w-[220px]">
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-2">Brochure Highlight</div>
+<div class="text-5xl font-headline font-black text-[#ffb3ad]">125%</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<figure class="group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_30px_80px_rgba(0,0,0,0.16)] m-0">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="DD Tech bridge and site application environment" src="images/slide1.jpg"/>
+<div class="absolute inset-0 bg-[linear-gradient(180deg,transparent_20%,rgba(17,17,17,0.78)_100%)]"></div>
+<div class="absolute top-5 left-5 rounded-full bg-[#801B1B] px-4 py-2 text-[10px] uppercase tracking-[0.24em] font-bold text-white">Bridge Work</div>
+</div>
+<figcaption class="p-8">
+<h4 class="font-headline text-3xl font-black mb-3">Staged Bridge Construction</h4>
+<p class="text-white/65 uppercase text-[11px] tracking-[0.22em] mb-5">Mechanical Splicing Support</p>
+<div class="flex items-center justify-between border-t border-white/10 pt-5">
+<span class="text-white/45 text-xs uppercase tracking-[0.22em]">Traffic-friendly execution</span>
+<span class="material-symbols-outlined text-[#ffb3ad] group-hover:translate-x-1 transition-transform">north_east</span>
+</div>
+</figcaption>
+</figure>
+<figure class="group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_30px_80px_rgba(0,0,0,0.16)] md:translate-y-12 m-0">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="DD Tech installed coupler and reinforcement view" src="images/DSC06936b.jpg"/>
+<div class="absolute inset-0 bg-[linear-gradient(180deg,transparent_20%,rgba(17,17,17,0.78)_100%)]"></div>
+<div class="absolute top-5 left-5 rounded-full bg-[#373A3C] px-4 py-2 text-[10px] uppercase tracking-[0.24em] font-bold text-white">Heavy Reinforcement</div>
+</div>
+<figcaption class="p-8">
+<h4 class="font-headline text-3xl font-black mb-3">Columns &amp; Core Zones</h4>
+<p class="text-white/65 uppercase text-[11px] tracking-[0.22em] mb-5">Reduced Congestion &amp; Better Flow</p>
+<div class="flex items-center justify-between border-t border-white/10 pt-5">
+<span class="text-white/45 text-xs uppercase tracking-[0.22em]">Concrete-friendly reinforcement</span>
+<span class="material-symbols-outlined text-[#ffb3ad] group-hover:translate-x-1 transition-transform">north_east</span>
+</div>
+</figcaption>
+</figure>
+<figure class="group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_30px_80px_rgba(0,0,0,0.16)] m-0">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="DD Tech workshop machine and process image" src="images/banner-2.jpg"/>
+<div class="absolute inset-0 bg-[linear-gradient(180deg,transparent_20%,rgba(17,17,17,0.78)_100%)]"></div>
+<div class="absolute top-5 left-5 rounded-full bg-[#70777A] px-4 py-2 text-[10px] uppercase tracking-[0.24em] font-bold text-white">Workshop Support</div>
+</div>
+<figcaption class="p-8">
+<h4 class="font-headline text-3xl font-black mb-3">Bar Preparation &amp; Threading</h4>
+<p class="text-white/65 uppercase text-[11px] tracking-[0.22em] mb-5">Cutting, Threading &amp; Machine Support</p>
+<div class="flex items-center justify-between border-t border-white/10 pt-5">
+<span class="text-white/45 text-xs uppercase tracking-[0.22em]">Project-ready manufacturing</span>
+<span class="material-symbols-outlined text-[#ffb3ad] group-hover:translate-x-1 transition-transform">north_east</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Technical Data & Resources -->
+<section class="py-16 md:py-24 xl:py-32 bg-[linear-gradient(180deg,#f8f3f1_0%,#ffffff_100%)]">
+<div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-12 gap-6 md:gap-10 items-start">
+<div class="col-span-12 lg:col-span-4 min-w-0">
+<div class="rounded-[2rem] bg-[#1b1717] text-white overflow-hidden shadow-[0_30px_80px_rgba(96,1,8,0.22)]">
+<div class="p-5 sm:p-8 md:p-12">
+<span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.3em] font-bold text-white/65 mb-8">Technical Library</span>
+<h2 class="font-headline text-3xl sm:text-4xl md:text-6xl font-black mb-6 md:mb-8 leading-none">Engineering<br/>Compliance.</h2>
+<p class="text-white/70 mb-8 md:mb-10 leading-relaxed text-sm sm:text-base md:text-lg">Key data from the DD Enterprises profile covering standards, coupler types, bar sizes, and performance information for project planning.</p>
+<div class="space-y-4">
+<div class="group rounded-2xl border border-white/10 bg-white/5 px-4 py-4 md:px-5 md:py-5 transition-colors hover:bg-white/10"><div class="flex items-start gap-3 md:gap-4 min-w-0"><span class="material-symbols-outlined text-[#ffb3ad] shrink-0 text-xl">description</span><div class="min-w-0"><div class="font-bold uppercase tracking-[0.12em] md:tracking-[0.16em] text-[10px] sm:text-[11px] md:text-xs text-white break-words">ACI 318-95 Clause 12.14.3.4</div><div class="text-white/55 text-[11px] md:text-xs mt-2 leading-relaxed break-words">Full mechanical connection should develop at least 125% of specified yield strength.</div></div></div></div>
+<div class="group rounded-2xl border border-white/10 bg-white/5 px-4 py-4 md:px-5 md:py-5 transition-colors hover:bg-white/10"><div class="flex items-start gap-3 md:gap-4 min-w-0"><span class="material-symbols-outlined text-[#ffb3ad] shrink-0 text-xl">description</span><div class="min-w-0"><div class="font-bold uppercase tracking-[0.12em] md:tracking-[0.16em] text-[10px] sm:text-[11px] md:text-xs text-white break-words">BS 8110 Pt: 1997 Clause 3.12.8.16.2</div><div class="text-white/55 text-[11px] md:text-xs mt-2 leading-relaxed break-words">Permanent elongation after loading to 0.6 fy should not exceed 0.1 mm.</div></div></div></div>
+<div class="group rounded-2xl border border-white/10 bg-white/5 px-4 py-4 md:px-5 md:py-5 transition-colors hover:bg-white/10"><div class="flex items-start gap-3 md:gap-4 min-w-0"><span class="material-symbols-outlined text-[#ffb3ad] shrink-0 text-xl">verified</span><div class="min-w-0"><div class="font-bold uppercase tracking-[0.12em] md:tracking-[0.16em] text-[10px] sm:text-[11px] md:text-xs text-white break-words">Type H and Type F Couplers</div><div class="text-white/55 text-[11px] md:text-xs mt-2 leading-relaxed break-words">Solutions for rotatable continuation bars and heavy bars that cannot be rotated.</div></div></div></div>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-8">
+<div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 md:px-5 md:py-5 min-w-0"><div class="text-2xl sm:text-3xl font-headline font-black text-[#ffb3ad]">48h</div><div class="text-[10px] uppercase tracking-[0.18em] md:tracking-[0.24em] text-white/45 mt-2 break-words">Doc Response</div></div>
+<div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4 md:px-5 md:py-5 min-w-0"><div class="text-2xl sm:text-3xl font-headline font-black text-[#ffb3ad]">100%</div><div class="text-[10px] uppercase tracking-[0.18em] md:tracking-[0.24em] text-white/45 mt-2 break-words">Bar Area Preserved</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-8 rounded-[2rem] bg-white border border-[#dcb7b2]/60 shadow-[0_30px_80px_rgba(0,0,0,0.08)] overflow-hidden min-w-0">
+<div class="bg-[linear-gradient(90deg,#7d0a0a_0%,#600108_100%)] px-5 sm:px-6 md:px-12 py-6 md:py-8 text-white">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 min-w-0"><div class="min-w-0"><p class="text-[10px] uppercase tracking-[0.3em] text-white/60 font-bold mb-3">Verified Profile Data</p><h3 class="font-headline text-2xl sm:text-3xl md:text-4xl font-black leading-tight break-words">Bar Size Specification Table</h3></div><div class="rounded-full border border-white/15 bg-white/10 px-4 py-2 md:px-5 md:py-3 text-[10px] uppercase tracking-[0.18em] md:tracking-[0.24em] font-bold text-white/80 self-start max-w-full">From Company PDF</div></div>
+</div>
+<div class="p-5 sm:p-6 md:p-12 bg-[linear-gradient(180deg,#fffdfd_0%,#f8f2f1_100%)]">
+<div class="overflow-x-auto rounded-2xl border border-[#e8d7d4] bg-white">
+<table class="w-full min-w-[420px] text-left text-xs sm:text-sm font-label">
+<thead><tr class="bg-[#1f1a1a] text-white font-bold uppercase tracking-[0.16em] md:tracking-widest"><th class="p-3 md:p-4">Bar Dia</th><th class="p-3 md:p-4">Pitch</th><th class="p-3 md:p-4">Thread Length</th><th class="p-3 md:p-4">OD</th></tr></thead>
+<tbody class="text-on-surface-variant">
+<tr class="border-b border-[#efe3e0]"><td class="p-3 md:p-4 font-bold text-on-surface">16</td><td class="p-3 md:p-4">2.5</td><td class="p-3 md:p-4">43</td><td class="p-3 md:p-4">25</td></tr>
+<tr class="border-b border-[#efe3e0] bg-[#fbf5f4]"><td class="p-3 md:p-4 font-bold text-on-surface">20</td><td class="p-3 md:p-4">2.5</td><td class="p-3 md:p-4">53</td><td class="p-3 md:p-4">30</td></tr>
+<tr class="border-b border-[#efe3e0]"><td class="p-3 md:p-4 font-bold text-on-surface">25</td><td class="p-3 md:p-4">2.5</td><td class="p-3 md:p-4">63</td><td class="p-3 md:p-4">38</td></tr>
+<tr class="border-b border-[#efe3e0] bg-[#fbf5f4]"><td class="p-3 md:p-4 font-bold text-on-surface">32</td><td class="p-3 md:p-4">3</td><td class="p-3 md:p-4">80</td><td class="p-3 md:p-4">48</td></tr>
+<tr class="bg-[#fbf5f4]"><td class="p-3 md:p-4 font-bold text-on-surface">40</td><td class="p-3 md:p-4">3.5</td><td class="p-3 md:p-4">96</td><td class="p-3 md:p-4">60</td></tr>
+</tbody>
+</table>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+<div class="rounded-2xl border border-[#ead8d4] bg-white px-4 py-4 md:px-5 md:py-5 min-w-0"><div class="text-[10px] uppercase tracking-[0.2em] md:tracking-[0.24em] text-on-surface-variant mb-2">Thread Type</div><div class="font-headline text-xl sm:text-2xl font-black text-primary break-words">Metric</div></div>
+<div class="rounded-2xl border border-[#ead8d4] bg-white px-4 py-4 md:px-5 md:py-5 min-w-0"><div class="text-[10px] uppercase tracking-[0.2em] md:tracking-[0.24em] text-on-surface-variant mb-2">Yield Stress</div><div class="font-headline text-xl sm:text-2xl font-black text-primary break-words">575 N/mm2</div></div>
+<div class="rounded-2xl border border-[#ead8d4] bg-white px-4 py-4 md:px-5 md:py-5 min-w-0"><div class="text-[10px] uppercase tracking-[0.2em] md:tracking-[0.24em] text-on-surface-variant mb-2">Tensile Stress</div><div class="font-headline text-xl sm:text-2xl font-black text-primary break-words">800 N/mm2</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 md:py-24 xl:py-28 bg-[linear-gradient(180deg,#ffffff_0%,#f8f2f1_100%)]">
+<div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="rounded-[2.25rem] border border-[#ead8d4] bg-white/80 backdrop-blur-sm shadow-[0_30px_80px_rgba(0,0,0,0.06)] p-6 sm:p-8 md:p-10 lg:p-12">
+<div class="flex flex-col xl:flex-row xl:items-end xl:justify-between gap-8 mb-10 md:mb-12">
+<div class="max-w-3xl">
+<span class="inline-flex items-center rounded-full border border-[#d7b3ac] bg-[#f9f1ef] px-4 py-2 text-[10px] uppercase tracking-[0.35em] font-bold text-primary">Image Library</span>
+<h2 class="mt-5 font-headline text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter text-on-surface">Real DD Tech Visuals.</h2>
+<p class="mt-5 max-w-2xl text-on-surface-variant text-sm sm:text-base md:text-lg leading-relaxed">A broader look at DD Tech through real workshop, machine, product, and site-oriented visuals sourced from your local image library.</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 xl:min-w-[360px]">
+<div class="rounded-2xl border border-[#ead8d4] bg-[#fcf7f6] px-4 py-4">
+<div class="text-[10px] uppercase tracking-[0.22em] text-on-surface-variant mb-2">Visual Set</div>
+<div class="font-headline text-2xl font-black text-primary">06</div>
+</div>
+<div class="rounded-2xl border border-[#ead8d4] bg-[#fcf7f6] px-4 py-4">
+<div class="text-[10px] uppercase tracking-[0.22em] text-on-surface-variant mb-2">Focus</div>
+<div class="font-headline text-xl font-black text-on-surface">Workshop + Site</div>
+</div>
+<div class="rounded-2xl border border-[#ead8d4] bg-[#fcf7f6] px-4 py-4 col-span-2 sm:col-span-1">
+<div class="text-[10px] uppercase tracking-[0.22em] text-on-surface-variant mb-2">Purpose</div>
+<div class="font-headline text-xl font-black text-on-surface">Real Product Story</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+<figure class="group overflow-hidden rounded-[2rem] border border-[#dec0bb] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
+<div class="overflow-hidden bg-[#f7efed]">
+<img alt="Threading machine in action" class="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" src="images/DSC06904.jpg"/>
+</div>
+<figcaption class="p-7">
+<span class="inline-block text-[10px] uppercase tracking-[0.28em] text-primary font-bold mb-3">Workshop Process</span>
+<h3 class="font-headline text-2xl font-black mb-3 text-on-surface">Threading Machine Operation</h3>
+<p class="text-on-surface-variant leading-relaxed">A close view of machining and threading work that supports site-ready rebar preparation and mechanical splicing workflows.</p>
+</figcaption>
+</figure>
+<figure class="group overflow-hidden rounded-[2rem] border border-[#dec0bb] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
+<div class="overflow-hidden bg-[#f7efed]">
+<img alt="Coupler installed on threaded rebar" class="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" src="images/DSC06936b.jpg"/>
+</div>
+<figcaption class="p-7">
+<span class="inline-block text-[10px] uppercase tracking-[0.28em] text-primary font-bold mb-3">Product Detail</span>
+<h3 class="font-headline text-2xl font-black mb-3 text-on-surface">Installed Coupler Detail</h3>
+<p class="text-on-surface-variant leading-relaxed">A product-level visual that reflects how mechanical couplers connect with threaded reinforcement in practical field use.</p>
+</figcaption>
+</figure>
+<figure class="group overflow-hidden rounded-[2rem] border border-[#dec0bb] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
+<div class="overflow-hidden bg-[#f7efed]">
+<img alt="Machine lineup and equipment photo" class="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" src="images/d5286385-95a4-44f8-8200-83cd57cf20d5.jpg"/>
+</div>
+<figcaption class="p-7">
+<span class="inline-block text-[10px] uppercase tracking-[0.28em] text-primary font-bold mb-3">Production Setup</span>
+<h3 class="font-headline text-2xl font-black mb-3 text-on-surface">Equipment Readiness</h3>
+<p class="text-on-surface-variant leading-relaxed">A machine lineup image that supports the DD Tech story around workshop capability and production preparedness.</p>
+</figcaption>
+</figure>
+<figure class="group overflow-hidden rounded-[2rem] border border-[#dec0bb] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
+<div class="flex h-72 items-center justify-center overflow-hidden bg-[#f9f4f3] p-6">
+<img alt="Coupler application montage" class="max-h-full w-full object-contain transition-transform duration-700 group-hover:scale-[1.04]" src="images/22new.png"/>
+</div>
+<figcaption class="p-7">
+<span class="inline-block text-[10px] uppercase tracking-[0.28em] text-primary font-bold mb-3">Application Range</span>
+<h3 class="font-headline text-2xl font-black mb-3 text-on-surface">Coupler Application View</h3>
+<p class="text-on-surface-variant leading-relaxed">Shows finished couplers and assembled bars, connecting the product range to actual reinforcement applications.</p>
+</figcaption>
+</figure>
+<figure class="group overflow-hidden rounded-[2rem] border border-[#dec0bb] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
+<div class="flex h-72 items-center justify-center overflow-hidden bg-[#f9f4f3] p-6">
+<img alt="Rendered coupler connection visual" class="max-h-full w-full object-contain transition-transform duration-700 group-hover:scale-[1.04]" src="images/2.png"/>
+</div>
+<figcaption class="p-7">
+<span class="inline-block text-[10px] uppercase tracking-[0.28em] text-primary font-bold mb-3">Connection Logic</span>
+<h3 class="font-headline text-2xl font-black mb-3 text-on-surface">Connection Concept View</h3>
+<p class="text-on-surface-variant leading-relaxed">A simplified coupling visual that helps communicate how the system works across multiple connected reinforcement bars.</p>
+</figcaption>
+</figure>
+<figure class="group overflow-hidden rounded-[2rem] border border-[#dec0bb] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
+<div class="overflow-hidden bg-[#f7efed]">
+<img alt="Bridge project visual" class="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" src="images/slide1.jpg"/>
+</div>
+<figcaption class="p-7">
+<span class="inline-block text-[10px] uppercase tracking-[0.28em] text-primary font-bold mb-3">Project Context</span>
+<h3 class="font-headline text-2xl font-black mb-3 text-on-surface">Application Environment</h3>
+<p class="text-on-surface-variant leading-relaxed">A bridge infrastructure image that reflects the scale and project context where mechanical splicing solutions are commonly used.</p>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof / Testimonials -->
+<section class="py-16 md:py-24 xl:py-32 bg-[linear-gradient(180deg,#ffffff_0%,#f6f0ee_100%)] overflow-hidden">
+<div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+<div>
+<span class="inline-block text-[10px] uppercase tracking-[0.35em] font-bold text-primary mb-4">Client Confidence</span>
+<h2 class="font-headline text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter text-[#7D0A0A]">Proof of Performance.</h2>
+</div>
+<p class="max-w-xl text-on-surface-variant text-sm sm:text-base md:text-lg leading-relaxed">The brochure emphasizes quality manufacturing, timely support, skilled execution, competitive pricing, and a customer-focused working style.</p>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-[1.3fr_0.9fr] gap-10 items-stretch">
+<div class="relative rounded-[2rem] bg-white border border-[#7D0A0A]/20 shadow-[0_30px_80px_rgba(0,0,0,0.08)] overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(128,27,27,0.12),transparent_34%)]"></div>
+<div class="relative z-10 p-6 sm:p-8 md:p-14">
+<span class="font-headline text-[84px] sm:text-[120px] md:text-[180px] leading-none absolute top-3 left-4 md:top-4 md:left-6 opacity-[0.06] text-primary">"</span>
+<div class="relative pt-10 sm:pt-14 md:pt-16">
+<div class="w-16 h-[3px] bg-[#7D0A0A] mb-8"></div>
+<p class="font-headline text-[1.95rem] sm:text-[2.2rem] md:text-[2.7rem] font-black leading-[1.18] sm:leading-[1.25] md:leading-[1.35] tracking-tight text-on-surface mb-8 md:mb-10 max-w-4xl">DD Tech focuses on practical construction support, helping clients choose the right coupler solution and execute projects with dependable manufacturing, threading, and technical guidance.</p>
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+<div>
+<div class="font-bold text-xl uppercase tracking-[0.18em] text-on-surface">DD Tech Profile</div>
+<div class="text-primary font-bold text-sm uppercase tracking-[0.18em] mt-2">Brochure-Based Company Summary</div>
+</div>
+<div class="grid grid-cols-3 gap-4 md:min-w-[280px]">
+<div class="rounded-2xl bg-stone-50 border border-stone-200/80 px-4 py-5">
+<div class="text-2xl font-black font-headline text-primary">2018</div>
+<div class="text-[10px] uppercase tracking-[0.22em] text-on-surface-variant mt-2">Journey Began</div>
+</div>
+<div class="rounded-2xl bg-stone-50 border border-stone-200/80 px-4 py-5">
+<div class="text-2xl font-black font-headline text-primary">4</div>
+<div class="text-[10px] uppercase tracking-[0.22em] text-on-surface-variant mt-2">Core Services</div>
+</div>
+<div class="rounded-2xl bg-stone-50 border border-stone-200/80 px-4 py-5">
+<div class="text-2xl font-black font-headline text-primary">125%</div>
+<div class="text-[10px] uppercase tracking-[0.22em] text-on-surface-variant mt-2">Yield Development</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative rounded-[2rem] overflow-hidden bg-[#1a1717] text-white shadow-[0_30px_80px_rgba(96,1,8,0.22)]">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,179,173,0.18),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0))]"></div>
+<div class="relative p-6 sm:p-8 md:p-10 h-full flex flex-col">
+<span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.28em] font-bold text-white/70 mb-8">Our Clients</span>
+<h3 class="font-headline text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter leading-[1] mb-5 md:mb-6">Trusted by growing construction and industrial partners.</h3>
+<p class="text-white/70 text-sm sm:text-base md:text-lg leading-relaxed mb-8">Our client relationships are built on dependable supply, responsive support, and product quality that performs in real project conditions.</p>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+<div class="text-2xl sm:text-3xl font-headline font-black text-white">Real</div>
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mt-2">Client Logos</div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+<div class="text-2xl sm:text-3xl font-headline font-black text-white">Trusted</div>
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mt-2">Execution Support</div>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+<div class="rounded-2xl border border-white/10 bg-white px-4 py-5 min-h-[92px] flex items-center justify-center">
+<img alt="Client logo 1" class="max-h-12 w-auto object-contain transition-all duration-300" src="images/our%20clints/1630652914314.jpg.jpeg"/>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white px-4 py-5 min-h-[92px] flex items-center justify-center">
+<img alt="Client logo 2" class="max-h-12 w-auto object-contain transition-all duration-300" src="images/our%20clints/client-09-1-rj89wg50gkxb0z369haw1x26e3e1wpn9vo4gkgs19k.webp"/>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white px-4 py-5 min-h-[92px] flex items-center justify-center">
+<img alt="Client logo 3" class="max-h-12 w-auto object-contain transition-all duration-300" src="images/our%20clints/client-12-1-rj89wg50gkxb0z369haw1x26e3e1wpn9vo4gkgs19k.webp"/>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white px-4 py-5 min-h-[92px] flex items-center justify-center">
+<img alt="Client logo 4" class="max-h-12 w-auto object-contain transition-all duration-300" src="images/our%20clints/download-8-rj89wg50gkxb0z369haw1x26e3e1wpn9vo4gkgs19k.webp"/>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white px-4 py-5 min-h-[92px] flex items-center justify-center">
+<img alt="Client logo 5" class="max-h-12 w-auto object-contain transition-all duration-300" src="images/our%20clints/images-2-1-rj89wg50gkxb0z369haw1x26e3e1wpn9vo4gkgs19k.webp"/>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white px-4 py-5 min-h-[92px] flex items-center justify-center">
+<img alt="Client logo 6" class="max-h-12 w-auto object-contain transition-all duration-300" src="images/our%20clints/images-3-1-rj89wg50gkxb0z369haw1x26e3e1wpn9vo4gkgs19k.webp"/>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white px-4 py-5 min-h-[92px] flex items-center justify-center sm:col-span-3">
+<img alt="Client logo 7" class="max-h-14 w-auto object-contain transition-all duration-300" src="images/our%20clints/WhatsApp%20Image%202026-04-08%20at%206.07.29%20PM.jpeg"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="hidden py-32 bg-white">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+<div class="relative">
+<span class="font-headline text-[200px] leading-none absolute -top-24 -left-12 opacity-5 text-on-surface">“</span>
+<div class="relative z-10 pt-12">
+<p class="font-headline text-3xl font-bold leading-relaxed text-on-surface mb-8">"Cost savings against lapping, reduced congestion, easier concrete flow, and preservation of full rebar cross-section are some of the key system benefits highlighted in the DD Tech brochure."</p>
+<div>
+<div class="font-bold text-lg uppercase tracking-wider">Mechanical Splicing Highlights</div>
+<div class="text-primary font-bold text-sm uppercase">DD Tech Brochure Notes</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-12 flex flex-col justify-center">
+<h3 class="font-headline text-4xl font-black mb-6">Built for Project Support.</h3>
+<p class="text-on-surface-variant mb-8">DD Tech works with contractors, plants, and project teams that need practical support in manufacturing, threading, transport, and technical coordination.</p>
+<div class="flex flex-wrap gap-8 opacity-40 grayscale">
+<div class="h-8 w-24 bg-on-surface rounded-sm"></div>
+<div class="h-8 w-32 bg-on-surface rounded-sm"></div>
+<div class="h-8 w-28 bg-on-surface rounded-sm"></div>
+<div class="h-8 w-36 bg-on-surface rounded-sm"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-16 md:py-24 xl:py-32 bg-[linear-gradient(180deg,#140f10_0%,#801B1B_52%,#1b1717_100%)] text-white overflow-hidden">
+<div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="relative rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] shadow-[0_35px_90px_rgba(0,0,0,0.28)] overflow-hidden">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(255,179,173,0.22),transparent_28%)]"></div>
+<div class="relative grid grid-cols-1 xl:grid-cols-[1.2fr_0.8fr] gap-10 p-10 md:p-14 xl:p-16 items-center">
+<div>
+<span class="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[10px] uppercase tracking-[0.3em] font-bold text-white/75 mb-8">Project Consultation</span>
+<h2 class="font-headline text-3xl sm:text-4xl md:text-7xl xl:text-8xl font-black tracking-tighter leading-[0.98] mb-6 md:mb-8">Start Your Project.</h2>
+<p class="max-w-3xl text-sm sm:text-base md:text-xl text-white/78 leading-relaxed mb-8 md:mb-10">Bring your next coupler requirement, threading job, or project support need to a team that works with practical site realities and dependable execution.</p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+<div class="rounded-2xl border border-white/10 bg-white/10 px-5 py-5 backdrop-blur-sm">
+<div class="text-3xl font-headline font-black text-[#ffb3ad]">48h</div>
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mt-2">Initial Technical Review</div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/10 px-5 py-5 backdrop-blur-sm">
+<div class="text-3xl font-headline font-black text-[#ffb3ad]">ISO</div>
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mt-2">Quality-Driven Workflow</div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/10 px-5 py-5 backdrop-blur-sm">
+<div class="text-3xl font-headline font-black text-[#ffb3ad]">Global</div>
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mt-2">Infrastructure Support</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row sm:items-center gap-4">
+<a class="inline-flex items-center justify-center rounded-full bg-white text-[#801B1B] px-8 py-4 font-bold uppercase tracking-[0.2em] text-xs hover:bg-[#F4F4F4] transition-colors" href="contact.html">Request Consultation</a>
+<a class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 py-4 font-bold uppercase tracking-[0.2em] text-xs text-white hover:bg-white/10 transition-colors" href="project.html">View Projects</a>
+</div>
+</div>
+<div class="rounded-[1.75rem] border border-white/10 bg-[#161313]/80 backdrop-blur-sm p-8 md:p-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-[#ffb3ad]">engineering</span>
+<p class="text-[10px] uppercase tracking-[0.3em] font-bold text-white/55">What We Prepare</p>
+</div>
+<div class="space-y-4 mb-8">
+<div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-5">
+<div class="font-bold uppercase tracking-[0.18em] text-xs text-white">Engineering Review</div>
+<div class="text-sm text-white/60 leading-relaxed mt-2">System recommendations aligned to your structure type, loading conditions, and compliance needs.</div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-5">
+<div class="font-bold uppercase tracking-[0.18em] text-xs text-white">Specification Support</div>
+<div class="text-sm text-white/60 leading-relaxed mt-2">Datasheets, material grades, and installation guidance for consultant and contractor teams.</div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-5">
+<div class="font-bold uppercase tracking-[0.18em] text-xs text-white">Execution Planning</div>
+<div class="text-sm text-white/60 leading-relaxed mt-2">Fabrication coordination and delivery planning for efficient on-site performance.</div>
+</div>
+</div>
+<div class="rounded-2xl border border-[#ffb3ad]/20 bg-[#801B1B]/30 px-5 py-5">
+<div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mb-2">Best For</div>
+<div class="font-headline text-2xl font-black text-white">Rebar couplers, site threading, TMT vehicle rental, and project-fit technical support.</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="relative overflow-hidden bg-[#111111] text-white">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(125,10,10,0.38),_transparent_28%),radial-gradient(circle_at_center_right,_rgba(255,179,173,0.12),_transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0))]"></div>
+<div class="relative max-w-screen-2xl mx-auto px-8 md:px-12 py-16 md:py-20">
+<div class="rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-8 md:p-10 shadow-[0_30px_90px_rgba(0,0,0,0.26)] mb-12">
+<div class="grid grid-cols-1 xl:grid-cols-[1.15fr_0.85fr] gap-8 items-center">
+<div>
+<span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.3em] font-bold text-white/60 mb-6">Start a Consultation</span>
+<h3 class="font-headline text-4xl md:text-5xl font-black tracking-tighter mb-4">Build with a team focused on precision, compliance, and site-ready execution.</h3>
+<p class="text-white/70 text-base md:text-lg leading-relaxed max-w-3xl">From material selection to fabrication coordination, DD Tech supports high-performance infrastructure projects with engineering-led systems designed to perform under real-world demands.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="rounded-2xl border border-white/10 bg-[#801B1B]/40 px-5 py-5">
+<div class="text-3xl font-headline font-black text-white">48h</div>
+<div class="text-[10px] uppercase tracking-[0.22em] text-white/55 mt-2">Consultation Response</div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-5">
+<div class="text-3xl font-headline font-black text-[#ffb3ad]">ISO</div>
+<div class="text-[10px] uppercase tracking-[0.22em] text-white/55 mt-2">Quality-Controlled Workflow</div>
+</div>
+<a class="inline-flex items-center justify-center rounded-full bg-white text-[#801B1B] px-8 py-4 font-bold uppercase tracking-[0.2em] text-xs hover:bg-[#F4F4F4] transition-colors sm:col-span-2" href="contact.html">Request Consultation</a>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-[1.25fr_0.8fr_0.8fr_0.95fr] gap-8 lg:gap-10">
+<div class="rounded-[1.75rem] border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
+<img alt="DD Steel Logo" class="h-24 w-auto object-contain mb-6" src="images/DD%20Steel%20logo.png"/>
+<p class="text-white/70 text-sm md:text-base leading-relaxed max-w-md mb-8">DD Tech delivers rebar couplers and practical construction support systems designed for dependable performance and easier site execution.</p>
+<div class="grid grid-cols-2 gap-4">
+<div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4">
+<div class="text-2xl font-headline font-black text-[#ffb3ad]">2018</div>
+<div class="text-[10px] uppercase tracking-[0.22em] text-white/45 mt-2">Journey Began</div>
+</div>
+<div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4">
+<div class="text-2xl font-headline font-black text-[#ffb3ad]">125%</div>
+<div class="text-[10px] uppercase tracking-[0.22em] text-white/45 mt-2">Yield Development</div>
+</div>
+</div>
+</div>
+<nav aria-label="Footer quick links" class="rounded-[1.75rem] border border-white/10 bg-[#151515] p-8">
+<h4 class="text-xs font-bold uppercase tracking-[0.3em] text-white/55 mb-6">Quick Links</h4>
+<ul class="space-y-4 text-sm">
+<li><a class="text-white/75 hover:text-white transition-colors" href="index.html">Home</a></li>
+<li><a class="text-white/75 hover:text-white transition-colors" href="about.html">About</a></li>
+<li><a class="text-white/75 hover:text-white transition-colors" href="service.html">Services</a></li>
+<li><a class="text-white/75 hover:text-white transition-colors" href="project.html">Project</a></li>
+<li><a class="text-white/75 hover:text-white transition-colors" href="contact.html">Contact</a></li>
+</ul>
+</nav>
+<nav aria-label="Footer capabilities" class="rounded-[1.75rem] border border-white/10 bg-[#151515] p-8">
+<h4 class="text-xs font-bold uppercase tracking-[0.3em] text-white/55 mb-6">Capabilities</h4>
+<ul class="space-y-4 text-sm text-white/75">
+<li>Rebar Coupler Manufacturing</li>
+<li>On-Site Threading Services</li>
+<li>TMT Transport Vehicle Rental</li>
+<li>Construction Technical Support</li>
+</ul>
+</nav>
+<address class="rounded-[1.75rem] border border-white/10 bg-[#151515] p-8 not-italic">
+<h4 class="text-xs font-bold uppercase tracking-[0.3em] text-white/55 mb-6">Contact</h4>
+<div class="space-y-4 text-sm text-white/75 leading-relaxed">
+<p>RH32, Madhuban Sai City, Talegaon Dabhade, Pune - 410507</p>
+<p>+91-9767164152 | +91-8669110052</p>
+<p>ddgroup787@gmail.com</p>
+<p>GSTIN: 27AAPFD1301E1ZW</p>
+<p>Mon - Sat | 9:00 AM - 7:00 PM</p>
+
+</div>
+</address>
+</div>
+</div>
+<div class="mt-10 rounded-[1.5rem] border border-white/10 bg-white/[0.03] px-6 py-5 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] uppercase tracking-[0.22em] text-white/45">
+<span>&copy; 2024 DD Tech Infrastructure. All rights reserved.</span>
+<span>Built for Precision, Strength and Permanence.</span>
+</div>
+</div>
+</footer>
+<div class="fixed inset-0 z-[120] hidden items-center justify-center bg-[#111111]/70 px-4 backdrop-blur-sm" data-popup-modal="">
+<div class="absolute inset-0" data-popup-close=""></div>
+<div class="relative w-full max-w-2xl overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,#161313_0%,#801B1B_100%)] text-white shadow-[0_35px_90px_rgba(0,0,0,0.35)]">
+<button class="absolute right-5 top-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white transition-colors hover:bg-white/20" type="button" data-popup-close="">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="grid grid-cols-1 md:grid-cols-[0.9fr_1.1fr]">
+<div class="border-b border-white/10 p-8 md:border-b-0 md:border-r">
+<span class="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.3em] text-white/65 mb-6">Request Consultation</span>
+<h3 class="font-headline text-3xl md:text-4xl font-black tracking-tighter mb-4">Let's discuss your next structural project.</h3>
+<p class="text-sm md:text-base leading-relaxed text-white/75">Share your requirement and our team will connect with you for engineering consultation, specifications, and execution planning.</p>
+</div>
+<form class="space-y-4 p-8 md:p-10" data-popup-form="">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<label for="popup-name" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Full Name</label>
+<input class="w-full rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/45 focus:border-white/35 focus:ring-0" id="popup-name" name="name" placeholder="Full Name" required="" type="text"/>
+<label for="popup-phone" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Phone Number</label>
+<input class="w-full rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/45 focus:border-white/35 focus:ring-0" id="popup-phone" name="phone" placeholder="Phone Number" required="" type="tel"/>
+</div>
+<label for="popup-email" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Email Address</label>
+<input class="w-full rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/45 focus:border-white/35 focus:ring-0" id="popup-email" name="email" placeholder="Email Address" required="" type="email"/>
+<label for="popup-message" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Project Requirement</label>
+<textarea class="min-h-[120px] w-full rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/45 focus:border-white/35 focus:ring-0" id="popup-message" name="message" placeholder="Tell us about your project requirement"></textarea>
+<button class="inline-flex w-full items-center justify-center rounded-full bg-white px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] text-[#801B1B] transition-colors hover:bg-[#F4F4F4]" type="submit">Submit Request</button>
+</form>
+</div>
+</div>
+</div>
+<footer class="hidden bg-stone-100 dark:bg-stone-900 w-full border-t border-outline/5">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 px-12 py-20 w-full max-w-screen-2xl mx-auto">
+<div class="col-span-2 md:col-span-1">
+<div class="flex items-center gap-4 mb-8">
+<img alt="DD Tech Monolith Logo" class="h-8 w-auto grayscale brightness-0 dark:brightness-200" data-alt="DD Tech brand logo for footer in minimalist monochrome" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7z11m1iSltgonh6jnNo65XXJeoPY1pNS5ucYz5YDlUr9ETf_1gGZQ6hPHnL71Pss5Yoz3CrV8YpKRw_XsUnQ3Z-ZFPmuqnnRHwYmKeqcYSz6vi9ENNBWvkgBz0T3RmTnQttm1L2yLe3ilxIJpxsza4wxRY6FNWcSVQemm9q4lVNwvtMMqL4oOd5ANkWGCUdJjoAj_ONCUeR5I0NL-6MnH-e2tsHdRoRIJHgckEalmYvvdUp82sybjFTkAmOy78vZV748t3Xrc4Po"/>
+<span class="text-lg font-bold text-stone-900 dark:text-stone-100 font-headline">DD Tech</span>
+</div>
+<p class="text-stone-500 text-sm leading-relaxed mb-8">Construction support company focused on rebar couplers, threading services, transport support, and practical technical guidance.</p>
+</div>
+<div>
+<h4 class="font-bold uppercase tracking-widest text-xs mb-8 text-on-surface">Solutions</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-red-800 underline decoration-2 underline-offset-4 font-medium transition-colors" href="#">Rebar Couplers</a></li>
+<li><a class="text-stone-500 hover:text-red-800 underline decoration-2 underline-offset-4 font-medium transition-colors" href="#">On-Site Threading</a></li>
+<li><a class="text-stone-500 hover:text-red-800 underline decoration-2 underline-offset-4 font-medium transition-colors" href="#">TMT Vehicle Rental</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold uppercase tracking-widest text-xs mb-8 text-on-surface">Corporate</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-red-800 underline decoration-2 underline-offset-4 font-medium transition-colors" href="about.html">Company Profile</a></li>
+<li><a class="text-stone-500 hover:text-red-800 underline decoration-2 underline-offset-4 font-medium transition-colors" href="project.html">Applications</a></li>
+<li><a class="text-stone-500 hover:text-red-800 underline decoration-2 underline-offset-4 font-medium transition-colors" href="contact.html">Reach DD Tech</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold uppercase tracking-widest text-xs mb-8 text-on-surface">Support</h4>
+<ul class="space-y-4">
+<li><a class="text-stone-500 hover:text-red-800 underline decoration-2 underline-offset-4 font-medium transition-colors" href="contact.html">Contact Support</a></li>
+<li><a class="text-stone-500 hover:text-red-800 underline decoration-2 underline-offset-4 font-medium transition-colors" href="service.html">Service Details</a></li>
+</ul>
+</div>
+</div>
+<div class="w-full max-w-screen-2xl mx-auto px-12 pb-12 border-t border-outline/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<span class="text-stone-400 text-[10px] uppercase tracking-widest font-bold">© 2024 DD Tech Infrastructure. All rights reserved. Precision Engineering &amp; Architectural Stability.</span>
+<div class="flex gap-8">
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary">language</span>
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary">linked_camera</span>
+<span class="material-symbols-outlined text-stone-400 cursor-pointer hover:text-primary">share</span>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+<script>
+    if (typeof Lenis !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const lenis = new Lenis({
+            duration: 1.1,
+            smoothWheel: true,
+            smoothTouch: false,
+            anchors: true,
+        });
+
+        const onFrame = (time) => {
+            lenis.raf(time);
+            window.requestAnimationFrame(onFrame);
+        };
+
+        window.requestAnimationFrame(onFrame);
+        window.lenis = lenis;
+    }
+
+    const heroSwiperEl = document.querySelector('.hero-swiper');
+    if (heroSwiperEl && typeof Swiper !== 'undefined') {
+        const heroSwiper = new Swiper(heroSwiperEl, {
+            loop: true,
+            speed: 1100,
+            spaceBetween: 0,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
+            grabCursor: true,
+            autoplay: {
+                delay: 4200,
+                disableOnInteraction: false,
+            },
+            keyboard: {
+                enabled: true,
+            },
+            pagination: {
+                el: '.hero-swiper .swiper-pagination',
+                clickable: true,
+            },
+        });
+
+        if (typeof gsap !== 'undefined') {
+            const animateHeroSlide = (slide) => {
+                if (!slide) return;
+
+                const kicker = slide.querySelector('.hero-slide-kicker');
+                const title = slide.querySelector('.hero-slide-title');
+                const text = slide.querySelector('p');
+                const buttons = slide.querySelectorAll('a');
+
+                gsap.killTweensOf([kicker, title, text, buttons]);
+                gsap.set([kicker, title, text, buttons], { clearProps: 'all' });
+
+                gsap.timeline()
+                    .from(kicker, { y: 28, opacity: 0, duration: 0.55, ease: 'power3.out' })
+                    .from(title, { y: 42, opacity: 0, duration: 0.7, ease: 'power3.out' }, '-=0.25')
+                    .from(text, { y: 24, opacity: 0, duration: 0.55, ease: 'power2.out' }, '-=0.35')
+                    .from(buttons, {
+                        y: 20,
+                        opacity: 0,
+                        duration: 0.45,
+                        stagger: 0.12,
+                        ease: 'power2.out',
+                    }, '-=0.25');
+            };
+
+            animateHeroSlide(heroSwiper.slides[heroSwiper.activeIndex]);
+            heroSwiper.on('slideChangeTransitionStart', () => {
+                animateHeroSlide(heroSwiper.slides[heroSwiper.activeIndex]);
+            });
+        }
+    }
+
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.utils.toArray('main section').forEach((section, index) => {
+            if (index === 0) return;
+
+            gsap.from(section, {
+                y: 56,
+                opacity: 0,
+                duration: 0.9,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 82%',
+                    once: true,
+                },
+            });
+        });
+    }
+
+    const popupModal = document.querySelector('[data-popup-modal]');
+    const popupForm = document.querySelector('[data-popup-form]');
+    const popupCloseButtons = document.querySelectorAll('[data-popup-close]');
+
+    if (popupModal) {
+        window.setTimeout(() => {
+            popupModal.classList.remove('hidden');
+            popupModal.classList.add('flex');
+        }, 3000);
+
+        popupCloseButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                popupModal.classList.add('hidden');
+                popupModal.classList.remove('flex');
+            });
+        });
+    }
+
+    if (popupForm && popupModal) {
+        popupForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            popupModal.classList.add('hidden');
+            popupModal.classList.remove('flex');
+            popupForm.reset();
+        });
+    }
+
+    const mobileMenuButton = document.querySelector('[data-mobile-menu-button]');
+    const mobileMenu = document.querySelector('[data-mobile-menu]');
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden', isOpen);
+            mobileMenuButton.setAttribute('aria-expanded', String(!isOpen));
+        });
+    }
+</script>
+</body></html>
