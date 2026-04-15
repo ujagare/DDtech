@@ -1,0 +1,41 @@
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /about.html
+Allow: /service.html
+Allow: /service-detail.html
+Allow: /contact.html
+Allow: /project.html
+Allow: /images/
+Allow: /dist/
+
+Disallow: /api/
+Disallow: /netlify/
+Disallow: /.env
+Disallow: /node_modules/
+Disallow: /.git/
+
+Crawl-delay: 1
+Request-rate: 30/60
+
+Sitemap: https://www.ddtech.in/sitemap.xml
+
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1

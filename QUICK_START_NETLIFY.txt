@@ -1,0 +1,69 @@
+================================================================================
+QUICK START - NETLIFY DEPLOYMENT (5 MINUTES)
+================================================================================
+
+STEP 1: GET RESEND API KEY (2 minutes)
+================================================================================
+1. Go to https://resend.com
+2. Sign up (free)
+3. Create API key
+4. Copy it (you'll need it)
+
+STEP 2: PUSH TO GITHUB (1 minute)
+================================================================================
+1. Create GitHub repository
+2. Push all files:
+   git add .
+   git commit -m "Initial commit"
+   git push origin main
+
+STEP 3: CONNECT TO NETLIFY (1 minute)
+================================================================================
+1. Go to https://netlify.com
+2. Click "Add new site" → "Import an existing project"
+3. Select GitHub
+4. Choose your repository
+5. Click "Deploy site"
+
+STEP 4: ADD ENVIRONMENT VARIABLE (1 minute)
+================================================================================
+1. In Netlify dashboard, go to "Site settings"
+2. Click "Build & deploy" → "Environment"
+3. Add variable:
+   - Key: RESEND_API_KEY
+   - Value: (paste your Resend API key)
+4. Save
+
+DONE! ✅
+================================================================================
+Your website is now live at: https://your-site-name.netlify.app
+
+TEST THE FORM
+================================================================================
+1. Go to your website
+2. Fill contact form
+3. Submit
+4. Check email at Info@ddtech.in
+
+FILES CREATED FOR NETLIFY
+================================================================================
+✓ netlify.toml - Configuration
+✓ netlify/functions/send-email.js - Email function
+✓ .gitignore - Git ignore file
+✓ package.json - Updated with build scripts
+✓ contact.html - Updated with Netlify endpoint
+
+WHAT HAPPENS AUTOMATICALLY
+================================================================================
+- Every push to GitHub = automatic deployment
+- Emails sent via Resend API
+- HTTPS enabled automatically
+- CDN for fast loading
+- Serverless functions for email
+
+NEED HELP?
+================================================================================
+Read: NETLIFY_DEPLOYMENT_GUIDE.txt
+Check: NETLIFY_CHECKLIST.txt
+
+================================================================================
