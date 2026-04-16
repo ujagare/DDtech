@@ -182,10 +182,7 @@
       Sentry.init({
         dsn: "https://YOUR_SENTRY_DSN_HERE@ingest.sentry.io/YOUR_PROJECT_ID",
         environment: "production",
-        tracesSampleRate: 1.0,
-        replaysSessionSampleRate: 0.1,
-        replaysOnErrorSampleRate: 1.0,
-        integrations: [new Sentry.Replay(), new Sentry.BrowserTracing()],
+        tracesSampleRate: 0.1,
       });
     </script>
 
@@ -230,12 +227,12 @@
       })(window, document, "script", "dataLayer", "GTM-XXXXXXX");
     </script>
 
-    <!-- Umami Analytics -->
-    <script
+    <!-- Umami Analytics - Add your website ID when ready -->
+    <!-- <script
       async
       src="https://analytics.umami.is/script.js"
       data-website-id="YOUR_UMAMI_WEBSITE_ID"
-    ></script>
+    ></script> -->
 
     <style>
       .material-symbols-outlined {
