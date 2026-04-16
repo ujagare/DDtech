@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Service Details | DD Tech Coupler Specifications</title>
+    <title id="page-title">Service Details | DD Tech Coupler Specifications</title>
     <meta name="description" content="DD Tech service details: Rebar coupler specifications, on-site threading, forging & machining, transit mixer rental, and technical guidance for construction."/>
     <meta name="keywords" content="rebar coupler specifications, mechanical splicing details, threading service details, coupler types, forging machining specifications, transit mixer details, construction service specifications, DD Tech service details, coupler installation guide, reinforcement solutions specifications"/>
     <meta name="author" content="DD Tech Infrastructure"/>
@@ -14,12 +14,12 @@
     <meta property="og:description" content="Comprehensive details about DD Tech's construction services including rebar couplers, threading, and technical support."/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://www.ddtech.in/service-detail.html"/>
-    <meta property="og:image" content="https://www.ddtech.in/images/banner-2.jpg"/>
+    <meta property="og:image" content="https://www.ddtech.in/images/banner-2.webp"/>
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="DD Tech Service Details | Construction Solutions"/>
     <meta name="twitter:description" content="Detailed specifications and information about our rebar coupler and construction services."/>
-    <meta name="twitter:image" content="https://www.ddtech.in/images/banner-2.jpg"/>
+    <meta name="twitter:image" content="https://www.ddtech.in/images/banner-2.webp"/>
     <!-- JSON-LD Schema for AI SEO -->
     <script type="application/ld+json">
     {
@@ -89,15 +89,15 @@
     />
     <link href="dist/styles.css" rel="stylesheet" />
     <link href="dist/social-ui.css" rel="stylesheet" />
-    <!-- Sentry Error Tracking -->
-    <script src="https://browser.sentry-cdn.com/7.91.0/bundle.min.js"></script>
+    <!-- Sentry Error Tracking - Commented out until DSN is configured -->
+    <!-- <script src="https://browser.sentry-cdn.com/7.91.0/bundle.min.js"></script>
     <script>
       Sentry.init({
         dsn: "https://YOUR_SENTRY_DSN_HERE@ingest.sentry.io/YOUR_PROJECT_ID",
         environment: "production",
         tracesSampleRate: 0.1
       });
-    </script>
+    </script> -->
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -172,9 +172,53 @@
         );
       }
       @media (max-width: 767px) {
+        .site-header {
+          background: #ffffff !important;
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
+        }
         .hero-inner-mobile {
           padding-top: 2rem !important;
           padding-bottom: 2rem !important;
+        }
+        /* Override Tailwind classes for mobile */
+        .text-4xl, .md\\:text-6xl, .xl\\:text-\\[4\\.5rem\\] {
+          font-size: 2.1rem !important;
+          line-height: 0.96 !important;
+        }
+        .text-3xl, .md\\:text-5xl, .md\\:text-4xl {
+          font-size: 1.5rem !important;
+          line-height: 1.1 !important;
+        }
+        .text-2xl {
+          font-size: 1.05rem !important;
+          line-height: 1.25 !important;
+        }
+        .text-xl {
+          font-size: 0.98rem !important;
+          line-height: 1.25 !important;
+        }
+        .text-lg, .md\\:text-xl {
+          font-size: 0.86rem !important;
+          line-height: 1.5 !important;
+        }
+        /* Service detail specific optimizations */
+        #hero-title {
+          font-size: 2.1rem !important;
+          line-height: 0.96 !important;
+        }
+        #hero-desc {
+          font-size: 0.86rem !important;
+          line-height: 1.5 !important;
+        }
+        #overview-title, #process-title {
+          font-size: 1.5rem !important;
+          line-height: 1.1 !important;
+          margin-bottom: 1rem !important;
+        }
+        #overview-desc {
+          font-size: 0.88rem !important;
+          line-height: 1.52 !important;
         }
       }
     </style>
@@ -184,7 +228,7 @@
   >
     <!-- Navigation -->
     <!-- Top Navigation Bar -->
-<header class="bg-white backdrop-blur-0 md:backdrop-blur-md sticky top-0 z-50 md:border-b md:border-stone-200/60 shadow-sm">
+<header class="site-header bg-white backdrop-blur-0 md:backdrop-blur-md sticky top-0 z-50 border-b-0 md:border-b md:border-stone-200/60 shadow-sm">
 <div class="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-3 md:py-4 max-w-screen-2xl mx-auto gap-4">
 <a class="flex items-center" href="index.html">
 <img alt="DD Steel Logo" class="h-14 md:h-20 w-auto object-contain" src="images/DD%20Steel%20logo.png" loading="lazy"/>
@@ -522,7 +566,7 @@ const SERVICES = {
     badge: 'Manufacturing',
     title: 'Rebar Coupler Manufacturing',
     heroDesc: 'We manufacture all types of rebar couplers, ensuring high strength, precision, and compliance with industry standards.',
-    heroImg: 'images/Rube cuplar/8fbe942b-5562-4d45-8299-eacd2ec39d6c.jpg',
+    heroImg: 'images/Rube cuplar/8fbe942b-5562-4d45-8299-eacd2ec39d6c.webp',
     overviewTitle: 'Rebar Coupler Manufacturing - High-Strength Production',
     overviewDesc: 'We manufacture all types of rebar couplers, ensuring high strength, precision, and compliance with industry standards. DD TECH manufactures parallel threaded mechanical splicing systems designed for the connection of concrete reinforcement bars ranging from 16mm to 40mm diameter. Our couplers are manufactured in compliance with IS 16172, ACI 318, BS 8110, ASME Sec III Div, and ISO 9001.',
     features: ['Standard (Parallel Threaded) Coupler', 'Reducer Coupler', 'Position Coupler (Adjustable)', 'MBT Coupler (Mechanical Bolt Type)', 'High strength and precision manufacturing', 'Full compliance with industry standards'],
@@ -538,20 +582,20 @@ const SERVICES = {
       { step: '03', title: 'Quality Inspection', desc: 'Dimensional checks, thread gauging, and batch traceability marking.' }
     ],
     gallery: [
-      { img: 'images/Rube cuplar/8fbe942b-5562-4d45-8299-eacd2ec39d6c.jpg', title: 'Standard Coupler', desc: 'Parallel threaded coupler for same-diameter rebar connections.' },
-      { img: 'images/Rube cuplar/0ab62429-149c-4688-93a4-81b045813d2e.jpg', title: 'Coupler Range', desc: 'Complete range of DD Tech rebar couplers.' },
-      { img: 'images/Rube cuplar/24793e77-49e3-4bc9-b1b1-f2c9c085410a.jpg', title: 'Precision Manufacturing', desc: 'High-precision machined couplers ready for installation.' },
-      { img: 'images/Rube cuplar/a5d99c6c-e747-4110-9238-c14467061c5c.jpg', title: 'Coupler Assembly', desc: 'Coupler components showing threading detail.' },
-      { img: 'images/Rube cuplar/e3745b05-7665-4446-86ac-41405bb20cc8.jpg', title: 'Quality Products', desc: 'Finished couplers with quality markings.' },
-      { img: 'images/Rube cuplar/fc0904e8-3c6d-421e-8df0-7680f429d2d6.jpg', title: 'Reducer Coupler', desc: 'Connects rebars of different diameters.' },
-      { img: 'images/Rube cuplar/ff65de89-af97-4eff-bbe6-0110aa01f589.jpg', title: 'Position Coupler', desc: 'Adjustable coupler for retrofit and congested areas.' }
+      { img: 'images/Rube cuplar/8fbe942b-5562-4d45-8299-eacd2ec39d6c.webp', title: 'Standard Coupler', desc: 'Parallel threaded coupler for same-diameter rebar connections.' },
+      { img: 'images/Rube cuplar/0ab62429-149c-4688-93a4-81b045813d2e.webp', title: 'Coupler Range', desc: 'Complete range of DD Tech rebar couplers.' },
+      { img: 'images/Rube cuplar/24793e77-49e3-4bc9-b1b1-f2c9c085410a.webp', title: 'Precision Manufacturing', desc: 'High-precision machined couplers ready for installation.' },
+      { img: 'images/Rube cuplar/a5d99c6c-e747-4110-9238-c14467061c5c.webp', title: 'Coupler Assembly', desc: 'Coupler components showing threading detail.' },
+      { img: 'images/Rube cuplar/e3745b05-7665-4446-86ac-41405bb20cc8.webp', title: 'Quality Products', desc: 'Finished couplers with quality markings.' },
+      { img: 'images/Rube cuplar/fc0904e8-3c6d-421e-8df0-7680f429d2d6.webp', title: 'Reducer Coupler', desc: 'Connects rebars of different diameters.' },
+      { img: 'images/Rube cuplar/ff65de89-af97-4eff-bbe6-0110aa01f589.webp', title: 'Position Coupler', desc: 'Adjustable coupler for retrofit and congested areas.' }
     ]
   },
   'on-site-threading': {
     badge: 'On-Site Service',
     title: 'On-Site Threading Services',
     heroDesc: 'We provide rebar threading services at construction sites, helping clients save time and ensure proper installation without delays.',
-    heroImg: 'images/DSC06904.jpg',
+    heroImg: 'images/DSC06904.webp',
     overviewTitle: 'On-Site Threading Services - Threading at Your Construction Site',
     overviewDesc: 'We provide rebar threading services at construction sites, helping clients save time and ensure proper installation without delays. Our on-site threading service brings the threading machine directly to your project location. This eliminates the need to transport rebars off-site, saving time and reducing coordination delays during active construction phases.',
     features: ['Mobile threading machine setup', 'Parallel thread cutting on-site', 'Supports 16mm to 40mm bars', 'Trained operators for site execution', 'Time-saving solution', 'Proper installation without delays'],
@@ -567,20 +611,20 @@ const SERVICES = {
       { step: '03', title: 'Threading & Handover', desc: 'Bars threaded, inspected, and handed over ready for coupler installation.' }
     ],
     gallery: [
-      { img: 'images/onsite/0194b473-6d3d-4c3f-9269-576ff312bd19.jpg', title: 'On-Site Threading', desc: 'Threading machine setup at construction site.' },
-      { img: 'images/onsite/2a0e6b34-b029-4a42-9e1f-f745bde7ec50.jpg', title: 'Site Operation', desc: 'On-site threading operation in progress.' },
-      { img: 'images/onsite/4ec56fbd-1840-4a84-96f9-d7f10a5838ab.jpg', title: 'Threading Process', desc: 'Rebar threading being performed at site.' },
-      { img: 'images/onsite/849bc615-a5ef-408e-a8d0-4bb82b7da44b.jpg', title: 'Mobile Setup', desc: 'Mobile threading equipment at construction location.' },
-      { img: 'images/onsite/b66bb5b5-973e-493a-8b13-25e45e6aa54c.jpg', title: 'Threaded Rebar', desc: 'Finished threaded bar ready for coupler connection.' },
-      { img: 'images/onsite/b791bbd6-4702-4b49-8298-206aab4d9048.jpg', title: 'Site Execution', desc: 'Skilled operators performing threading work.' },
-      { img: 'images/onsite/f43495b1-5f89-474d-8d4c-346858a50392.jpg', title: 'Quality Threading', desc: 'Precision threading for coupler compatibility.' }
+      { img: 'images/foging/0194b473-6d3d-4c3f-9269-576ff312bd19.webp', title: 'On-Site Threading', desc: 'Threading machine setup at construction site.' },
+      { img: 'images/foging/2a0e6b34-b029-4a42-9e1f-f745bde7ec50.webp', title: 'Site Operation', desc: 'On-site threading operation in progress.' },
+      { img: 'images/foging/4ec56fbd-1840-4a84-96f9-d7f10a5838ab.webp', title: 'Threading Process', desc: 'Rebar threading being performed at site.' },
+      { img: 'images/foging/849bc615-a5ef-408e-a8d0-4bb82b7da44b.webp', title: 'Mobile Setup', desc: 'Mobile threading equipment at construction location.' },
+      { img: 'images/foging/b66bb5b5-973e-493a-8b13-25e45e6aa54c.webp', title: 'Threaded Rebar', desc: 'Finished threaded bar ready for coupler connection.' },
+      { img: 'images/foging/b791bbd6-4702-4b49-8298-206aab4d9048.webp', title: 'Site Execution', desc: 'Skilled operators performing threading work.' },
+      { img: 'images/foging/f43495b1-5f89-474d-8d4c-346858a50392.webp', title: 'Quality Threading', desc: 'Precision threading for coupler compatibility.' }
     ]
   },
   'forging-machining': {
     badge: 'Manufacturing',
     title: 'Forging & Machining',
     heroDesc: 'We offer forging and machining solutions for rebar couplers, ensuring durability, accuracy, and consistent quality.',
-    heroImg: 'images/foging/d5286385-95a4-44f8-8200-83cd57cf20d5.jpg',
+    heroImg: 'images/foging/d5286385-95a4-44f8-8200-83cd57cf20d5.webp',
     overviewTitle: 'Forging & Machining - Precision Manufacturing',
     overviewDesc: 'We offer forging and machining solutions for rebar couplers, ensuring durability, accuracy, and consistent quality. Our forging and machining facility supports the production of high-strength rebar couplers with tight dimensional tolerances. Every component goes through controlled forging, CNC machining, and thread cutting processes to ensure consistent performance.',
     features: ['CNC precision machining', 'Controlled forging process', 'Dimensional accuracy checks', 'Consistent batch quality', 'Durable and accurate products', 'Quality assurance at every step'],
@@ -596,14 +640,14 @@ const SERVICES = {
       { step: '03', title: 'Inspection & Dispatch', desc: 'Final dimensional inspection, marking, and dispatch.' }
     ],
     gallery: [
-      { img: 'images/foging/d5286385-95a4-44f8-8200-83cd57cf20d5.jpg', title: 'Workshop Equipment', desc: 'Machining equipment lineup at DD Tech facility.' },
-      { img: 'images/foging/0194b473-6d3d-4c3f-9269-576ff312bd19.jpg', title: 'Forging Process', desc: 'High-strength forging operations in progress.' },
-      { img: 'images/foging/2a0e6b34-b029-4a42-9e1f-f745bde7ec50.jpg', title: 'CNC Machining', desc: 'Precision CNC machining for tight tolerances.' },
-      { img: 'images/foging/4ec56fbd-1840-4a84-96f9-d7f10a5838ab.jpg', title: 'Manufacturing Setup', desc: 'Complete manufacturing facility for couplers.' },
-      { img: 'images/foging/849bc615-a5ef-408e-a8d0-4bb82b7da44b.jpg', title: 'Quality Control', desc: 'Dimensional accuracy checks and inspection.' },
-      { img: 'images/foging/b66bb5b5-973e-493a-8b13-25e45e6aa54c.jpg', title: 'Thread Cutting', desc: 'Precision thread cutting on coupler components.' },
-      { img: 'images/foging/b791bbd6-4702-4b49-8298-206aab4d9048.jpg', title: 'Finished Products', desc: 'Machined and finished coupler units ready for use.' },
-      { img: 'images/foging/f43495b1-5f89-474d-8d4c-346858a50392.jpg', title: 'Production Line', desc: 'Consistent batch quality production process.' }
+      { img: 'images/foging/d5286385-95a4-44f8-8200-83cd57cf20d5.webp', title: 'Workshop Equipment', desc: 'Machining equipment lineup at DD Tech facility.' },
+      { img: 'images/foging/0194b473-6d3d-4c3f-9269-576ff312bd19.webp', title: 'Forging Process', desc: 'High-strength forging operations in progress.' },
+      { img: 'images/foging/2a0e6b34-b029-4a42-9e1f-f745bde7ec50.webp', title: 'CNC Machining', desc: 'Precision CNC machining for tight tolerances.' },
+      { img: 'images/foging/4ec56fbd-1840-4a84-96f9-d7f10a5838ab.webp', title: 'Manufacturing Setup', desc: 'Complete manufacturing facility for couplers.' },
+      { img: 'images/foging/849bc615-a5ef-408e-a8d0-4bb82b7da44b.webp', title: 'Quality Control', desc: 'Dimensional accuracy checks and inspection.' },
+      { img: 'images/foging/b66bb5b5-973e-493a-8b13-25e45e6aa54c.webp', title: 'Thread Cutting', desc: 'Precision thread cutting on coupler components.' },
+      { img: 'images/foging/b791bbd6-4702-4b49-8298-206aab4d9048.webp', title: 'Finished Products', desc: 'Machined and finished coupler units ready for use.' },
+      { img: 'images/foging/f43495b1-5f89-474d-8d4c-346858a50392.webp', title: 'Production Line', desc: 'Consistent batch quality production process.' }
     ]
   },
   'transit-mixers': {
@@ -626,16 +670,16 @@ const SERVICES = {
       { step: '03', title: 'Ongoing Support', desc: 'Continuous coordination to ensure smooth material movement.' }
     ],
     gallery: [
-      { img: 'images/Transpotationn/b42af744-590b-46c7-961e-189626cf2ac6.jpg', title: 'Transit Mixer Vehicle', desc: 'DD Tech transit mixer ready for concrete delivery.' },
-      { img: 'images/Transpotationn/cf2cf33d-7d64-4a24-a7b8-8a9407dc1966.jpg', title: 'TM Fleet', desc: 'Our fleet of transit mixers for RMC plant support.' },
-      { img: 'images/Transpotationn/fc1632ac-6698-4821-b5b1-b7964637b8db.jpg', title: 'On-Site Delivery', desc: 'Timely concrete delivery to construction sites.' }
+      { img: 'images/Transpotationn/b42af744-590b-46c7-961e-189626cf2ac6.webp', title: 'Transit Mixer Vehicle', desc: 'DD Tech transit mixer ready for concrete delivery.' },
+      { img: 'images/Transpotationn/cf2cf33d-7d64-4a24-a7b8-8a9407dc1966.webp', title: 'TM Fleet', desc: 'Our fleet of transit mixers for RMC plant support.' },
+      { img: 'images/Transpotationn/fc1632ac-6698-4821-b5b1-b7964637b8db.webp', title: 'On-Site Delivery', desc: 'Timely concrete delivery to construction sites.' }
     ]
   },
   'technical-guidance': {
     badge: 'Technical Support',
     title: 'Technical Support & Guidance',
     heroDesc: 'Our team provides expert support and consultation for selecting the right couplers and installation methods.',
-    heroImg: 'images/Technical/13.jpg',
+    heroImg: 'images/Technical/13.webp',
     overviewTitle: 'Technical Support & Guidance - Expert Consultation',
     overviewDesc: 'Our team provides expert support and consultation for selecting the right couplers and installation methods. DD Tech provides practical technical support to contractors, engineers, and project teams. From coupler selection to installation guidance, our team helps you make the right decisions for your structural requirements.',
     features: ['Coupler selection guidance', 'Installation method support', 'Compliance documentation', 'On-site technical assistance', 'Expert consultation services', 'Right product recommendations'],
@@ -651,11 +695,11 @@ const SERVICES = {
       { step: '03', title: 'Execution Support', desc: 'Technical documentation and on-site guidance provided.' }
     ],
     gallery: [
-      { img: 'images/Technical/13.jpg', title: 'Technical Consultation', desc: 'Expert guidance for coupler selection and installation.' },
-      { img: 'images/Technical/33.jpg', title: 'Installation Guidance', desc: 'Proper installation methods and best practices.' },
-      { img: 'images/Technical/g66new.png', title: 'Technical Documentation', desc: 'Comprehensive technical guides and datasheets.' },
-      { img: 'images/Technical/g77new.png', title: 'Standards Compliance', desc: 'Compliance with international standards and codes.' },
-      { img: 'images/Technical/p11new.png', title: 'Product Selection', desc: 'Right coupler selection for your requirements.' }
+      { img: 'images/Technical/13.webp', title: 'Technical Consultation', desc: 'Expert guidance for coupler selection and installation.' },
+      { img: 'images/Technical/33.webp', title: 'Installation Guidance', desc: 'Proper installation methods and best practices.' },
+      { img: 'images/Technical/g66new.webp', title: 'Technical Documentation', desc: 'Comprehensive technical guides and datasheets.' },
+      { img: 'images/Technical/g77new.webp', title: 'Standards Compliance', desc: 'Compliance with international standards and codes.' },
+      { img: 'images/Technical/p11new.webp', title: 'Product Selection', desc: 'Right coupler selection for your requirements.' }
     ]
   }
 };
@@ -669,70 +713,93 @@ function renderService(key) {
   const s = SERVICES[key] || SERVICES['rebar-coupler'];
 
   // Page title
-  document.getElementById('page-title').textContent = s.title + ' | DD Tech';
+  const pageTitle = document.getElementById('page-title');
+  if (pageTitle) pageTitle.textContent = s.title + ' | DD Tech';
 
   // Hero
-  document.getElementById('hero-badge').textContent = s.badge;
-  document.getElementById('hero-title').textContent = s.title;
-  document.getElementById('hero-desc').textContent = s.heroDesc;
-  document.getElementById('hero-img').src = s.heroImg;
-  document.getElementById('hero-img').alt = s.title;
+  const heroBadge = document.getElementById('hero-badge');
+  if (heroBadge) heroBadge.textContent = s.badge;
+  
+  const heroTitle = document.getElementById('hero-title');
+  if (heroTitle) heroTitle.textContent = s.title;
+  
+  const heroDesc = document.getElementById('hero-desc');
+  if (heroDesc) heroDesc.textContent = s.heroDesc;
+  
+  const heroImg = document.getElementById('hero-img');
+  if (heroImg) {
+    heroImg.src = s.heroImg;
+    heroImg.alt = s.title;
+  }
 
   // Overview
-  document.getElementById('overview-title').textContent = s.overviewTitle;
-  document.getElementById('overview-desc').textContent = s.overviewDesc;
+  const overviewTitle = document.getElementById('overview-title');
+  if (overviewTitle) overviewTitle.textContent = s.overviewTitle;
+  
+  const overviewDesc = document.getElementById('overview-desc');
+  if (overviewDesc) overviewDesc.textContent = s.overviewDesc;
 
   // Features
   const fl = document.getElementById('features-list');
-  fl.innerHTML = s.features.map(f => `
-    <div class="flex items-center gap-3">
-      <span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
-      <span class="text-stone-700">${f}</span>
-    </div>`).join('');
+  if (fl) {
+    fl.innerHTML = s.features.map(f => `
+      <div class="flex items-center gap-3">
+        <span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span>
+        <span class="text-stone-700">${f}</span>
+      </div>`).join('');
+  }
 
   // Highlights
   const hl = document.getElementById('highlights-list');
-  hl.innerHTML = s.highlights.map(h => `
-    <div class="rounded-2xl border border-white/10 bg-white/5 p-4 flex items-start gap-4">
-      <span class="material-symbols-outlined text-[#ffb3ad] shrink-0">${h.icon}</span>
+  if (hl) {
+    hl.innerHTML = s.highlights.map(h => `
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-4 flex items-start gap-4">
+        <span class="material-symbols-outlined text-[#ffb3ad] shrink-0">${h.icon}</span>
       <div>
         <div class="font-bold text-white text-sm mb-1">${h.title}</div>
         <p class="text-white/60 text-xs leading-relaxed">${h.desc}</p>
       </div>
     </div>`).join('');
+  }
 
   // Process
   const ps = document.getElementById('process-steps');
-  ps.innerHTML = s.process.map(p => `
-    <div class="rounded-[1.75rem] border border-[#ead8d4] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
-      <div class="text-[10px] uppercase tracking-[0.3em] text-primary font-bold mb-3">${p.step}</div>
-      <h3 class="font-headline text-xl font-black mb-3">${p.title}</h3>
-      <p class="text-stone-500 leading-relaxed text-sm">${p.desc}</p>
-    </div>`).join('');
+  if (ps) {
+    ps.innerHTML = s.process.map(p => `
+      <div class="rounded-[1.75rem] border border-[#ead8d4] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+        <div class="text-[10px] uppercase tracking-[0.3em] text-primary font-bold mb-3">${p.step}</div>
+        <h3 class="font-headline text-xl font-black mb-3">${p.title}</h3>
+        <p class="text-stone-500 leading-relaxed text-sm">${p.desc}</p>
+      </div>`).join('');
+  }
 
   // Gallery
   const gg = document.getElementById('gallery-grid');
-  gg.innerHTML = s.gallery.map(g => `
-    <div class="rounded-[1.75rem] overflow-hidden border border-[#ead8d4] bg-white shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
-      <img src="${g.img}" alt="${g.title}" class="w-full h-72 object-contain bg-gray-50" loading="lazy"/>
-      <div class="p-6">
-        <h3 class="font-headline text-lg font-black mb-2">${g.title}</h3>
-        <p class="text-stone-500 text-sm leading-relaxed">${g.desc}</p>
-      </div>
-    </div>`).join('');
+  if (gg) {
+    gg.innerHTML = s.gallery.map(g => `
+      <div class="rounded-[1.75rem] overflow-hidden border border-[#ead8d4] bg-white shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+        <img src="${g.img}" alt="${g.title}" class="w-full h-72 object-contain bg-gray-50" loading="lazy"/>
+        <div class="p-6">
+          <h3 class="font-headline text-lg font-black mb-2">${g.title}</h3>
+          <p class="text-stone-500 text-sm leading-relaxed">${g.desc}</p>
+        </div>
+      </div>`).join('');
+  }
 
   // Other services
   const os = document.getElementById('other-services');
-  os.innerHTML = Object.entries(SERVICES)
-    .filter(([k]) => k !== key)
-    .map(([k, sv]) => `
-      <a href="service-detail.html?service=${k}" class="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition-colors block">
+  if (os) {
+    os.innerHTML = Object.entries(SERVICES)
+      .filter(([k]) => k !== key)
+      .map(([k, sv]) => `
+        <a href="service-detail.html?service=${k}" class="rounded-[1.75rem] border border-white/10 bg-white/5 p-6 hover:bg-white/10 transition-colors block">
         <h3 class="font-headline text-lg font-black text-white mb-2">${sv.title}</h3>
         <p class="text-white/60 text-sm leading-relaxed">${sv.heroDesc}</p>
         <div class="mt-4 flex items-center gap-2 text-[#ffb3ad] text-xs font-bold uppercase tracking-[0.2em]">
           Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
         </div>
       </a>`).join('');
+  }
 }
 
 // Mobile menu

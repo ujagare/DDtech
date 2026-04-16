@@ -228,6 +228,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             backdrop-filter: blur(20px);
         }
         @media (max-width: 767px) {
+            .site-header {
+                background: #ffffff !important;
+                backdrop-filter: none !important;
+                -webkit-backdrop-filter: none !important;
+            }
+        }
+        @media (max-width: 767px) {
             .what-we-prepare-outer {
                 background: transparent !important;
                 border: none !important;
@@ -356,7 +363,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 <body class="bg-surface font-body text-on-surface overflow-x-hidden">
 <!-- Top Navigation Bar -->
-<header class="bg-white backdrop-blur-0 md:backdrop-blur-md sticky top-0 z-50 md:border-b md:border-stone-200/60 shadow-sm">
+<header class="site-header bg-white backdrop-blur-0 md:backdrop-blur-md sticky top-0 z-50 border-b-0 md:border-b md:border-stone-200/60 shadow-sm">
 <div class="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-3 md:py-4 max-w-screen-2xl mx-auto gap-4">
 <a class="flex items-center" href="index.html">
 <img alt="DD Steel Logo" class="h-14 md:h-20 w-auto object-contain" src="images/DD%20Steel%20logo.png" loading="lazy"/>
@@ -474,7 +481,7 @@ function toggleMobileMenu() {
 <div class="relative max-w-screen-2xl mx-auto min-h-[calc(100vh-76px)] md:min-h-[calc(100vh-89px)] px-4 sm:px-6 lg:px-8 py-8 md:py-12 flex items-center">
 <div class="hero-slide-content w-full">
 <span class="hero-slide-kicker">Coupler Manufacturing</span>
-<h1 class="hero-slide-title font-headline text-[2.85rem] sm:text-[3rem] md:text-6xl xl:text-[5.2rem] font-black leading-[0.92] tracking-tighter mb-5 text-white">Precision-machined couplers built for strength, fit, and reliable connection.</h1>
+<h1 class="hero-slide-title font-headline text-[2.2rem] sm:text-[2.75rem] md:text-6xl xl:text-[5.2rem] font-black leading-[0.92] tracking-tighter mb-5 text-white">Precision-machined couplers built for strength, fit, and reliable connection.</h1>
 <p class="max-w-2xl text-sm sm:text-base md:text-lg text-white/78 leading-relaxed mb-8">Finished with consistent internal threading and ready for demanding reinforcement work, our couplers are manufactured to support confident site performance.</p>
 <div class="grid grid-cols-1 sm:grid-cols-[auto_auto] gap-3 sm:w-fit">
 <a class="inline-flex items-center justify-center rounded-full bg-[#7D0A0A] text-white px-8 py-4 font-bold uppercase tracking-[0.2em] text-xs hover:bg-[#5f0707] transition-colors" href="contact.html">Request Consultation</a>
@@ -492,7 +499,7 @@ function toggleMobileMenu() {
 <div class="relative max-w-screen-2xl mx-auto min-h-[calc(100vh-76px)] md:min-h-[calc(100vh-89px)] px-4 sm:px-6 lg:px-8 py-8 md:py-12 flex items-center">
 <div class="hero-slide-content w-full">
 <span class="hero-slide-kicker">Rebar Preparation</span>
-<h2 class="hero-slide-title font-headline text-[2.85rem] sm:text-[3rem] md:text-6xl xl:text-[5.2rem] font-black leading-[0.92] tracking-tighter mb-5 text-white">Threaded bars and coupler-ready assemblies prepared for faster site installation.</h2>
+<h2 class="hero-slide-title font-headline text-[2.2rem] sm:text-[2.75rem] md:text-6xl xl:text-[5.2rem] font-black leading-[0.92] tracking-tighter mb-5 text-white">Threaded bars and coupler-ready assemblies prepared for faster site installation.</h2>
 <p class="max-w-2xl text-sm sm:text-base md:text-lg text-white/78 leading-relaxed mb-8">Our rebar preparation process helps teams move into installation with better alignment, reduced delay, and dependable continuity across active projects.</p>
 <div class="grid grid-cols-1 sm:grid-cols-[auto_auto] gap-3 sm:w-fit">
 <a class="inline-flex items-center justify-center rounded-full bg-[#7D0A0A] text-white px-8 py-4 font-bold uppercase tracking-[0.2em] text-xs hover:bg-[#5f0707] transition-colors" href="project.html">View Projects</a>
@@ -510,7 +517,7 @@ function toggleMobileMenu() {
 <div class="relative max-w-screen-2xl mx-auto min-h-[calc(100vh-76px)] md:min-h-[calc(100vh-89px)] px-4 sm:px-6 lg:px-8 py-8 md:py-12 flex items-center">
 <div class="hero-slide-content w-full">
 <span class="hero-slide-kicker">On-Site Threading</span>
-<h2 class="hero-slide-title font-headline text-[2.85rem] sm:text-[3rem] md:text-6xl xl:text-[5.2rem] font-black leading-[0.92] tracking-tighter mb-5 text-white">Field-ready threading support that keeps reinforcement work moving on schedule.</h2>
+<h2 class="hero-slide-title font-headline text-[2.2rem] sm:text-[2.75rem] md:text-6xl xl:text-[5.2rem] font-black leading-[0.92] tracking-tighter mb-5 text-white">Field-ready threading support that keeps reinforcement work moving on schedule.</h2>
 <p class="max-w-2xl text-sm sm:text-base md:text-lg text-white/78 leading-relaxed mb-8">With practical machine setup and skilled on-site handling, DD Tech supports accurate threading operations directly where execution matters most.</p>
 <div class="grid grid-cols-1 sm:grid-cols-[auto_auto] gap-3 sm:w-fit">
 <a class="inline-flex items-center justify-center rounded-full bg-[#7D0A0A] text-white px-8 py-4 font-bold uppercase tracking-[0.2em] text-xs hover:bg-[#5f0707] transition-colors" href="contact.html">Start Your Project</a>
@@ -527,34 +534,34 @@ function toggleMobileMenu() {
 <section class="py-16 md:py-24 xl:py-32 px-4 sm:px-6 lg:px-8 bg-[linear-gradient(180deg,#f4f4f4_0%,#fbf8f7_100%)]">
 <div class="max-w-screen-2xl mx-auto">
 <div class="grid grid-cols-1 xl:grid-cols-[0.95fr_1.05fr] gap-10 mb-14">
-<div class="rounded-[2rem] bg-[#1f1a1a] text-white p-6 sm:p-8 md:p-12 shadow-[0_30px_80px_rgba(96,1,8,0.16)]">
+<div class="rounded-[2rem] bg-[#1f1a1a] text-white p-5 sm:p-8 md:p-12 shadow-[0_30px_80px_rgba(96,1,8,0.16)]">
 <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.3em] font-bold text-white/65 mb-8">Core Systems</span>
-<h2 class="font-headline text-3xl sm:text-4xl md:text-6xl font-black leading-[0.95] tracking-tighter mb-6 md:mb-8">Technical Excellence</h2>
+<h2 class="font-headline text-[1.7rem] sm:text-4xl md:text-6xl font-black leading-[0.95] tracking-tighter mb-5 md:mb-8">Technical Excellence</h2>
 <p class="text-white/70 text-sm sm:text-base md:text-lg leading-relaxed max-w-xl mb-8 md:mb-10">Mechanical splicing systems engineered for full-strength joints, dependable elongation control, and practical installation across demanding infrastructure and building applications.</p>
 <div class="grid grid-cols-2 gap-3 md:gap-4">
 <div class="rounded-2xl border border-white/10 bg-[#801B1B] px-4 py-5 md:px-5 md:py-6">
-<div class="text-2xl sm:text-3xl md:text-4xl font-headline font-black text-white">125%</div>
+<div class="text-xl sm:text-3xl md:text-4xl font-headline font-black text-white">125%</div>
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/65 mt-2">Yield Development</div>
 </div>
 <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 md:px-5 md:py-6">
-<div class="text-2xl sm:text-3xl md:text-4xl font-headline font-black text-[#ffb3ad]">575</div>
+<div class="text-xl sm:text-3xl md:text-4xl font-headline font-black text-[#ffb3ad]">575</div>
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/50 mt-2">Min Yield N/mm2</div>
 </div>
 <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 md:px-5 md:py-6">
-<div class="text-2xl sm:text-3xl md:text-4xl font-headline font-black text-[#ffb3ad]">800</div>
+<div class="text-xl sm:text-3xl md:text-4xl font-headline font-black text-[#ffb3ad]">800</div>
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/50 mt-2">Min Tensile N/mm2</div>
 </div>
 <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-5 md:px-5 md:py-6">
-<div class="text-2xl sm:text-3xl md:text-4xl font-headline font-black text-[#ffb3ad]">&lt;0.1</div>
+<div class="text-xl sm:text-3xl md:text-4xl font-headline font-black text-[#ffb3ad]">&lt;0.1</div>
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/50 mt-2">Permanent Elongation</div>
 </div>
 </div>
 </div>
-<div class="rounded-[2rem] border border-[#d8b7b1] bg-white p-6 sm:p-8 md:p-10 shadow-[0_30px_80px_rgba(0,0,0,0.07)]">
+<div class="rounded-[2rem] border border-[#d8b7b1] bg-white p-5 sm:p-8 md:p-10 shadow-[0_30px_80px_rgba(0,0,0,0.07)]">
 <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
 <div>
 <p class="text-[10px] uppercase tracking-[0.3em] text-primary font-bold mb-4">Mechanical Splicing &amp; Structural Components</p>
-<h3 class="font-headline text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter text-on-surface">Systems Built for Critical Performance.</h3>
+<h3 class="font-headline text-[1.7rem] sm:text-4xl md:text-5xl font-black tracking-tighter text-on-surface">Systems Built for Critical Performance.</h3>
 <p class="mt-4 md:mt-5 max-w-2xl text-on-surface-variant text-sm sm:text-base md:text-lg leading-relaxed">Our mechanical splicing system is built around full-strength joint performance, preserved bar cross-section area, and practical site installation without torque wrenching.</p>
 </div>
 <div class="rounded-full border border-[#ead8d4] bg-[#faf4f3] px-5 py-3 text-[10px] uppercase tracking-[0.24em] font-bold text-primary">Logo Palette Applied</div>
@@ -591,74 +598,94 @@ function toggleMobileMenu() {
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <!-- Service 1: Rebar Coupler Manufacturing -->
-<a href="service-detail.html?service=rebar-coupler" class="block rounded-[2rem] border border-[#dec0bb] bg-white p-8 md:p-10 shadow-[0_24px_60px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.12)] transition-all group cursor-pointer">
+<a href="service-detail.html?service=rebar-coupler" class="block rounded-[2rem] border border-[#dec0bb] bg-white p-5 md:p-10 shadow-[0_24px_60px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.12)] transition-all group cursor-pointer">
 <div class="flex flex-col h-full">
-<div class="mb-8 overflow-hidden h-64 rounded-[1.5rem] bg-surface">
+<div class="mb-6 overflow-hidden h-48 md:h-64 rounded-[1.5rem] bg-surface">
 <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="DD Tech rebar coupler product close-up" src="images/8fbe942b-5562-4d45-8299-eacd2ec39d6c.webp" loading="lazy"/>
 </div>
 <div class="flex gap-4 mb-4">
 <span class="bg-[#373A3C] text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase">High Strength</span>
 <span class="bg-[#70777A] text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase">Precision Built</span>
 </div>
-<h3 class="font-headline text-3xl font-extrabold text-on-surface mb-4">Rebar Coupler Manufacturing</h3>
+<h3 class="font-headline text-2xl md:text-3xl font-extrabold text-on-surface mb-4">Rebar Coupler Manufacturing</h3>
 <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">We manufacture all types of rebar couplers with high strength, precise finishing, and reliable performance while maintaining full compliance with industry standards.</p>
-<div class="pt-6 border-t border-[#ead8d4] flex justify-between items-center">
-<span class="font-bold text-xs uppercase tracking-widest">Manufacturing Excellence</span>
+<div class="pt-6 border-t border-[#ead8d4]">
+<div class="flex justify-between items-center mb-4">
+<span class="font-bold text-xs uppercase tracking-widest text-stone-600">Manufacturing Excellence</span>
 <span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+<button class="w-full bg-[#7d0a0a] hover:bg-[#5f0707] text-white px-6 py-3 rounded-full font-bold uppercase tracking-wider text-xs transition-all duration-200 group-hover:shadow-lg">
+Learn More
+</button>
 </div>
 </div>
 </a>
 <!-- Service 2: On-Site Threading Services -->
-<a href="service-detail.html?service=on-site-threading" class="block rounded-[2rem] border border-[#dec0bb] bg-white p-8 md:p-10 shadow-[0_24px_60px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.12)] transition-all group cursor-pointer">
+<a href="service-detail.html?service=on-site-threading" class="block rounded-[2rem] border border-[#dec0bb] bg-white p-5 md:p-10 shadow-[0_24px_60px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.12)] transition-all group cursor-pointer">
 <div class="flex flex-col h-full">
-<div class="mb-8 overflow-hidden h-64 rounded-[1.5rem] bg-surface">
+<div class="mb-6 overflow-hidden h-48 md:h-64 rounded-[1.5rem] bg-surface">
 <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="DD Tech rebar threading machine setup" src="images/DSC06904.webp" loading="lazy"/>
 </div>
 <div class="flex gap-4 mb-4">
 <span class="bg-[#373A3C] text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase">On-Site Execution</span>
 <span class="bg-[#70777A] text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase">Fast Turnaround</span>
 </div>
-<h3 class="font-headline text-3xl font-extrabold text-on-surface mb-4">On-Site Threading Services</h3>
+<h3 class="font-headline text-2xl md:text-3xl font-extrabold text-on-surface mb-4">On-Site Threading Services</h3>
 <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">Our team provides rebar threading services directly at construction sites to help projects move faster with efficient execution, reduced delays, and dependable quality.</p>
-<div class="pt-6 border-t border-[#ead8d4] flex justify-between items-center">
-<span class="font-bold text-xs uppercase tracking-widest">Site-Ready Service</span>
+<div class="pt-6 border-t border-[#ead8d4]">
+<div class="flex justify-between items-center mb-4">
+<span class="font-bold text-xs uppercase tracking-widest text-stone-600">Site-Ready Service</span>
 <span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+<button class="w-full bg-[#7d0a0a] hover:bg-[#5f0707] text-white px-6 py-3 rounded-full font-bold uppercase tracking-wider text-xs transition-all duration-200 group-hover:shadow-lg">
+Learn More
+</button>
 </div>
 </div>
 </a>
 <!-- Service 3: TMT Transport Vehicle Rental -->
-<a href="service-detail.html?service=transit-mixers" class="block rounded-[2rem] border border-[#dec0bb] bg-white p-8 md:p-10 shadow-[0_24px_60px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.12)] transition-all group cursor-pointer">
+<a href="service-detail.html?service=transit-mixers" class="block rounded-[2rem] border border-[#dec0bb] bg-white p-5 md:p-10 shadow-[0_24px_60px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.12)] transition-all group cursor-pointer">
 <div class="flex flex-col h-full">
-<div class="mb-8 overflow-hidden h-64 rounded-[1.5rem] bg-surface">
+<div class="mb-6 overflow-hidden h-48 md:h-64 rounded-[1.5rem] bg-surface">
 <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="DD Tech construction site and transport context" src="images/banner-1.webp" loading="lazy"/>
 </div>
 <div class="flex gap-4 mb-4">
 <span class="bg-[#373A3C] text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase">Rental Fleet</span>
 <span class="bg-[#70777A] text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase">Timely Movement</span>
 </div>
-<h3 class="font-headline text-3xl font-extrabold text-on-surface mb-4">TMT Transport Vehicle Rental</h3>
+<h3 class="font-headline text-2xl md:text-3xl font-extrabold text-on-surface mb-4">TMT Transport Vehicle Rental</h3>
 <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">We offer TMT transport vehicles on rent for RMC plants and construction operations, supporting timely and smooth movement of materials across active project sites.</p>
-<div class="pt-6 border-t border-[#ead8d4] flex justify-between items-center">
-<span class="font-bold text-xs uppercase tracking-widest">Reliable Logistics Support</span>
+<div class="pt-6 border-t border-[#ead8d4]">
+<div class="flex justify-between items-center mb-4">
+<span class="font-bold text-xs uppercase tracking-widest text-stone-600">Reliable Logistics Support</span>
 <span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+<button class="w-full bg-[#7d0a0a] hover:bg-[#5f0707] text-white px-6 py-3 rounded-full font-bold uppercase tracking-wider text-xs transition-all duration-200 group-hover:shadow-lg">
+Learn More
+</button>
 </div>
 </div>
 </a>
 <!-- Service 4: Construction Technical Support & Guidance -->
-<a href="service-detail.html?service=technical-guidance" class="block rounded-[2rem] border border-[#dec0bb] bg-white p-8 md:p-10 shadow-[0_24px_60px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.12)] transition-all group cursor-pointer">
+<a href="service-detail.html?service=technical-guidance" class="block rounded-[2rem] border border-[#dec0bb] bg-white p-5 md:p-10 shadow-[0_24px_60px_rgba(0,0,0,0.06)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.12)] transition-all group cursor-pointer">
 <div class="flex flex-col h-full">
-<div class="mb-8 overflow-hidden h-64 rounded-[1.5rem] bg-surface">
+<div class="mb-6 overflow-hidden h-48 md:h-64 rounded-[1.5rem] bg-surface">
 <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="DD Tech coupler assembly and application image" src="images/22new.webp" loading="lazy"/>
 </div>
 <div class="flex gap-4 mb-4">
 <span class="bg-[#373A3C] text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase">Expert Guidance</span>
 <span class="bg-[#70777A] text-white px-3 py-1 text-[10px] font-bold tracking-widest uppercase">Installation Support</span>
 </div>
-<h3 class="font-headline text-3xl font-extrabold text-on-surface mb-4">Construction Technical Support &amp; Guidance</h3>
+<h3 class="font-headline text-2xl md:text-3xl font-extrabold text-on-surface mb-4">Construction Technical Support &amp; Guidance</h3>
 <p class="text-on-surface-variant leading-relaxed mb-8 flex-grow">We provide technical support and practical guidance to help clients choose the right solution, understand application needs, and ensure proper installation at site.</p>
-<div class="pt-6 border-t border-[#ead8d4] flex justify-between items-center">
-<span class="font-bold text-xs uppercase tracking-widest">Engineering Assistance</span>
+<div class="pt-6 border-t border-[#ead8d4]">
+<div class="flex justify-between items-center mb-4">
+<span class="font-bold text-xs uppercase tracking-widest text-stone-600">Engineering Assistance</span>
 <span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+<button class="w-full bg-[#7d0a0a] hover:bg-[#5f0707] text-white px-6 py-3 rounded-full font-bold uppercase tracking-wider text-xs transition-all duration-200 group-hover:shadow-lg">
+Learn More
+</button>
 </div>
 </div>
 </a>
@@ -669,29 +696,29 @@ function toggleMobileMenu() {
 <section class="py-16 md:py-24 xl:py-32 bg-[linear-gradient(180deg,#ffffff_0%,#f6efed_100%)] overflow-hidden">
 <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="grid grid-cols-1 xl:grid-cols-[0.9fr_1.1fr] gap-10 items-stretch">
-<div class="rounded-[2rem] bg-[#1f1a1a] text-white p-6 sm:p-8 md:p-12 shadow-[0_30px_80px_rgba(96,1,8,0.18)]">
+<div class="rounded-[2rem] bg-[#1f1a1a] text-white p-5 sm:p-8 md:p-12 shadow-[0_30px_80px_rgba(96,1,8,0.18)]">
 <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.3em] font-bold text-white/65 mb-8">Legacy of Precision</span>
-<h2 class="font-headline text-3xl sm:text-4xl md:text-6xl font-black leading-[0.98] tracking-tighter mb-6 md:mb-8">Professionalism<br/>Built into Every<br/><span class="text-[#ffb3ad]">Structure.</span></h2>
+<h2 class="font-headline text-[1.7rem] sm:text-4xl md:text-6xl font-black leading-[0.98] tracking-tighter mb-5 md:mb-8">Professionalism<br/>Built into Every<br/><span class="text-[#ffb3ad]">Structure.</span></h2>
 <div class="space-y-4 md:space-y-6 text-white/72 text-sm sm:text-base md:text-lg leading-relaxed">
 <p>DD Tech began its journey in 2018 as DD Enterprises and has grown into a trusted construction support company focused on rebar couplers, threading services, transport support, and practical technical guidance.</p>
 <p>The brochure positions DD Tech around dependable execution, customer-focused service, and standards-conscious manufacturing for projects that need reliable on-site coordination.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 md:mt-10">
 <div class="rounded-2xl border border-white/10 bg-[#801B1B] px-5 py-6">
-<div class="text-3xl md:text-4xl font-black text-white font-headline mb-2">2018</div>
+<div class="text-[1.6rem] md:text-4xl font-black text-white font-headline mb-2">2018</div>
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/65">Journey Began</div>
 </div>
 <div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-6">
-<div class="text-3xl md:text-4xl font-black text-[#ffb3ad] font-headline mb-2">4</div>
+<div class="text-[1.6rem] md:text-4xl font-black text-[#ffb3ad] font-headline mb-2">4</div>
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/50">Core Services</div>
 </div>
 <div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-6">
-<div class="text-3xl md:text-4xl font-black text-[#ffb3ad] font-headline mb-2">IS | BS | ISO</div>
+<div class="text-[1.6rem] md:text-4xl font-black text-[#ffb3ad] font-headline mb-2">IS | BS | ISO</div>
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/50">Standards Focus</div>
 </div>
 </div>
 </div>
-<div class="relative rounded-[2rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.12)] min-h-[720px] md:min-h-[680px]">
+<div class="relative rounded-[2rem] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.12)] min-h-[560px] md:min-h-[680px]">
 <img class="absolute inset-0 w-full h-full object-cover" alt="High-contrast architectural photograph of a steel girder fabrication facility with golden hour light streaming through industrial windows" src="images/15.webp" loading="lazy"/>
 <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,17,17,0.18)_0%,rgba(17,17,17,0.72)_100%)]"></div>
 <div class="absolute top-4 left-4 right-4 md:top-8 md:left-8 md:right-8 flex flex-col md:flex-row md:items-start md:justify-between gap-3 md:gap-4 z-10">
@@ -701,7 +728,7 @@ function toggleMobileMenu() {
 </div>
 <div class="hidden sm:block rounded-2xl border border-white/10 bg-white/10 backdrop-blur-sm px-5 py-4 md:px-6 md:py-5 min-w-[180px] md:min-w-[200px]">
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mb-2">Factory Network</div>
-<div class="font-headline text-3xl md:text-4xl font-black text-[#ffb3ad]">Pune</div>
+<div class="font-headline text-[1.8rem] md:text-4xl font-black text-[#ffb3ad]">Pune</div>
 <div class="text-xs uppercase tracking-[0.22em] text-white/55 mt-2">Operating Base</div>
 </div>
 </div>
@@ -731,43 +758,43 @@ function toggleMobileMenu() {
 <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
 <div>
 <span class="inline-block text-[10px] uppercase tracking-[0.35em] font-bold text-[#ffb3ad] mb-4">Projects</span>
-<h2 class="font-headline text-3xl sm:text-4xl md:text-6xl font-black uppercase tracking-tighter">Project Portfolio</h2>
+<h2 class="font-headline text-[1.7rem] sm:text-4xl md:text-6xl font-black uppercase tracking-tighter">Project Portfolio</h2>
 </div>
 <div class="flex flex-col sm:items-end gap-4">
 <p class="max-w-2xl text-white/65 text-sm sm:text-base md:text-lg leading-relaxed">Featured project references delivered with DD Tech coupler systems, threading support, and execution-focused coordination across Pune and Mumbai locations.</p>
 </div>
 </div>
 <div class="grid grid-cols-1 xl:grid-cols-[0.9fr_1.1fr] gap-8 mb-10">
-<div class="rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-sm p-8 md:p-10 shadow-[0_30px_80px_rgba(0,0,0,0.18)]">
+<div class="rounded-[2rem] border border-white/10 bg-white/5 backdrop-blur-sm p-5 md:p-10 shadow-[0_30px_80px_rgba(0,0,0,0.18)]">
 <div class="grid grid-cols-2 gap-4">
 <div class="rounded-2xl border border-white/10 bg-[#801B1B] px-5 py-6">
-<div class="text-4xl font-headline font-black text-white">2018</div>
+<div class="text-[1.8rem] md:text-4xl font-headline font-black text-white">2018</div>
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/65 mt-2">Journey Began</div>
 </div>
 <div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-6">
-<div class="text-4xl font-headline font-black text-[#ffb3ad]">4</div>
+<div class="text-[1.8rem] md:text-4xl font-headline font-black text-[#ffb3ad]">4</div>
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mt-2">Core Services</div>
 </div>
 <div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-6">
-<div class="text-4xl font-headline font-black text-[#ffb3ad]">125%</div>
+<div class="text-[1.8rem] md:text-4xl font-headline font-black text-[#ffb3ad]">125%</div>
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mt-2">Yield Development</div>
 </div>
 <div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-6">
-<div class="text-4xl font-headline font-black text-[#ffb3ad]">IS | BS | ISO</div>
+<div class="text-[1.8rem] md:text-4xl font-headline font-black text-[#ffb3ad]">IS | BS | ISO</div>
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mt-2">Standards Focus</div>
 </div>
 </div>
 </div>
-<div class="rounded-[2rem] border border-[#b87d7d]/20 bg-[linear-gradient(135deg,rgba(128,27,27,0.22),rgba(255,255,255,0.04))] p-8 md:p-10">
-<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+<div class="rounded-[2rem] border border-[#b87d7d]/20 bg-[linear-gradient(135deg,rgba(128,27,27,0.22),rgba(255,255,255,0.04))] p-4 md:p-10">
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
 <div>
 <p class="text-[10px] uppercase tracking-[0.3em] text-white/45 font-bold mb-3">Portfolio Snapshot</p>
-<h3 class="font-headline text-4xl md:text-5xl font-black tracking-tighter mb-4">Real projects backed by practical site support.</h3>
-<p class="text-white/65 text-lg leading-relaxed max-w-2xl">Each project combines quality-controlled coupler supply, on-site execution alignment, and reliable reinforcement continuity from planning to installation.</p>
+<h3 class="font-headline text-[1.45rem] sm:text-4xl md:text-5xl font-black tracking-tighter leading-[1.08] mb-3">Real projects backed by practical site support.</h3>
+<p class="text-white/65 text-[0.98rem] md:text-lg leading-relaxed max-w-2xl">Each project combines quality-controlled coupler supply, on-site execution alignment, and reliable reinforcement continuity from planning to installation.</p>
 </div>
-<div class="rounded-2xl border border-white/10 bg-black/20 px-6 py-5 min-w-[220px]">
+<div class="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 min-w-0 w-full md:w-auto md:min-w-[220px]">
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-2">Featured Cities</div>
-<div class="text-5xl font-headline font-black text-[#ffb3ad]">Pune / Mumbai</div>
+<div class="text-[2.1rem] md:text-5xl font-headline font-black leading-[0.92] text-[#ffb3ad] break-words">Pune / Mumbai</div>
 </div>
 </div>
 </div>
@@ -780,12 +807,8 @@ function toggleMobileMenu() {
 <div class="absolute top-5 left-5 rounded-full bg-[#801B1B] px-4 py-2 text-[10px] uppercase tracking-[0.24em] font-bold text-white">Pune</div>
 </div>
 <figcaption class="p-8">
-<h4 class="font-headline text-3xl font-black mb-3">Vantage Project</h4>
+<h4 class="font-headline text-2xl md:text-3xl font-black mb-3">Vantage Project</h4>
 <p class="text-white/65 uppercase text-[11px] tracking-[0.22em] mb-5">Kharadi, Pune</p>
-<div class="flex items-center justify-between border-t border-white/10 pt-5">
-<span class="text-white/45 text-xs uppercase tracking-[0.22em]">Execution support</span>
-<span class="material-symbols-outlined text-[#ffb3ad] group-hover:translate-x-1 transition-transform">north_east</span>
-</div>
 </figcaption>
 </figure>
 <figure class="group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_30px_80px_rgba(0,0,0,0.16)] m-0">
@@ -795,12 +818,8 @@ function toggleMobileMenu() {
 <div class="absolute top-5 left-5 rounded-full bg-[#373A3C] px-4 py-2 text-[10px] uppercase tracking-[0.24em] font-bold text-white">Commercial</div>
 </div>
 <figcaption class="p-8">
-<h4 class="font-headline text-3xl font-black mb-3">Solita Business Hub III</h4>
+<h4 class="font-headline text-2xl md:text-3xl font-black mb-3">Solita Business Hub III</h4>
 <p class="text-white/65 uppercase text-[11px] tracking-[0.22em] mb-5">Baner, Pune</p>
-<div class="flex items-center justify-between border-t border-white/10 pt-5">
-<span class="text-white/45 text-xs uppercase tracking-[0.22em]">Project coordination</span>
-<span class="material-symbols-outlined text-[#ffb3ad] group-hover:translate-x-1 transition-transform">north_east</span>
-</div>
 </figcaption>
 </figure>
 <figure class="group rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm shadow-[0_30px_80px_rgba(0,0,0,0.16)] m-0">
@@ -810,12 +829,9 @@ function toggleMobileMenu() {
 <div class="absolute top-5 left-5 rounded-full bg-[#70777A] px-4 py-2 text-[10px] uppercase tracking-[0.24em] font-bold text-white">Mumbai</div>
 </div>
 <figcaption class="p-8">
-<h4 class="font-headline text-3xl font-black mb-3">Provenance Land</h4>
+<h4 class="font-headline text-2xl md:text-3xl font-black mb-3">Provenance Land</h4>
 <p class="text-white/65 uppercase text-[11px] tracking-[0.22em] mb-5">Worli, Mumbai</p>
-<div class="flex items-center justify-between border-t border-white/10 pt-5">
-<span class="text-white/45 text-xs uppercase tracking-[0.22em]">Structural applications</span>
-<span class="material-symbols-outlined text-[#ffb3ad] group-hover:translate-x-1 transition-transform">north_east</span>
-</div>
+</figcaption>
 </div>
 </figure>
 </div>
@@ -832,7 +848,7 @@ function toggleMobileMenu() {
 <div class="rounded-[2rem] bg-[#1b1717] text-white overflow-hidden shadow-[0_30px_80px_rgba(96,1,8,0.22)]">
 <div class="p-5 sm:p-8 md:p-12">
 <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.3em] font-bold text-white/65 mb-8">Technical Library</span>
-<h2 class="font-headline text-3xl sm:text-4xl md:text-6xl font-black mb-6 md:mb-8 leading-none">Engineering<br/>Compliance.</h2>
+<h2 class="font-headline text-[1.7rem] sm:text-4xl md:text-6xl font-black mb-5 md:mb-8 leading-none">Engineering<br/>Compliance.</h2>
 <p class="text-white/70 mb-8 md:mb-10 leading-relaxed text-sm sm:text-base md:text-lg">Key data from the DD Enterprises profile covering standards, coupler types, bar sizes, and performance information for project planning.</p>
 <div class="space-y-4">
 <div class="group rounded-2xl border border-white/10 bg-white/5 px-4 py-4 md:px-5 md:py-5 transition-colors hover:bg-white/10"><div class="flex items-start gap-3 md:gap-4 min-w-0"><span class="material-symbols-outlined text-[#ffb3ad] shrink-0 text-xl">description</span><div class="min-w-0"><div class="font-bold uppercase tracking-[0.12em] md:tracking-[0.16em] text-[10px] sm:text-[11px] md:text-xs text-white break-words">ACI 318-95 Clause 12.14.3.4</div><div class="text-white/55 text-[11px] md:text-xs mt-2 leading-relaxed break-words">Full mechanical connection should develop at least 125% of specified yield strength.</div></div></div></div>
@@ -879,7 +895,7 @@ function toggleMobileMenu() {
 <div class="flex flex-col xl:flex-row xl:items-end xl:justify-between gap-8 mb-10 md:mb-12">
 <div class="max-w-3xl">
 <span class="inline-flex items-center rounded-full border border-[#d7b3ac] bg-[#f9f1ef] px-4 py-2 text-[10px] uppercase tracking-[0.35em] font-bold text-primary">Image Library</span>
-<h2 class="mt-5 font-headline text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter text-on-surface">Real DD Tech Visuals.</h2>
+<h2 class="mt-4 font-headline text-[1.7rem] sm:text-4xl md:text-6xl font-black tracking-tighter text-on-surface">Real DD Tech Visuals.</h2>
 <p class="mt-5 max-w-2xl text-on-surface-variant text-sm sm:text-base md:text-lg leading-relaxed">A broader look at DD Tech through real workshop, machine, product, and site-oriented visuals sourced from your local image library.</p>
 </div>
 <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 xl:min-w-[360px]">
@@ -900,7 +916,7 @@ function toggleMobileMenu() {
 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
 <figure class="group overflow-hidden rounded-[2rem] border border-[#dec0bb] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
 <div class="overflow-hidden bg-[#f7efed]">
-<img alt="Threading machine in action" class="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" src="images/DSC06904.webp" loading="lazy"/>
+<img alt="Threading machine in action" class="h-56 md:h-72 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" src="images/DSC06904.webp" loading="lazy"/>
 </div>
 <figcaption class="p-7">
 <span class="inline-block text-[10px] uppercase tracking-[0.28em] text-primary font-bold mb-3">Workshop Process</span>
@@ -910,7 +926,7 @@ function toggleMobileMenu() {
 </figure>
 <figure class="group overflow-hidden rounded-[2rem] border border-[#dec0bb] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
 <div class="overflow-hidden bg-[#f7efed]">
-<img alt="Coupler installed on threaded rebar" class="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" src="images/DSC06936b.webp" loading="lazy"/>
+<img alt="Coupler installed on threaded rebar" class="h-56 md:h-72 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" src="images/DSC06936b.webp" loading="lazy"/>
 </div>
 <figcaption class="p-7">
 <span class="inline-block text-[10px] uppercase tracking-[0.28em] text-primary font-bold mb-3">Product Detail</span>
@@ -920,7 +936,7 @@ function toggleMobileMenu() {
 </figure>
 <figure class="group overflow-hidden rounded-[2rem] border border-[#dec0bb] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
 <div class="overflow-hidden bg-[#f7efed]">
-<img alt="Machine lineup and equipment photo" class="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" src="images/d5286385-95a4-44f8-8200-83cd57cf20d5.webp" loading="lazy"/>
+<img alt="Machine lineup and equipment photo" class="h-56 md:h-72 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" src="images/d5286385-95a4-44f8-8200-83cd57cf20d5.webp" loading="lazy"/>
 </div>
 <figcaption class="p-7">
 <span class="inline-block text-[10px] uppercase tracking-[0.28em] text-primary font-bold mb-3">Production Setup</span>
@@ -929,7 +945,7 @@ function toggleMobileMenu() {
 </figcaption>
 </figure>
 <figure class="group overflow-hidden rounded-[2rem] border border-[#dec0bb] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
-<div class="flex h-72 items-center justify-center overflow-hidden bg-[#f9f4f3] p-6">
+<div class="flex h-56 md:h-72 items-center justify-center overflow-hidden bg-[#f9f4f3] p-5 md:p-6">
 <img alt="Coupler application montage" class="max-h-full w-full object-contain transition-transform duration-700 group-hover:scale-[1.04]" src="images/22new.webp" loading="lazy"/>
 </div>
 <figcaption class="p-7">
@@ -939,7 +955,7 @@ function toggleMobileMenu() {
 </figcaption>
 </figure>
 <figure class="group overflow-hidden rounded-[2rem] border border-[#dec0bb] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
-<div class="flex h-72 items-center justify-center overflow-hidden bg-[#f9f4f3] p-6">
+<div class="flex h-56 md:h-72 items-center justify-center overflow-hidden bg-[#f9f4f3] p-5 md:p-6">
 <img alt="Rendered coupler connection visual" class="max-h-full w-full object-contain transition-transform duration-700 group-hover:scale-[1.04]" src="images/2.webp" loading="lazy"/>
 </div>
 <figcaption class="p-7">
@@ -950,7 +966,7 @@ function toggleMobileMenu() {
 </figure>
 <figure class="group overflow-hidden rounded-[2rem] border border-[#dec0bb] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
 <div class="overflow-hidden bg-[#f7efed]">
-<img alt="Bridge project visual" class="h-72 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" src="images/slide1.webp" loading="lazy"/>
+<img alt="Bridge project visual" class="h-56 md:h-72 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" src="images/slide1.webp" loading="lazy"/>
 </div>
 <figcaption class="p-7">
 <span class="inline-block text-[10px] uppercase tracking-[0.28em] text-primary font-bold mb-3">Project Context</span>
@@ -968,35 +984,35 @@ function toggleMobileMenu() {
 <div class="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
 <div>
 <span class="inline-block text-[10px] uppercase tracking-[0.35em] font-bold text-primary mb-4">Client Confidence</span>
-<h2 class="font-headline text-3xl sm:text-4xl md:text-6xl font-black tracking-tighter text-[#7D0A0A]">Proof of Performance.</h2>
+<h2 class="font-headline text-[1.7rem] sm:text-4xl md:text-6xl font-black tracking-tighter text-[#7D0A0A]">Proof of Performance.</h2>
 </div>
 <p class="max-w-xl text-on-surface-variant text-sm sm:text-base md:text-lg leading-relaxed">The brochure emphasizes quality manufacturing, timely support, skilled execution, competitive pricing, and a customer-focused working style.</p>
 </div>
 <div class="grid grid-cols-1 xl:grid-cols-[1.3fr_0.9fr] gap-10 items-stretch">
 <div class="relative rounded-[2rem] bg-white border border-[#7D0A0A]/20 shadow-[0_30px_80px_rgba(0,0,0,0.08)] overflow-hidden">
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(128,27,27,0.12),transparent_34%)]"></div>
-<div class="relative z-10 p-6 sm:p-8 md:p-14">
-<span class="font-headline text-[84px] sm:text-[120px] md:text-[180px] leading-none absolute top-3 left-4 md:top-4 md:left-6 opacity-[0.06] text-primary">"</span>
-<div class="relative pt-10 sm:pt-14 md:pt-16">
-<div class="w-16 h-[3px] bg-[#7D0A0A] mb-8"></div>
-<p class="font-headline text-[1.95rem] sm:text-[2.2rem] md:text-[2.7rem] font-black leading-[1.18] sm:leading-[1.25] md:leading-[1.35] tracking-tight text-on-surface mb-8 md:mb-10 max-w-4xl">DD Tech focuses on practical construction support, helping clients choose the right coupler solution and execute projects with dependable manufacturing, threading, and technical guidance.</p>
+<div class="relative z-10 p-5 sm:p-8 md:p-14">
+<span class="font-headline text-[44px] sm:text-[120px] md:text-[180px] leading-none absolute top-3 left-4 md:top-4 md:left-6 opacity-[0.06] text-primary">"</span>
+<div class="relative pt-8 sm:pt-14 md:pt-16">
+<div class="w-12 md:w-16 h-[3px] bg-[#7D0A0A] mb-6 md:mb-8"></div>
+<p class="font-headline text-[1.15rem] sm:text-[2.2rem] md:text-[2.7rem] font-black leading-[1.28] sm:leading-[1.25] md:leading-[1.35] tracking-tight text-on-surface mb-7 md:mb-10 max-w-4xl">DD Tech focuses on practical construction support, helping clients choose the right coupler solution and execute projects with dependable manufacturing, threading, and technical guidance.</p>
 <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
 <div>
-<div class="font-bold text-xl uppercase tracking-[0.18em] text-on-surface">DD Tech Profile</div>
-<div class="text-primary font-bold text-sm uppercase tracking-[0.18em] mt-2">Brochure-Based Company Summary</div>
+<div class="font-bold text-[1.05rem] md:text-xl uppercase tracking-[0.18em] text-on-surface">DD Tech Profile</div>
+<div class="text-primary font-bold text-[0.9rem] md:text-sm uppercase tracking-[0.16em] md:tracking-[0.18em] mt-2">Brochure-Based Company Summary</div>
 </div>
-<div class="grid grid-cols-3 gap-4 md:min-w-[280px]">
-<div class="rounded-2xl bg-stone-50 border border-stone-200/80 px-4 py-5">
-<div class="text-2xl font-black font-headline text-primary">2018</div>
-<div class="text-[10px] uppercase tracking-[0.22em] text-on-surface-variant mt-2">Journey Began</div>
+<div class="grid grid-cols-3 gap-2 md:gap-4 md:min-w-[280px]">
+<div class="min-w-0 rounded-2xl bg-stone-50 border border-stone-200/80 px-2 py-4 md:px-4 md:py-5">
+<div class="text-[1.8rem] md:text-2xl font-black font-headline text-primary">2018</div>
+<div class="text-[7px] md:text-[10px] uppercase tracking-[0.06em] md:tracking-[0.22em] leading-[1.3] text-on-surface-variant mt-2 break-words">Journey Began</div>
 </div>
-<div class="rounded-2xl bg-stone-50 border border-stone-200/80 px-4 py-5">
-<div class="text-2xl font-black font-headline text-primary">4</div>
-<div class="text-[10px] uppercase tracking-[0.22em] text-on-surface-variant mt-2">Core Services</div>
+<div class="min-w-0 rounded-2xl bg-stone-50 border border-stone-200/80 px-2 py-4 md:px-4 md:py-5">
+<div class="text-[1.8rem] md:text-2xl font-black font-headline text-primary">4</div>
+<div class="text-[7px] md:text-[10px] uppercase tracking-[0.06em] md:tracking-[0.22em] leading-[1.3] text-on-surface-variant mt-2 break-words">Core Services</div>
 </div>
-<div class="rounded-2xl bg-stone-50 border border-stone-200/80 px-4 py-5">
-<div class="text-2xl font-black font-headline text-primary">125%</div>
-<div class="text-[10px] uppercase tracking-[0.22em] text-on-surface-variant mt-2">Yield Development</div>
+<div class="min-w-0 rounded-2xl bg-stone-50 border border-stone-200/80 px-2 py-4 md:px-4 md:py-5">
+<div class="text-[1.8rem] md:text-2xl font-black font-headline text-primary">125%</div>
+<div class="text-[7px] md:text-[10px] uppercase tracking-[0.06em] md:tracking-[0.22em] leading-[1.3] text-on-surface-variant mt-2 break-words">Yield Development</div>
 </div>
 </div>
 </div>
@@ -1007,8 +1023,8 @@ function toggleMobileMenu() {
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,179,173,0.18),transparent_28%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0))]"></div>
 <div class="relative p-6 sm:p-8 md:p-10 h-full flex flex-col">
 <span class="inline-flex w-fit items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.28em] font-bold text-white/70 mb-8">Our Clients</span>
-<h3 class="font-headline text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter leading-[1] mb-5 md:mb-6">Trusted by growing construction and industrial partners.</h3>
-<p class="text-white/70 text-sm sm:text-base md:text-lg leading-relaxed mb-8">Our client relationships are built on dependable supply, responsive support, and product quality that performs in real project conditions.</p>
+<h3 class="font-headline text-[1.4rem] sm:text-4xl md:text-5xl font-black tracking-tighter leading-[1] mb-4 md:mb-6">Trusted by growing construction and industrial partners.</h3>
+<p class="text-white/70 text-sm sm:text-base md:text-lg leading-relaxed mb-6 md:mb-8">Our client relationships are built on dependable supply, responsive support, and product quality that performs in real project conditions.</p>
 <div class="grid grid-cols-2 gap-4 mb-8">
 <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
 <div class="text-2xl sm:text-3xl font-headline font-black text-white">Real</div>
@@ -1081,22 +1097,22 @@ function toggleMobileMenu() {
 <div class="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
 <div class="relative rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] shadow-[0_35px_90px_rgba(0,0,0,0.28)] overflow-hidden">
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(255,179,173,0.22),transparent_28%)]"></div>
-<div class="relative grid grid-cols-1 xl:grid-cols-[1.2fr_0.8fr] gap-10 p-10 md:p-14 xl:p-16 items-center">
+<div class="relative grid grid-cols-1 xl:grid-cols-[1.2fr_0.8fr] gap-8 p-5 md:p-14 xl:p-16 items-center">
 <div>
 <span class="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[10px] uppercase tracking-[0.3em] font-bold text-white/75 mb-8">Project Consultation</span>
-<h2 class="font-headline text-3xl sm:text-4xl md:text-7xl xl:text-8xl font-black tracking-tighter leading-[0.98] mb-6 md:mb-8">Start Your Project.</h2>
+<h2 class="font-headline text-[1.9rem] sm:text-4xl md:text-7xl xl:text-8xl font-black tracking-tighter leading-[0.98] mb-5 md:mb-8">Start Your Project.</h2>
 <p class="max-w-3xl text-sm sm:text-base md:text-xl text-white/78 leading-relaxed mb-8 md:mb-10">Bring your next coupler requirement, threading job, or project support need to a team that works with practical site realities and dependable execution.</p>
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
 <div class="rounded-2xl border border-white/10 bg-white/10 px-5 py-5 backdrop-blur-sm">
-<div class="text-3xl font-headline font-black text-[#ffb3ad]">48h</div>
+<div class="text-2xl md:text-3xl font-headline font-black text-[#ffb3ad]">48h</div>
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mt-2">Initial Technical Review</div>
 </div>
 <div class="rounded-2xl border border-white/10 bg-white/10 px-5 py-5 backdrop-blur-sm">
-<div class="text-3xl font-headline font-black text-[#ffb3ad]">ISO</div>
+<div class="text-2xl md:text-3xl font-headline font-black text-[#ffb3ad]">ISO</div>
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mt-2">Quality-Driven Workflow</div>
 </div>
 <div class="rounded-2xl border border-white/10 bg-white/10 px-5 py-5 backdrop-blur-sm">
-<div class="text-3xl font-headline font-black text-[#ffb3ad]">Global</div>
+<div class="text-2xl md:text-3xl font-headline font-black text-[#ffb3ad]">Global</div>
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mt-2">Infrastructure Support</div>
 </div>
 </div>
@@ -1105,7 +1121,7 @@ function toggleMobileMenu() {
 <a class="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/5 px-8 py-4 font-bold uppercase tracking-[0.2em] text-xs text-white hover:bg-white/10 transition-colors" href="project.html">View Projects</a>
 </div>
 </div>
-<div class="what-we-prepare-outer rounded-[1.75rem] border border-white/10 bg-[#161313]/80 backdrop-blur-sm p-8 md:p-10">
+<div class="what-we-prepare-outer rounded-[1.75rem] border border-white/10 bg-[#161313]/80 backdrop-blur-sm p-5 md:p-10">
 <div class="flex items-center gap-3 mb-6">
 <span class="material-symbols-outlined text-[#ffb3ad]">engineering</span>
 <p class="text-[10px] uppercase tracking-[0.3em] font-bold text-white/55">What We Prepare</p>
@@ -1126,7 +1142,7 @@ function toggleMobileMenu() {
 </div>
 <div class="rounded-2xl border border-[#ffb3ad]/20 bg-[#801B1B]/30 px-5 py-5">
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/55 mb-2">Best For</div>
-<div class="font-headline text-2xl font-black text-white">Rebar couplers, site threading, TMT vehicle rental, and project-fit technical support.</div>
+<div class="font-headline text-[1.45rem] md:text-2xl font-black text-white">Rebar couplers, site threading, TMT vehicle rental, and project-fit technical support.</div>
 </div>
 </div>
 </div>
@@ -1138,20 +1154,20 @@ function toggleMobileMenu() {
 <footer class="relative overflow-hidden bg-[#111111] text-white">
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(125,10,10,0.38),_transparent_28%),radial-gradient(circle_at_center_right,_rgba(255,179,173,0.12),_transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0))]"></div>
 <div class="relative max-w-screen-2xl mx-auto px-8 md:px-12 py-16 md:py-20">
-<div class="rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-8 md:p-10 shadow-[0_30px_90px_rgba(0,0,0,0.26)] mb-12">
+<div class="rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-5 md:p-10 shadow-[0_30px_90px_rgba(0,0,0,0.26)] mb-12">
 <div class="grid grid-cols-1 xl:grid-cols-[1.15fr_0.85fr] gap-8 items-center">
 <div>
 <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.3em] font-bold text-white/60 mb-6">Start a Consultation</span>
-<h3 class="font-headline text-4xl md:text-5xl font-black tracking-tighter mb-4">Build with a team focused on precision, compliance, and site-ready execution.</h3>
-<p class="text-white/70 text-base md:text-lg leading-relaxed max-w-3xl">From material selection to fabrication coordination, DD Tech supports high-performance infrastructure projects with engineering-led systems designed to perform under real-world demands.</p>
+<h3 class="font-headline text-[1.45rem] md:text-5xl font-black tracking-tighter mb-4">Build with a team focused on precision, compliance, and site-ready execution.</h3>
+<p class="text-white/70 text-sm md:text-lg leading-relaxed max-w-3xl">From material selection to fabrication coordination, DD Tech supports high-performance infrastructure projects with engineering-led systems designed to perform under real-world demands.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div class="rounded-2xl border border-white/10 bg-[#801B1B]/40 px-5 py-5">
-<div class="text-3xl font-headline font-black text-white">48h</div>
+<div class="text-2xl md:text-3xl font-headline font-black text-white">48h</div>
 <div class="text-[10px] uppercase tracking-[0.22em] text-white/55 mt-2">Consultation Response</div>
 </div>
 <div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-5">
-<div class="text-3xl font-headline font-black text-[#ffb3ad]">ISO</div>
+<div class="text-2xl md:text-3xl font-headline font-black text-[#ffb3ad]">ISO</div>
 <div class="text-[10px] uppercase tracking-[0.22em] text-white/55 mt-2">Quality-Controlled Workflow</div>
 </div>
 <a class="inline-flex items-center justify-center rounded-full bg-white text-[#801B1B] px-8 py-4 font-bold uppercase tracking-[0.2em] text-xs hover:bg-[#F4F4F4] transition-colors sm:col-span-2" href="contact.html">Request Consultation</a>

@@ -265,6 +265,87 @@
       .text-shadow-sm {
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       }
+      .service-hero-heading {
+        font-size: 4rem;
+        line-height: 0.9;
+        letter-spacing: -0.04em;
+      }
+      @media (max-width: 767px) {
+        .service-hero-heading {
+          font-size: 2.1rem !important;
+          line-height: 0.96 !important;
+        }
+        .service-hero-subtext {
+          font-size: 0.88rem !important;
+          line-height: 1.5 !important;
+        }
+        .service-section-heading {
+          font-size: 1.5rem !important;
+          line-height: 1.1 !important;
+          margin-bottom: 0.8rem !important;
+        }
+        .service-section-subtext {
+          font-size: 0.9rem !important;
+          line-height: 1.55 !important;
+        }
+        .service-card-title {
+          font-size: 1.05rem !important;
+          line-height: 1.25 !important;
+          margin-bottom: 0.6rem !important;
+        }
+        .service-card-text {
+          font-size: 0.82rem !important;
+          line-height: 1.45 !important;
+        }
+        .service-compact-card {
+          padding: 1rem !important;
+        }
+        .service-info-title {
+          font-size: 0.98rem !important;
+          line-height: 1.25 !important;
+          margin-bottom: 0.5rem !important;
+        }
+        .service-info-text {
+          font-size: 0.8rem !important;
+          line-height: 1.45 !important;
+        }
+        /* Override Tailwind classes for mobile */
+        .text-5xl,
+        .md\\:text-7xl,
+        .xl\\:text-\\[5rem\\] {
+          font-size: 2.1rem !important;
+          line-height: 0.96 !important;
+        }
+        .text-4xl,
+        .md\\:text-5xl {
+          font-size: 1.5rem !important;
+          line-height: 1.1 !important;
+        }
+        .text-3xl {
+          font-size: 1.3rem !important;
+          line-height: 1.15 !important;
+        }
+        .text-2xl {
+          font-size: 1.05rem !important;
+          line-height: 1.25 !important;
+        }
+        .text-xl {
+          font-size: 0.98rem !important;
+          line-height: 1.25 !important;
+        }
+        .text-lg,
+        .md\\:text-xl {
+          font-size: 0.88rem !important;
+          line-height: 1.5 !important;
+        }
+      }
+      @media (max-width: 767px) {
+        .site-header {
+          background: #ffffff !important;
+          backdrop-filter: none !important;
+          -webkit-backdrop-filter: none !important;
+        }
+      }
     </style>
   </head>
   <body
@@ -273,7 +354,7 @@
     <!-- Navigation -->
     <!-- Top Navigation Bar -->
     <header
-      class="bg-white backdrop-blur-0 md:backdrop-blur-md sticky top-0 z-50 md:border-b md:border-stone-200/60 shadow-sm"
+      class="site-header bg-white backdrop-blur-0 md:backdrop-blur-md sticky top-0 z-50 border-b-0 md:border-b md:border-stone-200/60 shadow-sm"
     >
       <div
         class="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-3 md:py-4 max-w-screen-2xl mx-auto gap-4"
@@ -516,7 +597,7 @@
           class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.08),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(255,218,214,0.18),transparent_22%)]"
         ></div>
         <div
-          class="hero-inner-mobile relative max-w-screen-2xl mx-auto px-8 py-8 md:py-24"
+          class="hero-inner-mobile relative max-w-screen-2xl mx-auto px-4 md:px-8 py-8 md:py-24"
         >
           <div
             class="grid grid-cols-1 xl:grid-cols-[1.05fr_0.95fr] gap-10 items-center"
@@ -527,13 +608,13 @@
                 >DD Tech Services</span
               >
               <h1
-                class="font-headline text-5xl md:text-7xl xl:text-[5rem] font-black leading-[0.9] tracking-tighter mb-8"
+                class="service-hero-heading font-headline text-5xl md:text-7xl xl:text-[5rem] font-black leading-[0.9] tracking-tighter mb-8"
               >
                 Service solutions built for speed, precision, and reliable site
                 execution.
               </h1>
               <p
-                class="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mb-8"
+                class="service-hero-subtext text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mb-8"
               >
                 From rebar coupler manufacturing to threading, transport
                 support, and technical guidance, DD Tech helps construction
@@ -578,7 +659,7 @@
 
       <section
         id="service-grid"
-        class="py-24 px-8 bg-[linear-gradient(180deg,#f7f2f1_0%,#ffffff_100%)]"
+        class="py-16 md:py-24 px-4 md:px-8 bg-[linear-gradient(180deg,#f7f2f1_0%,#ffffff_100%)]"
       >
         <div class="max-w-screen-2xl mx-auto">
           <div
@@ -591,30 +672,44 @@
                 Core Infrastructure Offerings
               </p>
               <h2
-                class="font-headline text-4xl md:text-5xl font-black tracking-tighter text-charcoal"
+                class="service-section-heading font-headline text-4xl md:text-5xl font-black tracking-tighter text-charcoal"
               >
                 Services that fit real construction requirements.
               </h2>
             </div>
-            <p class="max-w-2xl text-stone-500 text-lg leading-relaxed">
+            <p
+              class="service-section-subtext max-w-2xl text-stone-500 text-lg leading-relaxed"
+            >
               Our service portfolio is built around manufacturing strength,
               forging and machining capability, on-site execution support,
               transit mixer availability, and guidance that helps projects move
               without unnecessary delays.
             </p>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+          <!-- Service Cards Container -->
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             <a
               href="service-detail.html?service=rebar-coupler"
-              class="rounded-[1.75rem] border border-[#ead8d4] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.05)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.1)] transition-all block"
+              class="service-compact-card group rounded-[1.9rem] border border-[#ead8d4] bg-[linear-gradient(180deg,#ffffff_0%,#fbf5f4_100%)] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.05)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.12)] hover:-translate-y-1 transition-all duration-300 block"
             >
-              <span class="material-symbols-outlined text-4xl text-primary mb-5"
-                >architecture</span
+              <div class="flex items-start justify-between gap-4 mb-6">
+                <span
+                  class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#7d0a0a]/10 text-primary"
+                  ><span class="material-symbols-outlined text-[30px]"
+                    >architecture</span
+                  ></span
+                >
+                <span
+                  class="rounded-full border border-[#ead8d4] bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-primary"
+                  >Type 01</span
+                >
+              </div>
+              <h3
+                class="service-card-title font-headline text-2xl font-black mb-4 text-on-surface"
               >
-              <h3 class="font-headline text-2xl font-bold mb-4">
                 Rebar Coupler Manufacturing
               </h3>
-              <p class="text-stone-500 leading-relaxed mb-6">
+              <p class="service-card-text text-stone-500 leading-relaxed mb-6">
                 We manufacture all types of rebar couplers with high strength,
                 precision, and dependable quality for demanding construction
                 applications.
@@ -633,26 +728,41 @@
                   ><span>Industry-focused quality</span>
                 </div>
               </div>
-              <div
-                class="mt-6 inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-[0.2em]"
-              >
-                Learn More
-                <span class="material-symbols-outlined text-sm"
-                  >arrow_forward</span
+              <div class="mt-8 pt-2">
+                <span
+                  class="inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#7d0a0a] px-6 py-3 text-[11px] font-bold uppercase tracking-[0.22em] text-white shadow-[0_14px_30px_rgba(125,10,10,0.18)] transition-all duration-300 group-hover:bg-[#5f0707] group-hover:shadow-[0_18px_35px_rgba(125,10,10,0.24)]"
                 >
+                  <span>Learn More</span>
+                  <span
+                    class="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover:translate-x-1"
+                    >north_east</span
+                  >
+                </span>
               </div>
             </a>
+
             <a
               href="service-detail.html?service=on-site-threading"
-              class="rounded-[1.75rem] border border-[#ead8d4] bg-[#fbf5f4] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.05)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.1)] transition-all block"
+              class="service-compact-card group rounded-[1.9rem] border border-[#ead8d4] bg-[linear-gradient(180deg,#fbf5f4_0%,#fffafa_100%)] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.05)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.12)] hover:-translate-y-1 transition-all duration-300 block"
             >
-              <span class="material-symbols-outlined text-4xl text-primary mb-5"
-                >engineering</span
+              <div class="flex items-start justify-between gap-4 mb-6">
+                <span
+                  class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#7d0a0a]/10 text-primary"
+                  ><span class="material-symbols-outlined text-[30px]"
+                    >engineering</span
+                  ></span
+                >
+                <span
+                  class="rounded-full border border-[#ead8d4] bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-primary"
+                  >Type 02</span
+                >
+              </div>
+              <h3
+                class="service-card-title font-headline text-2xl font-black mb-4 text-on-surface"
               >
-              <h3 class="font-headline text-2xl font-bold mb-4">
                 On-Site Threading Services
               </h3>
-              <p class="text-stone-500 leading-relaxed mb-6">
+              <p class="service-card-text text-stone-500 leading-relaxed mb-6">
                 We deliver rebar threading services at construction sites for
                 faster execution, better coordination, and smooth progress
                 during active project work.
@@ -671,26 +781,41 @@
                   ><span>Better workflow continuity</span>
                 </div>
               </div>
-              <div
-                class="mt-6 inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-[0.2em]"
-              >
-                Learn More
-                <span class="material-symbols-outlined text-sm"
-                  >arrow_forward</span
+              <div class="mt-8 pt-2">
+                <span
+                  class="inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#7d0a0a] px-6 py-3 text-[11px] font-bold uppercase tracking-[0.22em] text-white shadow-[0_14px_30px_rgba(125,10,10,0.18)] transition-all duration-300 group-hover:bg-[#5f0707] group-hover:shadow-[0_18px_35px_rgba(125,10,10,0.24)]"
                 >
+                  <span>Learn More</span>
+                  <span
+                    class="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover:translate-x-1"
+                    >north_east</span
+                  >
+                </span>
               </div>
             </a>
+
             <a
               href="service-detail.html?service=transit-mixers"
-              class="rounded-[1.75rem] border border-[#ead8d4] bg-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.05)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.1)] transition-all block"
+              class="service-compact-card group rounded-[1.9rem] border border-[#ead8d4] bg-[linear-gradient(180deg,#ffffff_0%,#f7f1ef_100%)] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.05)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.14)] hover:-translate-y-1 transition-all duration-300 block"
             >
-              <span class="material-symbols-outlined text-4xl text-primary mb-5"
-                >local_shipping</span
+              <div class="flex items-start justify-between gap-4 mb-6">
+                <span
+                  class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#7d0a0a]/10 text-primary"
+                  ><span class="material-symbols-outlined text-[30px]"
+                    >local_shipping</span
+                  ></span
+                >
+                <span
+                  class="rounded-full border border-[#ead8d4] bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-primary"
+                  >Type 03</span
+                >
+              </div>
+              <h3
+                class="service-card-title font-headline text-2xl font-black mb-4 text-on-surface"
               >
-              <h3 class="font-headline text-2xl font-bold mb-4">
                 Transit Mixers (TM Vehicles)
               </h3>
-              <p class="text-stone-500 leading-relaxed mb-6">
+              <p class="service-card-text text-stone-500 leading-relaxed mb-6">
                 We provide TM vehicles on rent for RMC plants and construction
                 projects to ensure smooth, timely, and dependable material
                 movement.
@@ -709,27 +834,41 @@
                   ><span>Timely material movement</span>
                 </div>
               </div>
-              <div
-                class="mt-6 inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-[0.2em]"
-              >
-                Learn More
-                <span class="material-symbols-outlined text-sm"
-                  >arrow_forward</span
+              <div class="mt-8 pt-2">
+                <span
+                  class="inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#7d0a0a] px-6 py-3 text-[11px] font-bold uppercase tracking-[0.22em] text-white shadow-[0_14px_30px_rgba(125,10,10,0.18)] transition-all duration-300 group-hover:bg-[#5f0707] group-hover:shadow-[0_18px_35px_rgba(125,10,10,0.24)]"
                 >
+                  <span>Learn More</span>
+                  <span
+                    class="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover:translate-x-1"
+                    >north_east</span
+                  >
+                </span>
               </div>
             </a>
+
             <a
               href="service-detail.html?service=technical-guidance"
-              class="rounded-[1.75rem] bg-[linear-gradient(180deg,#171212_0%,#262021_100%)] text-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.16)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.18)] transition-all block"
+              class="service-compact-card group rounded-[1.9rem] bg-[linear-gradient(180deg,#171212_0%,#262021_100%)] text-white p-8 shadow-[0_20px_60px_rgba(0,0,0,0.16)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.18)] hover:-translate-y-1 transition-all duration-300 block"
             >
-              <span
-                class="material-symbols-outlined text-4xl text-[#ffb3ad] mb-5"
-                >fact_check</span
+              <div class="flex items-start justify-between gap-4 mb-6">
+                <span
+                  class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10 text-[#ffb3ad]"
+                  ><span class="material-symbols-outlined text-[30px]"
+                    >fact_check</span
+                  ></span
+                >
+                <span
+                  class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-[#ffb3ad]"
+                  >Type 04</span
+                >
+              </div>
+              <h3
+                class="service-card-title font-headline text-2xl font-black mb-4"
               >
-              <h3 class="font-headline text-2xl font-bold mb-4">
                 Construction Technical Support
               </h3>
-              <p class="text-white/70 leading-relaxed mb-6">
+              <p class="service-card-text text-white/70 leading-relaxed mb-6">
                 Our experts help clients choose suitable solutions, understand
                 installation requirements, and execute projects with the right
                 technical guidance.
@@ -748,26 +887,41 @@
                   ><span>Practical execution support</span>
                 </div>
               </div>
-              <div
-                class="mt-6 inline-flex items-center gap-2 text-[#ffb3ad] font-bold text-xs uppercase tracking-[0.2em]"
-              >
-                Learn More
-                <span class="material-symbols-outlined text-sm"
-                  >arrow_forward</span
+              <div class="mt-8 pt-2">
+                <span
+                  class="inline-flex w-full items-center justify-center gap-3 rounded-full border border-white/10 bg-white text-[11px] font-bold uppercase tracking-[0.22em] text-[#7d0a0a] px-6 py-3 shadow-[0_14px_30px_rgba(0,0,0,0.18)] transition-all duration-300 group-hover:bg-[#fff4f2] group-hover:shadow-[0_18px_35px_rgba(0,0,0,0.22)]"
                 >
+                  <span>Learn More</span>
+                  <span
+                    class="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover:translate-x-1"
+                    >north_east</span
+                  >
+                </span>
               </div>
             </a>
+
             <a
               href="service-detail.html?service=forging-machining"
-              class="rounded-[1.75rem] border border-[#ead8d4] bg-[#fbf5f4] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.05)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.1)] transition-all block"
+              class="service-compact-card group rounded-[1.9rem] border border-[#ead8d4] bg-[linear-gradient(180deg,#fbf5f4_0%,#fffafa_100%)] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.05)] hover:shadow-[0_30px_80px_rgba(128,27,27,0.12)] hover:-translate-y-1 transition-all duration-300 block"
             >
-              <span class="material-symbols-outlined text-4xl text-primary mb-5"
-                >build</span
+              <div class="flex items-start justify-between gap-4 mb-6">
+                <span
+                  class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[#7d0a0a]/10 text-primary"
+                  ><span class="material-symbols-outlined text-[30px]"
+                    >build</span
+                  ></span
+                >
+                <span
+                  class="rounded-full border border-[#ead8d4] bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-primary"
+                  >Type 05</span
+                >
+              </div>
+              <h3
+                class="service-card-title font-headline text-2xl font-black mb-4 text-on-surface"
               >
-              <h3 class="font-headline text-2xl font-bold mb-4">
                 Forging & Machining
               </h3>
-              <p class="text-stone-500 leading-relaxed mb-6">
+              <p class="service-card-text text-stone-500 leading-relaxed mb-6">
                 We offer forging and machining solutions for rebar couplers,
                 ensuring durability, accuracy, and consistent quality in every
                 unit produced.
@@ -786,20 +940,23 @@
                   ><span>Consistent quality output</span>
                 </div>
               </div>
-              <div
-                class="mt-6 inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-[0.2em]"
-              >
-                Learn More
-                <span class="material-symbols-outlined text-sm"
-                  >arrow_forward</span
+              <div class="mt-8 pt-2">
+                <span
+                  class="inline-flex w-full items-center justify-center gap-3 rounded-full bg-[#7d0a0a] px-6 py-3 text-[11px] font-bold uppercase tracking-[0.22em] text-white shadow-[0_14px_30px_rgba(125,10,10,0.18)] transition-all duration-300 group-hover:bg-[#5f0707] group-hover:shadow-[0_18px_35px_rgba(125,10,10,0.24)]"
                 >
+                  <span>Learn More</span>
+                  <span
+                    class="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover:translate-x-1"
+                    >north_east</span
+                  >
+                </span>
               </div>
             </a>
           </div>
         </div>
       </section>
 
-      <section class="py-24 px-8 bg-surface-container-low">
+      <section class="py-16 md:py-24 px-4 md:px-8 bg-surface-container-low">
         <div class="max-w-screen-2xl mx-auto">
           <div
             class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12"
@@ -811,13 +968,15 @@
                 Real Work Visuals
               </p>
               <h2
-                class="font-headline text-4xl md:text-5xl font-black tracking-tighter"
+                class="service-section-heading font-headline text-4xl md:text-5xl font-black tracking-tighter"
               >
                 Images from manufacturing, field support, and coupler
                 applications.
               </h2>
             </div>
-            <p class="max-w-2xl text-stone-500 text-lg leading-relaxed">
+            <p
+              class="service-section-subtext max-w-2xl text-stone-500 text-lg leading-relaxed"
+            >
               These visuals reflect the kind of practical work behind DD Tech
               services, from machining and cutting to finished coupler products
               and site-oriented execution support.
@@ -833,11 +992,11 @@
                 src="images/banner-2.webp"
                 loading="lazy"
               />
-              <figcaption class="p-6">
-                <h3 class="text-xl font-black mb-3">
+              <figcaption class="service-compact-card p-6">
+                <h3 class="service-info-title text-xl font-black mb-3">
                   Threading &amp; Machining
                 </h3>
-                <p class="text-secondary leading-relaxed">
+                <p class="service-info-text text-secondary leading-relaxed">
                   Production support aligned with bar preparation and threading
                   processes for site-ready coupler use.
                 </p>
@@ -852,9 +1011,11 @@
                 src="images/cmpny-img-1.webp"
                 loading="lazy"
               />
-              <figcaption class="p-6">
-                <h3 class="text-xl font-black mb-3">Cutting Process</h3>
-                <p class="text-secondary leading-relaxed">
+              <figcaption class="service-compact-card p-6">
+                <h3 class="service-info-title text-xl font-black mb-3">
+                  Cutting Process
+                </h3>
+                <p class="service-info-text text-secondary leading-relaxed">
                   The profile references bar-end cutting for perpendicularity
                   before threading and assembly preparation.
                 </p>
@@ -869,9 +1030,11 @@
                 src="images/8fbe942b-5562-4d45-8299-eacd2ec39d6c.webp"
                 loading="lazy"
               />
-              <figcaption class="p-6">
-                <h3 class="text-xl font-black mb-3">Coupler Product</h3>
-                <p class="text-secondary leading-relaxed">
+              <figcaption class="service-compact-card p-6">
+                <h3 class="service-info-title text-xl font-black mb-3">
+                  Coupler Product
+                </h3>
+                <p class="service-info-text text-secondary leading-relaxed">
                   Finished coupler units built for dependable mechanical
                   connection in structural reinforcement systems.
                 </p>
@@ -886,9 +1049,11 @@
                 src="images/banner-1.webp"
                 loading="lazy"
               />
-              <div class="p-6">
-                <h3 class="text-xl font-black mb-3">Site Execution Context</h3>
-                <p class="text-secondary leading-relaxed">
+              <div class="service-compact-card p-6">
+                <h3 class="service-info-title text-xl font-black mb-3">
+                  Site Execution Context
+                </h3>
+                <p class="service-info-text text-secondary leading-relaxed">
                   Our services are built for active project conditions where
                   coordination, speed, and support matter every day.
                 </p>
@@ -903,11 +1068,11 @@
                 src="images/DSC06904.webp"
                 loading="lazy"
               />
-              <div class="p-6">
-                <h3 class="text-xl font-black mb-3">
+              <div class="service-compact-card p-6">
+                <h3 class="service-info-title text-xl font-black mb-3">
                   Threading Machine Close-Up
                 </h3>
-                <p class="text-secondary leading-relaxed">
+                <p class="service-info-text text-secondary leading-relaxed">
                   A real workshop close-up highlighting the machine setup used
                   for threading and bar preparation.
                 </p>
@@ -922,11 +1087,11 @@
                 src="images/DSC06936b.webp"
                 loading="lazy"
               />
-              <div class="p-6">
-                <h3 class="text-xl font-black mb-3">
+              <div class="service-compact-card p-6">
+                <h3 class="service-info-title text-xl font-black mb-3">
                   Installed Coupler Close-Up
                 </h3>
-                <p class="text-secondary leading-relaxed">
+                <p class="service-info-text text-secondary leading-relaxed">
                   A close view of the coupler mounted on threaded reinforcement,
                   connecting workshop preparation to field-ready use.
                 </p>
@@ -941,9 +1106,11 @@
                 src="images/d5286385-95a4-44f8-8200-83cd57cf20d5.webp"
                 loading="lazy"
               />
-              <div class="p-6">
-                <h3 class="text-xl font-black mb-3">Machine Line-Up</h3>
-                <p class="text-secondary leading-relaxed">
+              <div class="service-compact-card p-6">
+                <h3 class="service-info-title text-xl font-black mb-3">
+                  Machine Line-Up
+                </h3>
+                <p class="service-info-text text-secondary leading-relaxed">
                   Workshop equipment visuals that support DD Tech's service
                   readiness for production, forging and machining, and project
                   response.
@@ -959,11 +1126,11 @@
                 src="images/22new.webp"
                 loading="lazy"
               />
-              <div class="p-6">
-                <h3 class="text-xl font-black mb-3">
+              <div class="service-compact-card p-6">
+                <h3 class="service-info-title text-xl font-black mb-3">
                   Finished Application Visual
                 </h3>
-                <p class="text-secondary leading-relaxed">
+                <p class="service-info-text text-secondary leading-relaxed">
                   A combined product image showing how finished couplers appear
                   in reinforced bar applications.
                 </p>
@@ -973,12 +1140,12 @@
         </div>
       </section>
 
-      <section class="py-24 px-8 bg-white">
+      <section class="py-16 md:py-24 px-4 md:px-8 bg-white">
         <div
           class="max-w-screen-2xl mx-auto grid grid-cols-1 xl:grid-cols-[1.05fr_0.95fr] gap-8 items-stretch"
         >
           <div
-            class="rounded-[2rem] bg-[#121010] text-white p-8 md:p-10 h-full"
+            class="service-compact-card rounded-[2rem] bg-[#121010] text-white p-8 md:p-10 h-full"
           >
             <p
               class="text-[10px] uppercase tracking-[0.3em] text-white/55 font-bold mb-4"
@@ -986,47 +1153,57 @@
               How We Work
             </p>
             <h2
-              class="font-headline text-4xl md:text-5xl font-black tracking-tighter mb-8"
+              class="service-section-heading font-headline text-4xl md:text-5xl font-black tracking-tighter mb-8"
             >
               A service workflow built around project realities.
             </h2>
             <div class="space-y-5">
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <div
+                class="service-compact-card rounded-2xl border border-white/10 bg-white/5 p-6"
+              >
                 <div
                   class="text-[10px] uppercase tracking-[0.24em] text-white/50 mb-3"
                 >
                   01 Assessment
                 </div>
-                <h3 class="text-2xl font-bold mb-3">Requirement Review</h3>
-                <p class="text-white/70 leading-relaxed">
+                <h3 class="service-info-title text-2xl font-bold mb-3">
+                  Requirement Review
+                </h3>
+                <p class="service-info-text text-white/70 leading-relaxed">
                   We understand the project need, service scope, site
                   conditions, material requirements, and execution expectations
                   before work begins.
                 </p>
               </div>
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <div
+                class="service-compact-card rounded-2xl border border-white/10 bg-white/5 p-6"
+              >
                 <div
                   class="text-[10px] uppercase tracking-[0.24em] text-white/50 mb-3"
                 >
                   02 Planning
                 </div>
-                <h3 class="text-2xl font-bold mb-3">
+                <h3 class="service-info-title text-2xl font-bold mb-3">
                   Coordination &amp; Scheduling
                 </h3>
-                <p class="text-white/70 leading-relaxed">
+                <p class="service-info-text text-white/70 leading-relaxed">
                   Production planning, forging and machining coordination, site
                   scheduling, transit arrangements, and technical coordination
                   are aligned to keep work practical and efficient.
                 </p>
               </div>
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-6">
+              <div
+                class="service-compact-card rounded-2xl border border-white/10 bg-white/5 p-6"
+              >
                 <div
                   class="text-[10px] uppercase tracking-[0.24em] text-white/50 mb-3"
                 >
                   03 Delivery
                 </div>
-                <h3 class="text-2xl font-bold mb-3">Execution Support</h3>
-                <p class="text-white/70 leading-relaxed">
+                <h3 class="service-info-title text-2xl font-bold mb-3">
+                  Execution Support
+                </h3>
+                <p class="service-info-text text-white/70 leading-relaxed">
                   We deliver the selected service with quality checks, timely
                   response, and support that helps projects continue without
                   unnecessary interruptions.
@@ -1036,7 +1213,7 @@
           </div>
           <div class="grid grid-cols-1 gap-5 h-full">
             <div
-              class="rounded-[1.75rem] border border-[#e3b8b1] bg-[linear-gradient(145deg,#fff9f8_0%,#f5e8e4_100%)] p-8 shadow-[0_22px_60px_rgba(125,10,10,0.08)] h-full"
+              class="service-compact-card rounded-[1.75rem] border border-[#e3b8b1] bg-[linear-gradient(145deg,#fff9f8_0%,#f5e8e4_100%)] p-8 shadow-[0_22px_60px_rgba(125,10,10,0.08)] h-full"
             >
               <div class="flex items-start justify-between gap-4 mb-6">
                 <div>
@@ -1046,7 +1223,7 @@
                     Service Advantages
                   </p>
                   <h3
-                    class="font-headline text-3xl font-black tracking-tight text-on-surface"
+                    class="service-section-heading font-headline text-3xl font-black tracking-tight text-on-surface"
                   >
                     Built to make site execution smoother.
                   </h3>
@@ -1061,7 +1238,7 @@
               </div>
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div
-                  class="rounded-[1.35rem] border border-[#ead8d4] bg-white px-5 py-5 shadow-[0_10px_30px_rgba(125,10,10,0.05)]"
+                  class="service-compact-card rounded-[1.35rem] border border-[#ead8d4] bg-white px-5 py-5 shadow-[0_10px_30px_rgba(125,10,10,0.05)]"
                 >
                   <div class="flex items-start gap-4">
                     <span
@@ -1072,10 +1249,14 @@
                       >
                     </span>
                     <div>
-                      <div class="font-bold text-on-surface mb-1">
+                      <div
+                        class="service-info-title font-bold text-on-surface mb-1"
+                      >
                         Active Site Support
                       </div>
-                      <p class="text-sm text-secondary leading-relaxed">
+                      <p
+                        class="service-info-text text-sm text-secondary leading-relaxed"
+                      >
                         Practical support for active construction work where
                         speed and coordination matter every day.
                       </p>
@@ -1083,7 +1264,7 @@
                   </div>
                 </div>
                 <div
-                  class="rounded-[1.35rem] border border-[#ead8d4] bg-white px-5 py-5 shadow-[0_10px_30px_rgba(125,10,10,0.05)]"
+                  class="service-compact-card rounded-[1.35rem] border border-[#ead8d4] bg-white px-5 py-5 shadow-[0_10px_30px_rgba(125,10,10,0.05)]"
                 >
                   <div class="flex items-start gap-4">
                     <span
@@ -1094,10 +1275,14 @@
                       >
                     </span>
                     <div>
-                      <div class="font-bold text-on-surface mb-1">
+                      <div
+                        class="service-info-title font-bold text-on-surface mb-1"
+                      >
                         Better Coordination
                       </div>
-                      <p class="text-sm text-secondary leading-relaxed">
+                      <p
+                        class="service-info-text text-sm text-secondary leading-relaxed"
+                      >
                         Faster coordination between supply and site teams to
                         reduce delays and improve workflow continuity.
                       </p>
@@ -1105,7 +1290,7 @@
                   </div>
                 </div>
                 <div
-                  class="rounded-[1.35rem] border border-[#ead8d4] bg-white px-5 py-5 shadow-[0_10px_30px_rgba(125,10,10,0.05)]"
+                  class="service-compact-card rounded-[1.35rem] border border-[#ead8d4] bg-white px-5 py-5 shadow-[0_10px_30px_rgba(125,10,10,0.05)]"
                 >
                   <div class="flex items-start gap-4">
                     <span
@@ -1116,10 +1301,14 @@
                       >
                     </span>
                     <div>
-                      <div class="font-bold text-on-surface mb-1">
+                      <div
+                        class="service-info-title font-bold text-on-surface mb-1"
+                      >
                         Dependable Quality
                       </div>
-                      <p class="text-sm text-secondary leading-relaxed">
+                      <p
+                        class="service-info-text text-sm text-secondary leading-relaxed"
+                      >
                         Dependable quality with standards-focused processes that
                         support confidence on demanding projects.
                       </p>
@@ -1127,7 +1316,7 @@
                   </div>
                 </div>
                 <div
-                  class="rounded-[1.35rem] border border-[#ead8d4] bg-white px-5 py-5 shadow-[0_10px_30px_rgba(125,10,10,0.05)]"
+                  class="service-compact-card rounded-[1.35rem] border border-[#ead8d4] bg-white px-5 py-5 shadow-[0_10px_30px_rgba(125,10,10,0.05)]"
                 >
                   <div class="flex items-start gap-4">
                     <span
@@ -1138,10 +1327,14 @@
                       >
                     </span>
                     <div>
-                      <div class="font-bold text-on-surface mb-1">
+                      <div
+                        class="service-info-title font-bold text-on-surface mb-1"
+                      >
                         Responsive Technical Help
                       </div>
-                      <p class="text-sm text-secondary leading-relaxed">
+                      <p
+                        class="service-info-text text-sm text-secondary leading-relaxed"
+                      >
                         Responsive technical help when projects need clarity on
                         installation, selection, or execution planning.
                       </p>
@@ -1151,7 +1344,7 @@
               </div>
             </div>
             <div
-              class="rounded-[1.75rem] bg-[linear-gradient(180deg,#2b3134_0%,#171b1d_100%)] text-white p-8 relative overflow-hidden border border-white/10"
+              class="service-compact-card rounded-[1.75rem] bg-[linear-gradient(180deg,#2b3134_0%,#171b1d_100%)] text-white p-8 relative overflow-hidden border border-white/10"
             >
               <span
                 class="material-symbols-outlined absolute -right-6 -bottom-6 text-[9rem] opacity-10"
@@ -1162,7 +1355,7 @@
               >
                 Quality & Standards
               </p>
-              <p class="text-white leading-relaxed">
+              <p class="service-info-text text-white leading-relaxed">
                 Our service quality is supported by standards-conscious
                 manufacturing, forging and machining accuracy, and proven
                 coupler systems that meet IS, BS, and ISO quality standards for
@@ -1174,7 +1367,7 @@
       </section>
 
       <section
-        class="py-24 px-8 bg-[linear-gradient(180deg,#171212_0%,#111111_100%)] text-white"
+        class="py-16 md:py-24 px-4 md:px-8 bg-[linear-gradient(180deg,#171212_0%,#111111_100%)] text-white"
       >
         <div class="max-w-screen-2xl mx-auto">
           <div
@@ -1187,11 +1380,13 @@
                 Technical Standards
               </p>
               <h2
-                class="font-headline text-4xl md:text-5xl font-black tracking-tighter mb-6"
+                class="service-section-heading font-headline text-4xl md:text-5xl font-black tracking-tighter mb-6"
               >
                 Standards that support confidence on every project.
               </h2>
-              <p class="text-white/70 text-lg leading-relaxed">
+              <p
+                class="service-section-subtext text-white/70 text-lg leading-relaxed"
+              >
                 Our work aligns with recognized quality and material standards
                 that support reliability, consistency, and confidence in
                 demanding construction environments.
@@ -1265,7 +1460,7 @@
 
       <!-- Product Specifications Section -->
       <section
-        class="py-24 px-8 bg-[linear-gradient(180deg,#f8f3f1_0%,#ffffff_100%)] relative overflow-hidden"
+        class="py-16 md:py-24 px-4 md:px-8 bg-[linear-gradient(180deg,#f8f3f1_0%,#ffffff_100%)] relative overflow-hidden"
       >
         <div class="max-w-screen-2xl mx-auto">
           <div
@@ -1281,11 +1476,13 @@
                   Product Specifications
                 </p>
                 <h2
-                  class="font-headline text-3xl md:text-5xl font-black tracking-tighter mb-4 md:mb-6"
+                  class="service-section-heading font-headline text-3xl md:text-5xl font-black tracking-tighter mb-4 md:mb-6"
                 >
                   Parallel Threaded Mechanical Splicing Systems
                 </h2>
-                <p class="text-stone-600 text-sm md:text-base leading-relaxed">
+                <p
+                  class="service-section-subtext text-stone-600 text-sm md:text-base leading-relaxed"
+                >
                   DD TECH Couplers are Parallel Threaded Mechanical Splicing
                   systems (Mechanical coupler) designed and manufactured for the
                   connection of concrete reinforcement bars ranging from a
@@ -1317,10 +1514,14 @@
                 class="inline-flex items-center rounded-full bg-[#7D0A0A] px-3 py-1 text-[10px] uppercase tracking-[0.2em] font-bold text-white mb-3"
                 >Type 01</span
               >
-              <h3 class="font-headline text-xl font-black tracking-tight mb-3">
+              <h3
+                class="service-info-title font-headline text-xl font-black tracking-tight mb-3"
+              >
                 Standard (Parallel Threaded) Coupler
               </h3>
-              <p class="text-stone-500 text-sm leading-relaxed mb-5">
+              <p
+                class="service-info-text text-stone-500 text-sm leading-relaxed mb-5"
+              >
                 Used to connect two rebars of the same diameter with parallel
                 threads for full-strength mechanical connections.
               </p>
@@ -1386,10 +1587,14 @@
                   loading="lazy"
                 />
               </div>
-              <h3 class="font-headline text-xl font-black tracking-tight mb-3">
+              <h3
+                class="service-info-title font-headline text-xl font-black tracking-tight mb-3"
+              >
                 Reducer Coupler
               </h3>
-              <p class="text-stone-500 text-sm leading-relaxed mb-5">
+              <p
+                class="service-info-text text-stone-500 text-sm leading-relaxed mb-5"
+              >
                 Connects rebars of different diameters while maintaining safe
                 and dependable structural continuity.
               </p>
@@ -1453,10 +1658,14 @@
                   loading="lazy"
                 />
               </div>
-              <h3 class="font-headline text-xl font-black tracking-tight mb-3">
+              <h3
+                class="service-info-title font-headline text-xl font-black tracking-tight mb-3"
+              >
                 Position Coupler (Adjustable)
               </h3>
-              <p class="text-stone-500 text-sm leading-relaxed mb-5">
+              <p
+                class="service-info-text text-stone-500 text-sm leading-relaxed mb-5"
+              >
                 Used when one bar cannot be rotated; allows adjustment during
                 installation in retrofit or congested areas.
               </p>
@@ -1518,10 +1727,14 @@
                   loading="lazy"
                 />
               </div>
-              <h3 class="font-headline text-xl font-black tracking-tight mb-3">
+              <h3
+                class="service-info-title font-headline text-xl font-black tracking-tight mb-3"
+              >
                 MBT Coupler (Mechanical Bolt Type)
               </h3>
-              <p class="text-white/70 text-sm leading-relaxed mb-5">
+              <p
+                class="service-info-text text-white/70 text-sm leading-relaxed mb-5"
+              >
                 Connect reinforcing bars without thread cutting or bar rotation
                 � ideal for repair work, column splicing, piling, and bridge
                 applications.
@@ -1597,13 +1810,13 @@
                 >Start a Consultation</span
               >
               <h3
-                class="font-headline text-4xl md:text-5xl font-black tracking-tighter mb-4"
+                class="service-section-heading font-headline text-4xl md:text-5xl font-black tracking-tighter mb-4"
               >
                 Build with a team focused on precision, compliance, and
                 site-ready execution.
               </h3>
               <p
-                class="text-white/70 text-base md:text-lg leading-relaxed max-w-3xl"
+                class="service-section-subtext text-white/70 text-base md:text-lg leading-relaxed max-w-3xl"
               >
                 From material selection to fabrication coordination, DD Tech
                 supports high-performance infrastructure projects with

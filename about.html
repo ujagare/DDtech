@@ -159,6 +159,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             backdrop-filter: blur(20px);
         }
         @media (max-width: 767px) {
+            .site-header {
+                background: #ffffff !important;
+                backdrop-filter: none !important;
+                -webkit-backdrop-filter: none !important;
+            }
             .hero-inner-mobile { padding-top: 2rem !important; padding-bottom: 2rem !important; }
             .service-icon {
                 height: 36px !important;
@@ -229,15 +234,60 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
         @media (max-width: 767px) {
             .about-hero-heading {
-                font-size: 3.35rem;
-                line-height: 0.95;
+                font-size: 2.55rem;
+                line-height: 0.94;
+            }
+            .about-hero-subtext {
+                font-size: 0.92rem !important;
+                line-height: 1.55 !important;
+            }
+            .about-section-heading {
+                font-size: 1.75rem !important;
+                line-height: 1.05 !important;
+                margin-bottom: 1rem !important;
+            }
+            .about-section-subtext {
+                font-size: 0.95rem !important;
+                line-height: 1.6 !important;
+            }
+            .about-stat-value {
+                font-size: 1.55rem !important;
+            }
+            .about-stat-label {
+                font-size: 0.5rem !important;
+                letter-spacing: 0.08em !important;
+                line-height: 1.35 !important;
+            }
+            .about-stat-value-wide {
+                font-size: 1.15rem !important;
+                line-height: 1.1 !important;
+                letter-spacing: -0.02em !important;
+                word-break: break-word !important;
+            }
+            .about-stat-label-wide {
+                font-size: 0.48rem !important;
+                letter-spacing: 0.05em !important;
+                line-height: 1.32 !important;
+                word-break: break-word !important;
+            }
+            .about-feature-title {
+                font-size: 1.15rem !important;
+                line-height: 1.2 !important;
+                margin-bottom: 0.5rem !important;
+            }
+            .about-feature-text {
+                font-size: 0.85rem !important;
+                line-height: 1.5 !important;
+            }
+            .about-compact-card {
+                padding: 1.1rem !important;
             }
         }
     </style>
 </head>
 <body class="bg-surface text-on-surface overflow-x-hidden">
 <!-- Top Navigation Bar -->
-<header class="bg-white backdrop-blur-0 md:backdrop-blur-md sticky top-0 z-50 md:border-b md:border-stone-200/60 shadow-sm">
+<header class="site-header bg-white backdrop-blur-0 md:backdrop-blur-md sticky top-0 z-50 border-b-0 md:border-b md:border-stone-200/60 shadow-sm">
 <div class="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-3 md:py-4 max-w-screen-2xl mx-auto gap-4">
 <a class="flex items-center" href="index.html">
 <img alt="DD Steel Logo" class="h-14 md:h-20 w-auto object-contain" src="images/DD%20Steel%20logo.png" loading="lazy"/>
@@ -349,24 +399,24 @@ function toggleMobileMenu() {
 <div>
 <span class="inline-flex items-center rounded-full border border-white/15 bg-white/8 px-4 py-2 text-[10px] uppercase tracking-[0.3em] font-bold text-white/70 mb-8">DD Tech Company Profile</span>
 <h1 class="about-hero-heading font-headline md:text-7xl xl:text-[5rem] font-black max-w-5xl mb-6 md:mb-8">The link behind every strong structure.</h1>
-<p class="text-base md:text-xl text-white/80 leading-relaxed max-w-3xl mb-6">DD TECH is a manufacturer of rebar couplers and a construction services provider, delivering dependable solutions for modern structural work. Since beginning in 2018 under DD Enterprises and later rebranding as DD TECH, the company has grown around quality, reliability, innovation, and customer satisfaction.</p>
-<p class="text-sm md:text-base text-white/65 leading-relaxed max-w-3xl mb-8">Our work supports major Residential, Commercial, Industrial and Infrastructural projects with product strength, service responsiveness, and practical technical understanding from shop floor to site execution.</p>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-4xl">
-<div class="rounded-2xl border border-white/10 bg-white/8 px-4 py-4">
-<div class="text-2xl font-headline font-black text-white">2018</div>
-<div class="text-[10px] uppercase tracking-[0.24em] text-white/50 mt-2">Established</div>
+<p class="about-hero-subtext text-base md:text-xl text-white/80 leading-relaxed max-w-3xl mb-6">DD TECH is a manufacturer of rebar couplers and a construction services provider, delivering dependable solutions for modern structural work. Since beginning in 2018 under DD Enterprises and later rebranding as DD TECH, the company has grown around quality, reliability, innovation, and customer satisfaction.</p>
+<p class="about-section-subtext text-sm md:text-base text-white/65 leading-relaxed max-w-3xl mb-8">Our work supports major Residential, Commercial, Industrial and Infrastructural projects with product strength, service responsiveness, and practical technical understanding from shop floor to site execution.</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-8 max-w-4xl">
+<div class="min-w-0 rounded-2xl border border-white/10 bg-white/8 px-3 py-4">
+<div class="about-stat-value text-2xl font-headline font-black text-white">2018</div>
+<div class="about-stat-label text-[10px] uppercase tracking-[0.24em] text-white/50 mt-2">Established</div>
 </div>
-<div class="rounded-2xl border border-white/10 bg-white/8 px-4 py-4">
-<div class="text-2xl font-headline font-black text-white">16�40mm</div>
-<div class="text-[10px] uppercase tracking-[0.24em] text-white/50 mt-2">Bar Range</div>
+<div class="min-w-0 rounded-2xl border border-white/10 bg-white/8 px-3 py-4">
+<div class="about-stat-value about-stat-value-wide text-2xl font-headline font-black text-white">16-40mm</div>
+<div class="about-stat-label text-[10px] uppercase tracking-[0.24em] text-white/50 mt-2">Bar Range</div>
 </div>
-<div class="rounded-2xl border border-white/10 bg-white/8 px-4 py-4">
-<div class="text-2xl font-headline font-black text-white">4+</div>
-<div class="text-[10px] uppercase tracking-[0.24em] text-white/50 mt-2">Project Sectors</div>
+<div class="min-w-0 rounded-2xl border border-white/10 bg-white/8 px-3 py-4">
+<div class="about-stat-value text-2xl font-headline font-black text-white">4+</div>
+<div class="about-stat-label text-[10px] uppercase tracking-[0.24em] text-white/50 mt-2">Project Sectors</div>
 </div>
-<div class="rounded-2xl border border-white/10 bg-white/8 px-4 py-4">
-<div class="text-2xl font-headline font-black text-white">IS | ACI | BS</div>
-<div class="text-[10px] uppercase tracking-[0.24em] text-white/50 mt-2">Standards Focus</div>
+<div class="min-w-0 rounded-2xl border border-white/10 bg-white/8 px-3 py-4">
+<div class="about-stat-value about-stat-value-wide text-2xl font-headline font-black text-white">IS | ACI | BS</div>
+<div class="about-stat-label about-stat-label-wide text-[10px] uppercase tracking-[0.24em] text-white/50 mt-2">Standards Focus</div>
 </div>
 </div>
 <div class="flex flex-col sm:flex-row gap-4">
@@ -379,9 +429,9 @@ function toggleMobileMenu() {
 <div class="relative rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_30px_90px_rgba(0,0,0,0.28)]">
 <img class="h-[360px] md:h-[620px] w-full object-cover" alt="Real DD Tech bridge and infrastructure application environment" src="images/slide1.webp" loading="lazy"/>
 <div class="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,15,15,0.02),rgba(15,15,15,0.5))]"></div>
-<div class="absolute left-6 right-6 bottom-6 rounded-[1.5rem] border border-white/10 bg-[#111111]/70 backdrop-blur-md p-6">
+<div class="absolute left-4 right-4 bottom-4 md:left-6 md:right-6 md:bottom-6 rounded-[1.5rem] border border-white/10 bg-[#111111]/70 backdrop-blur-md p-4 md:p-6">
 <p class="text-[10px] uppercase tracking-[0.3em] text-white/55 font-bold mb-3">Trusted Construction Solutions</p>
-<p class="text-white/80 leading-relaxed">We specialize in parallel threaded mechanical splicing systems and construction support services for projects that demand dependable execution, traceability, and consistent quality.</p>
+<p class="about-feature-text text-white/80 leading-relaxed">We specialize in parallel threaded mechanical splicing systems and construction support services for projects that demand dependable execution, traceability, and consistent quality.</p>
 </div>
 </div>
 </div>
@@ -389,13 +439,13 @@ function toggleMobileMenu() {
 </div>
 </section>
 
-<section id="company-overview" class="py-24 px-8 bg-[linear-gradient(180deg,#f7f2f1_0%,#ffffff_100%)]">
+<section id="company-overview" class="py-16 md:py-24 px-4 md:px-8 bg-[linear-gradient(180deg,#f7f2f1_0%,#ffffff_100%)]">
 <div class="max-w-screen-2xl mx-auto">
 <div class="grid grid-cols-1 xl:grid-cols-[0.9fr_1.1fr] gap-8 items-stretch">
-<div class="rounded-[2rem] bg-[#171212] text-white p-8 md:p-10 shadow-[0_25px_80px_rgba(96,1,8,0.15)] h-full">
+<div class="about-compact-card rounded-[2rem] bg-[#171212] text-white p-8 md:p-10 shadow-[0_25px_80px_rgba(96,1,8,0.15)] h-full">
 <span class="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.28em] font-bold text-white/60 mb-6">About Us</span>
-<h2 class="font-headline text-4xl md:text-5xl font-black tracking-tighter mb-6">A practical manufacturing and construction partner.</h2>
-<p class="text-white/75 text-lg leading-relaxed mb-8">DD TECH began its journey in 2018 under the name DD Enterprises and has since evolved into a trusted name in the construction industry. With a focus on quality, reliability, and innovation, we rebranded as DD TECH to reflect our growing capabilities and long-term vision.</p>
+<h2 class="about-section-heading font-headline text-4xl md:text-5xl font-black tracking-tighter mb-6">A practical manufacturing and construction partner.</h2>
+<p class="about-section-subtext text-white/75 text-lg leading-relaxed mb-8">DD TECH began its journey in 2018 under the name DD Enterprises and has since evolved into a trusted name in the construction industry. With a focus on quality, reliability, and innovation, we rebranded as DD TECH to reflect our growing capabilities and long-term vision.</p>
 <div class="space-y-4">
 <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/50 mb-2">Who We Are</div>
@@ -423,61 +473,61 @@ function toggleMobileMenu() {
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 <div class="md:col-span-2 grid grid-cols-2 md:grid-cols-4 gap-4">
-<div class="rounded-[1.5rem] border border-[#ead8d4] bg-white px-5 py-5 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
-<div class="text-3xl font-headline font-black text-primary">2018</div>
-<div class="text-[10px] uppercase tracking-[0.24em] text-secondary mt-2">Journey Began</div>
+<div class="min-w-0 rounded-[1.5rem] border border-[#ead8d4] bg-white px-4 py-4 md:px-5 md:py-5 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+<div class="about-stat-value text-3xl font-headline font-black text-primary">2018</div>
+<div class="about-stat-label text-[10px] uppercase tracking-[0.24em] text-secondary mt-2">Journey Began</div>
 </div>
-<div class="rounded-[1.5rem] border border-[#ead8d4] bg-white px-5 py-5 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
-<div class="text-3xl font-headline font-black text-primary">16�40mm</div>
-<div class="text-[10px] uppercase tracking-[0.24em] text-secondary mt-2">Coupler Range</div>
+<div class="min-w-0 rounded-[1.5rem] border border-[#ead8d4] bg-white px-4 py-4 md:px-5 md:py-5 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+<div class="about-stat-value about-stat-value-wide text-3xl font-headline font-black text-primary">16-40mm</div>
+<div class="about-stat-label text-[10px] uppercase tracking-[0.24em] text-secondary mt-2">Coupler Range</div>
 </div>
-<div class="rounded-[1.5rem] border border-[#ead8d4] bg-white px-5 py-5 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
-<div class="text-3xl font-headline font-black text-primary">4</div>
-<div class="text-[10px] uppercase tracking-[0.24em] text-secondary mt-2">Product Types</div>
+<div class="min-w-0 rounded-[1.5rem] border border-[#ead8d4] bg-white px-4 py-4 md:px-5 md:py-5 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+<div class="about-stat-value text-3xl font-headline font-black text-primary">4</div>
+<div class="about-stat-label text-[10px] uppercase tracking-[0.24em] text-secondary mt-2">Product Types</div>
 </div>
-<div class="rounded-[1.5rem] border border-[#ead8d4] bg-white px-5 py-5 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
-<div class="text-3xl font-headline font-black text-primary">ISO</div>
-<div class="text-[10px] uppercase tracking-[0.24em] text-secondary mt-2">Certified Focus</div>
+<div class="min-w-0 rounded-[1.5rem] border border-[#ead8d4] bg-white px-4 py-4 md:px-5 md:py-5 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+<div class="about-stat-value text-3xl font-headline font-black text-primary">ISO</div>
+<div class="about-stat-label text-[10px] uppercase tracking-[0.24em] text-secondary mt-2">Certified Focus</div>
 </div>
 </div>
-<div class="rounded-[1.75rem] border border-[#ead8d4] bg-white p-7 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+<div class="about-compact-card rounded-[1.75rem] border border-[#ead8d4] bg-white p-7 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
 <span class="material-symbols-outlined text-4xl text-primary mb-5">factory</span>
-<h3 class="text-2xl font-black tracking-tight mb-3">Manufacturing Focus</h3>
-<p class="text-secondary leading-relaxed">We manufacture parallel threaded rebar couplers for structural reinforcement applications, with attention to process discipline, mechanical performance, and project-ready reliability.</p>
+<h3 class="about-feature-title text-2xl font-black tracking-tight mb-3">Manufacturing Focus</h3>
+<p class="about-feature-text text-secondary leading-relaxed">We manufacture parallel threaded rebar couplers for structural reinforcement applications, with attention to process discipline, mechanical performance, and project-ready reliability.</p>
 </div>
-<div class="rounded-[1.75rem] border border-[#ead8d4] bg-[#fbf5f4] p-7 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+<div class="about-compact-card rounded-[1.75rem] border border-[#ead8d4] bg-[#fbf5f4] p-7 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
 <span class="material-symbols-outlined text-4xl text-primary mb-5">engineering</span>
-<h3 class="text-2xl font-black tracking-tight mb-3">On-Site Support</h3>
-<p class="text-secondary leading-relaxed">Our on-site threading services help improve coordination, reduce delays, and make active construction work more efficient for contractors and project teams.</p>
+<h3 class="about-feature-title text-2xl font-black tracking-tight mb-3">On-Site Support</h3>
+<p class="about-feature-text text-secondary leading-relaxed">Our on-site threading services help improve coordination, reduce delays, and make active construction work more efficient for contractors and project teams.</p>
 </div>
-<div class="rounded-[1.75rem] border border-[#ead8d4] bg-[#fbf5f4] p-7 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+<div class="about-compact-card rounded-[1.75rem] border border-[#ead8d4] bg-[#fbf5f4] p-7 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
 <span class="material-symbols-outlined text-4xl text-primary mb-5">apartment</span>
-<h3 class="text-2xl font-black tracking-tight mb-3">Sector Experience</h3>
-<p class="text-secondary leading-relaxed">Our solutions support Residential, Commercial, Industrial and Infrastructural developments, giving us practical exposure across multiple construction environments.</p>
+<h3 class="about-feature-title text-2xl font-black tracking-tight mb-3">Sector Experience</h3>
+<p class="about-feature-text text-secondary leading-relaxed">Our solutions support Residential, Commercial, Industrial and Infrastructural developments, giving us practical exposure across multiple construction environments.</p>
 </div>
-<div class="rounded-[1.75rem] border border-[#ead8d4] bg-[#fbf5f4] p-7 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+<div class="about-compact-card rounded-[1.75rem] border border-[#ead8d4] bg-[#fbf5f4] p-7 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
 <span class="material-symbols-outlined text-4xl text-primary mb-5">build</span>
-<h3 class="text-2xl font-black tracking-tight mb-3">Forging & Machining</h3>
-<p class="text-secondary leading-relaxed">We offer forging and machining solutions that support durable, accurate, and consistent coupler production aligned with real project needs.</p>
+<h3 class="about-feature-title text-2xl font-black tracking-tight mb-3">Forging & Machining</h3>
+<p class="about-feature-text text-secondary leading-relaxed">We offer forging and machining solutions that support durable, accurate, and consistent coupler production aligned with real project needs.</p>
 </div>
-<div class="rounded-[1.75rem] border border-[#ead8d4] bg-white p-7 shadow-[0_20px_60px_rgba(0,0,0,0.05)] md:col-span-2 xl:col-span-1">
+<div class="about-compact-card rounded-[1.75rem] border border-[#ead8d4] bg-white p-7 shadow-[0_20px_60px_rgba(0,0,0,0.05)] md:col-span-2 xl:col-span-1">
 <span class="material-symbols-outlined text-4xl text-primary mb-5">support_agent</span>
-<h3 class="text-2xl font-black tracking-tight mb-3">Technical Guidance</h3>
-<p class="text-secondary leading-relaxed">We assist clients with product selection, installation understanding, and practical technical support during planning, execution, and site-level decision making.</p>
+<h3 class="about-feature-title text-2xl font-black tracking-tight mb-3">Technical Guidance</h3>
+<p class="about-feature-text text-secondary leading-relaxed">We assist clients with product selection, installation understanding, and practical technical support during planning, execution, and site-level decision making.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
 
-<section class="py-24 px-8 bg-white">
+<section class="py-16 md:py-24 px-4 md:px-8 bg-white">
 <div class="max-w-screen-2xl mx-auto space-y-5">
 <div class="grid grid-cols-1 xl:grid-cols-[1.08fr_0.92fr] gap-5 items-stretch">
-<div class="rounded-[2rem] bg-[linear-gradient(180deg,#171212_0%,#0f0c0c_100%)] text-white p-8 md:p-10 h-full shadow-[0_28px_80px_rgba(0,0,0,0.2)]">
+<div class="about-compact-card rounded-[2rem] bg-[linear-gradient(180deg,#171212_0%,#0f0c0c_100%)] text-white p-8 md:p-10 h-full shadow-[0_28px_80px_rgba(0,0,0,0.2)]">
 <div class="flex items-center justify-between gap-4 mb-6">
 <div>
 <p class="text-[10px] uppercase tracking-[0.3em] text-white/55 font-bold mb-3">Our Services</p>
-<h2 class="font-headline text-4xl md:text-5xl font-black tracking-tighter">Construction support designed for dependable execution.</h2>
+<h2 class="about-section-heading font-headline text-4xl md:text-5xl font-black tracking-tighter">Construction support designed for dependable execution.</h2>
 </div>
 <div class="hidden md:flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white/5">
 <span class="material-symbols-outlined text-[#ffb3ad] text-4xl">engineering</span>
@@ -542,11 +592,11 @@ function toggleMobileMenu() {
 </div>
 </div>
 <div class="space-y-5 h-full">
-<div class="rounded-[1.75rem] border border-[#ead8d4] bg-[linear-gradient(180deg,#fff8f7_0%,#f5ece9_100%)] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
+<div class="about-compact-card rounded-[1.75rem] border border-[#ead8d4] bg-[linear-gradient(180deg,#fff8f7_0%,#f5ece9_100%)] p-8 shadow-[0_20px_60px_rgba(0,0,0,0.05)]">
 <div class="flex items-center justify-between gap-4 mb-6">
 <div>
 <p class="text-[10px] uppercase tracking-[0.28em] text-primary font-bold mb-3">Our Strengths</p>
-<h3 class="font-headline text-3xl font-black tracking-tight">What Clients Value Most</h3>
+<h3 class="about-section-heading font-headline text-3xl font-black tracking-tight">What Clients Value Most</h3>
 </div>
 <span class="hidden md:inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-primary shadow-[0_12px_30px_rgba(128,27,27,0.08)]">
 <span class="material-symbols-outlined text-[28px]">workspace_premium</span>
@@ -610,7 +660,7 @@ function toggleMobileMenu() {
 </div>
 </div>
 </div>
-<div class="rounded-[1.75rem] bg-[linear-gradient(180deg,#7d0a0a_0%,#4f0707_100%)] text-white p-8 relative overflow-hidden shadow-[0_25px_60px_rgba(93,7,7,0.22)]">
+<div class="about-compact-card rounded-[1.75rem] bg-[linear-gradient(180deg,#7d0a0a_0%,#4f0707_100%)] text-white p-8 relative overflow-hidden shadow-[0_25px_60px_rgba(93,7,7,0.22)]">
 <span class="material-symbols-outlined absolute -right-6 -bottom-6 text-[9rem] opacity-10">fact_check</span>
 <div class="flex items-center justify-between gap-4 mb-5">
 <div>
@@ -640,14 +690,14 @@ function toggleMobileMenu() {
 </div>
 </section>
 
-<section class="pt-12 pb-24 px-8 bg-[linear-gradient(180deg,#f4f0ef_0%,#ffffff_100%)]">
+<section class="pt-10 md:pt-12 pb-16 md:pb-24 px-4 md:px-8 bg-[linear-gradient(180deg,#f4f0ef_0%,#ffffff_100%)]">
 <div class="max-w-screen-2xl mx-auto">
-<div class="rounded-[2rem] bg-[linear-gradient(180deg,#7d0a0a_0%,#4f0707_100%)] text-white p-8 md:p-10 shadow-[0_25px_60px_rgba(93,7,7,0.18)]">
+<div class="about-compact-card rounded-[2rem] bg-[linear-gradient(180deg,#7d0a0a_0%,#4f0707_100%)] text-white p-8 md:p-10 shadow-[0_25px_60px_rgba(93,7,7,0.18)]">
 <div class="flex items-start justify-between gap-4 mb-8">
 <div>
 <p class="text-[10px] uppercase tracking-[0.3em] text-white/60 font-bold mb-4">Vision & Mission</p>
-<h2 class="font-headline text-4xl md:text-5xl font-black tracking-tighter mb-4">Built for long-term trust in construction.</h2>
-<p class="max-w-2xl text-white/80 text-base md:text-lg leading-relaxed">DD TECH is focused on dependable growth, better project support, and stronger client partnerships through quality products, practical services, and disciplined execution.</p>
+<h2 class="about-section-heading font-headline text-4xl md:text-5xl font-black tracking-tighter mb-4">Built for long-term trust in construction.</h2>
+<p class="about-section-subtext max-w-2xl text-white/80 text-base md:text-lg leading-relaxed">DD TECH is focused on dependable growth, better project support, and stronger client partnerships through quality products, practical services, and disciplined execution.</p>
 </div>
 <span class="hidden md:inline-flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/10 text-[#ffb3ad]">
 <span class="material-symbols-outlined text-[28px]">track_changes</span>
@@ -658,15 +708,15 @@ function toggleMobileMenu() {
 <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-[#ffb3ad] mb-5">
 <span class="material-symbols-outlined text-[26px]">visibility</span>
 </div>
-<h3 class="text-2xl font-bold mb-3">Vision</h3>
-<p class="text-white/80 leading-relaxed">To become a leading and trusted manufacturer of rebar couplers and construction solutions by delivering high-quality products, reliable services, and lasting confidence to every client we serve.</p>
+<h3 class="about-feature-title text-2xl font-bold mb-3">Vision</h3>
+<p class="about-feature-text text-white/80 leading-relaxed">To become a leading and trusted manufacturer of rebar couplers and construction solutions by delivering high-quality products, reliable services, and lasting confidence to every client we serve.</p>
 </div>
 <div class="rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.05))] p-6 md:p-7">
 <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-[#ffb3ad] mb-5">
 <span class="material-symbols-outlined text-[26px]">flag</span>
 </div>
-<h3 class="text-2xl font-bold mb-3">Mission</h3>
-<p class="text-white/80 leading-relaxed">To provide innovative, reliable, and cost-effective construction solutions through superior manufacturing, on-site services, and a firm commitment to quality, safety, excellence, and customer satisfaction.</p>
+<h3 class="about-feature-title text-2xl font-bold mb-3">Mission</h3>
+<p class="about-feature-text text-white/80 leading-relaxed">To provide innovative, reliable, and cost-effective construction solutions through superior manufacturing, on-site services, and a firm commitment to quality, safety, excellence, and customer satisfaction.</p>
 </div>
 </div>
 </div>
@@ -677,12 +727,12 @@ function toggleMobileMenu() {
 <footer class="relative overflow-hidden bg-[#111111] text-white">
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(125,10,10,0.38),_transparent_28%),radial-gradient(circle_at_center_right,_rgba(255,179,173,0.12),_transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0))]"></div>
 <div class="relative max-w-screen-2xl mx-auto px-8 md:px-12 py-16 md:py-20">
-<div class="rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-8 md:p-10 shadow-[0_30px_90px_rgba(0,0,0,0.26)] mb-12">
+<div class="about-compact-card rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.03))] p-8 md:p-10 shadow-[0_30px_90px_rgba(0,0,0,0.26)] mb-12">
 <div class="grid grid-cols-1 xl:grid-cols-[1.15fr_0.85fr] gap-8 items-center">
 <div>
 <span class="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[10px] uppercase tracking-[0.3em] font-bold text-white/60 mb-6">Start a Consultation</span>
-<h3 class="font-headline text-4xl md:text-5xl font-black tracking-tighter mb-4">Connect with DD Tech for dependable construction support.</h3>
-<p class="text-white/70 text-base md:text-lg leading-relaxed max-w-3xl">From rebar coupler manufacturing to on-site threading, forging & machining, transit mixer rental, and technical guidance, we provide practical solutions that help construction teams deliver with confidence.</p>
+<h3 class="about-section-heading font-headline text-4xl md:text-5xl font-black tracking-tighter mb-4">Connect with DD Tech for dependable construction support.</h3>
+<p class="about-section-subtext text-white/70 text-base md:text-lg leading-relaxed max-w-3xl">From rebar coupler manufacturing to on-site threading, forging & machining, transit mixer rental, and technical guidance, we provide practical solutions that help construction teams deliver with confidence.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 <div class="rounded-2xl border border-white/10 bg-[#801B1B]/40 px-5 py-5">
@@ -690,8 +740,8 @@ function toggleMobileMenu() {
 <div class="text-[10px] uppercase tracking-[0.22em] text-white/55 mt-2">Established</div>
 </div>
 <div class="rounded-2xl border border-white/10 bg-white/5 px-5 py-5">
-<div class="text-3xl font-headline font-black text-[#ffb3ad]">IS | BS | ISO</div>
-<div class="text-[10px] uppercase tracking-[0.22em] text-white/55 mt-2">Standards-Focused Quality</div>
+<div class="about-stat-value-wide text-3xl font-headline font-black text-[#ffb3ad]">IS | BS | ISO</div>
+<div class="about-stat-label-wide text-[10px] uppercase tracking-[0.22em] text-white/55 mt-2">Standards-Focused Quality</div>
 </div>
 <a class="inline-flex items-center justify-center rounded-full bg-white text-[#801B1B] px-8 py-4 font-bold uppercase tracking-[0.2em] text-xs hover:bg-[#F4F4F4] transition-colors sm:col-span-2" href="contact.html">Request Consultation</a>
 </div>
@@ -707,8 +757,8 @@ function toggleMobileMenu() {
 <div class="text-[10px] uppercase tracking-[0.22em] text-white/45 mt-2">Journey Began</div>
 </div>
 <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-4">
-<div class="text-2xl font-headline font-black text-[#ffb3ad]">4 Types</div>
-<div class="text-[10px] uppercase tracking-[0.22em] text-white/45 mt-2">Coupler Range</div>
+<div class="about-stat-value-wide text-2xl font-headline font-black text-[#ffb3ad]">4 Types</div>
+<div class="about-stat-label-wide text-[10px] uppercase tracking-[0.22em] text-white/45 mt-2">Coupler Range</div>
 </div>
 </div>
 </div>
