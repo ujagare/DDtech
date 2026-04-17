@@ -276,8 +276,8 @@
         }
         /* Override Tailwind classes for mobile */
         .text-5xl,
-        .md\\:text-7xl,
-        .xl\\:text-\\[5rem\\] {
+        .md\:text-7xl,
+        .xl\:text-\[5rem\] {
           font-size: 2.1rem !important;
           line-height: 0.96 !important;
         }
@@ -1327,7 +1327,7 @@
             .split("")
             .map(
               (char, i) =>
-                `<span style="display: inline-block; opacity: 0;" data-char="${i}">${char === " " ? "&nbsp;" : char}</span>`,
+                `<span style="display: inline-block;" data-char="${i}">${char === " " ? "&nbsp;" : char}</span>`,
             )
             .join("");
 
@@ -1352,7 +1352,7 @@
           element.innerHTML = words
             .map(
               (word, i) =>
-                `<span style="display: inline-block; margin-right: 0.25em; opacity: 0;" data-word="${i}">${word}</span>`,
+                `<span style="display: inline-block; margin-right: 0.25em;" data-word="${i}">${word}</span>`,
             )
             .join("");
 
