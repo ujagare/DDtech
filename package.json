@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:css": "tailwindcss -i ./src/input.css -o ./dist/styles.css --minify",
-    "watch:css": "tailwindcss -i ./src/input.css -o ./dist/styles.css --watch",
+    "build:css": "node ./node_modules/tailwindcss/lib/cli.js -i ./src/input.css -o ./dist/styles.css --minify",
+    "watch:css": "node ./node_modules/tailwindcss/lib/cli.js -i ./src/input.css -o ./dist/styles.css --watch",
     "test": "npm run build",
     "dev": "netlify dev",
     "build": "npm run build:css"
