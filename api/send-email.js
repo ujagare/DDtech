@@ -70,6 +70,7 @@ module.exports = async (req, res) => {
 
           <p>If you need immediate assistance, feel free to call us:</p>
           <ul>
+            <li><a href="tel:+917821925836">+91 7821925836</a></li>
             <li><a href="tel:+919767164151">+91 9767164151</a></li>
             <li><a href="tel:+918669110052">+91 8669110052</a></li>
           </ul>

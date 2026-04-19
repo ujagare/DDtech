@@ -15,6 +15,21 @@
 <meta name="revisit-after" content="7 days"/>
 <meta name="distribution" content="global"/>
 <meta name="rating" content="general"/>
+<!-- Additional SEO Meta Tags -->
+<meta name="language" content="english">
+<meta name="geo.country" content="IN">
+<meta name="geo.placename" content="Pune">
+<meta name="geo.position" content="18.5204;73.8567">
+<meta name="ICBM" content="18.5204,73.8567">
+<meta name="subject" content="Rebar Couplers, Construction Services, Manufacturing">
+<meta name="revised" content="Sunday, April 19th, 2026, 5:00 am">
+<meta name="abstract" content="DD Tech - Leading rebar coupler manufacturer in Pune providing mechanical splicing, on-site threading services, forging & machining, and technical guidance.">
+<meta name="topic" content="Rebar Coupler Manufacturer Pune India">
+<meta name="summary" content="Leading manufacturer of rebar couplers with on-site threading services and construction solutions across India.">
+<meta name="Classification" content="Business">
+<meta name="author" content="DD Tech Infrastructure, Info@ddtech.in">
+<meta name="designer" content="DD Tech Infrastructure">
+<meta name="copyright" content="2026 DD Tech Infrastructure">
 <!-- Open Graph Meta Tags -->
 <meta property="og:title" content="DD Tech | Rebar Coupler Manufacturer & Threading Services"/>
 <meta property="og:description" content="Leading manufacturer of rebar couplers with on-site threading services, forging & machining solutions for construction projects in Pune and across India."/>
@@ -52,26 +67,20 @@
     "postalCode": "410501",
     "addressCountry": "IN"
   },
-  "contactPoint": {
+  "contactPoint": [{
     "@type": "ContactPoint",
-    "telephone": "+91-9767164151",
+    "telephone": "+91-7821925836",
     "contactType": "Customer Service",
     "email": "Info@ddtech.in",
-    "availableLanguage": ["English", "Hindi", "Marathi"]
-  },
+    "availableLanguage": ["English", "Hindi", "Marathi"],
+    "areaServed": "IN"
+  }],
   "sameAs": [
     "https://www.instagram.com/ddtechindia/",
-    "https://wa.me/919767164151"
+    "https://wa.me/919767164151",
+    "https://www.facebook.com/ddtechindia",
+    "https://www.linkedin.com/company/ddtech-infrastructure"
   ],
-  "areaServed": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": "18.5204",
-      "longitude": "73.8567"
-    },
-    "geoRadius": "500000"
-  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Construction Services",
@@ -109,6 +118,19 @@
         }
       }
     ]
+  },
+  "brand": {
+    "@type": "Brand",
+    "name": "DD Tech"
+  },
+  "foundingLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pune",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    }
   }
 }
 </script>
@@ -123,6 +145,54 @@
     "target": "https://www.ddtech.in/search?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
+}
+</script>
+
+<!-- Breadcrumb Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Home",
+    "item": "https://www.ddtech.in/"
+  }]
+}
+</script>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What services does DD Tech provide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DD Tech provides rebar coupler manufacturing, on-site threading services, forging & machining, transit mixer rental, and technical guidance for construction projects."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the bar diameter range for your couplers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our parallel threaded rebar couplers are suitable for 16-40mm bar diameter range."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is DD Tech located?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DD Tech Infrastructure is located at 08, Sunrise Industrial Park, GAT no: 554, Nighoje, Pune, Maharashtra, India - 410501."
+      }
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -531,13 +601,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <header class="site-header bg-white backdrop-blur-0 md:backdrop-blur-md sticky top-0 z-50 border-b-0 md:border-b md:border-stone-200/60 shadow-sm">
 <div class="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-3 md:py-4 max-w-screen-2xl mx-auto gap-4">
 <a class="flex items-center" href="index.html">
-<img alt="DD Steel Logo" class="h-14 md:h-20 w-auto object-contain" src="images/DD%20Steel%20logo.png" loading="lazy"/>
+<img alt="DD Steel Logo" class="h-14 md:h-20 w-auto object-contain" src="images/DD%20Steel%20logo.png" loading="lazy" itemprop="logo"/>
 </a>
 <nav aria-label="Primary" class="hidden md:flex items-center gap-10">
 <a class="text-red-900 border-b-2 border-red-900 pb-1 font-bold uppercase tracking-widest text-xs transition-colors duration-200" href="index.html">Home</a>
 <a class="text-stone-600 font-medium hover:text-red-800 transition-colors duration-200 uppercase tracking-widest text-xs" href="about.html">About</a>
 <a class="text-stone-600 font-medium hover:text-red-800 transition-colors duration-200 uppercase tracking-widest text-xs" href="service.html">Services</a>
 <a class="text-stone-600 font-medium hover:text-red-800 transition-colors duration-200 uppercase tracking-widest text-xs" href="project.html">Project</a>
+<a class="text-stone-600 font-medium hover:text-red-800 transition-colors duration-200 uppercase tracking-widest text-xs" href="certification.html">Certifications</a>
 <a class="text-stone-600 font-medium hover:text-red-800 transition-colors duration-200 uppercase tracking-widest text-xs" href="contact.html">Contact</a>
 </nav>
 <div class="flex items-center gap-3">
@@ -565,6 +636,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a onclick="toggleMobileMenu()" class="text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center" href="about.html">About</a>
 <a onclick="toggleMobileMenu()" class="text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center" href="service.html">Services</a>
 <a onclick="toggleMobileMenu()" class="text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center" href="project.html">Project</a>
+<a onclick="toggleMobileMenu()" class="text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center" href="certification.html">Certifications</a>
 <a onclick="toggleMobileMenu()" class="text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center" href="contact.html">Contact</a>
 </nav>
 
@@ -575,7 +647,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="text-center space-y-3 mb-6">
 <h3 class="text-lg font-bold text-white mb-3">Contact Information</h3>
 <p class="text-sm text-white/90 leading-relaxed">Sunrise Industrial Park, Nighoje,<br/>Pune, Maharashtra, India - 412115</p>
-<a href="tel:+919767164151" class="block text-xl font-bold text-white hover:text-[#ffb3ad] transition-colors mt-3">+91 97671 64151</a>
+<a href="tel:+917821925836" class="block text-xl font-bold text-white hover:text-[#ffb3ad] transition-colors mt-3">+91 7821925836 | +91 97671 64151</a>
 <a href="mailto:Info@ddtech.in" class="block text-sm text-white/90 hover:text-white transition-colors">Info@ddtech.in</a>
 </div>
 
@@ -640,7 +712,7 @@ function toggleMobileMenu() {
 <div class="swiper-slide relative">
 <picture>
 <source media="(max-width: 767px)" srcset="images/mobile/9a0d9b6e-3cdf-4d98-8671-0c196e8a862e.webp"/>
-<img alt="DD Tech precision-finished rebar couplers arranged in production-ready batches" class="absolute inset-0 h-full w-full object-cover" src="images/e3745b05-7665-4446-86ac-41405bb20cc8.webp" loading="eager" fetchpriority="high"/>
+<img alt="DD Tech precision-finished rebar couplers arranged in production-ready batches" class="absolute inset-0 h-full w-full object-cover" src="images/e3745b05-7665-4446-86ac-41405bb20cc8.webp" loading="eager" fetchpriority="high" itemprop="image"/>
 </picture>
 <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.78) 42%, rgba(0, 0, 0, 0.62) 100%);"></div>
 <div class="relative max-w-screen-2xl mx-auto min-h-[calc(100vh-76px)] md:min-h-[calc(100vh-89px)] px-4 sm:px-6 lg:px-8 py-8 md:py-12 flex items-center">
@@ -1120,7 +1192,7 @@ function toggleMobileMenu() {
 </figure>
 <figure class="group overflow-hidden rounded-[2rem] border border-[#dec0bb] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
 <div class="overflow-hidden bg-[#f7efed]">
-<img alt="Coupler installed on threaded rebar" class="h-56 md:h-72 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" src="images/DSC06936b.webp" loading="lazy"/>
+<img alt="Coupler installed on threaded rebar" class="h-56 md:h-72 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" src="images/2 (1).webp" loading="lazy"/>
 </div>
 <figcaption class="p-7">
 <span class="inline-block text-[10px] uppercase tracking-[0.28em] text-primary font-bold mb-3">Product Detail</span>
@@ -1160,7 +1232,7 @@ function toggleMobileMenu() {
 </figure>
 <figure class="group overflow-hidden rounded-[2rem] border border-[#dec0bb] bg-white shadow-[0_24px_60px_rgba(0,0,0,0.06)]">
 <div class="overflow-hidden bg-[#f7efed]">
-<img alt="Bridge project visual" class="h-56 md:h-72 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" src="images/slide1.webp" loading="lazy"/>
+<img alt="Bridge project visual" class="h-56 md:h-72 w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" src="images/6b1d002b-07ff-4201-b45e-59391f3532cf.webp" loading="lazy"/>
 </div>
 <figcaption class="p-7">
 <span class="inline-block text-[10px] uppercase tracking-[0.28em] text-primary font-bold mb-3">Project Context</span>
@@ -1390,6 +1462,7 @@ function toggleMobileMenu() {
 <li><a class="text-white/75 hover:text-white transition-colors" href="about.html">About</a></li>
 <li><a class="text-white/75 hover:text-white transition-colors" href="service.html">Services</a></li>
 <li><a class="text-white/75 hover:text-white transition-colors" href="project.html">Project</a></li>
+<li><a class="text-white/75 hover:text-white transition-colors" href="certification.html">Certifications</a></li>
 <li><a class="text-white/75 hover:text-white transition-colors" href="contact.html">Contact</a></li>
 </ul>
 </nav>
@@ -1406,7 +1479,7 @@ function toggleMobileMenu() {
 <h4 class="text-xs font-bold uppercase tracking-[0.3em] text-white/55 mb-6">Contact</h4>
 <div class="space-y-4 text-sm text-white/75 leading-relaxed">
 <p>RH32, Madhuban Sai City, Talegaon Dabhade, Pune - 410507</p>
-<p>+91-9767164152 | +91-8669110052</p>
+<p>+91-7821925836 | +91-9767164152 | +91-8669110052</p>
 <p>ddgroup787@gmail.com</p>
 <p>GSTIN: 27AAPFD1301E1ZW</p>
 <p>Mon - Sat | 9:00 AM - 7:00 PM</p>
