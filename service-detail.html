@@ -94,42 +94,30 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
-    <!-- Sentry Error Tracking - Commented out until DSN is configured -->
-    <!-- <script src="https://browser.sentry-cdn.com/7.91.0/bundle.min.js"></script>
+    <!-- Sentry Error Tracking -->
+    <script src="https://js.sentry-cdn.com/69f257dd3f7b6a212c92ab6046d376d4.min.js" crossorigin="anonymous"></script>
     <script>
       Sentry.init({
-        dsn: "https://YOUR_SENTRY_DSN_HERE@ingest.sentry.io/YOUR_PROJECT_ID",
+        dsn: "https://69f257dd3f7b6a212c92ab6046d376d4@o4511247149301760.ingest.us.sentry.io/4511247155068928",
         environment: "production",
-        tracesSampleRate: 0.1
+        tracesSampleRate: 0.1,
+        integrations: [
+          new Sentry.BrowserTracing(),
+        ],
+        beforeSend(event) {
+          // Filter out common non-critical errors
+          if (event.exception) {
+            const error = event.exception.values[0];
+            if (error && error.type === 'ChunkLoadError') {
+              return null;
+            }
+          }
+          return event;
+        }
       });
-    </script> -->
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX', {
-        'page_path': window.location.pathname,
-        'anonymize_ip': true
-      });
     </script>
 
-    <!-- Google Tag Manager (head) -->
-    <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXXX');
-    </script>
-
-    <!-- Umami Analytics - Add your website ID when ready -->
-    <!-- <script async src="https://analytics.umami.is/script.js" data-website-id="YOUR_UMAMI_WEBSITE_ID"></script> -->
 
     <link
       href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&family=Manrope:wght@400;500;600;700&display=swap"
@@ -422,16 +410,34 @@
         }
       }
     </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7YN505TLDB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7YN505TLDB');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NK9LZQ6L');</script>
+<!-- End Google Tag Manager -->
   </head>
   <body
     class="bg-surface font-body text-on-surface antialiased overflow-x-hidden"
   >
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK9LZQ6L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <!-- Navigation -->
     <!-- Top Navigation Bar -->
 <header class="site-header bg-white backdrop-blur-0 md:backdrop-blur-md sticky top-0 z-50 border-b-0 md:border-b md:border-stone-200/60 shadow-sm">
 <div class="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-3 md:py-4 max-w-screen-2xl mx-auto gap-4">
 <a class="flex items-center" href="index.html">
-<img alt="DD Steel Logo" class="h-14 md:h-20 w-auto object-contain" src="images/DD%20Steel%20logo.png" loading="lazy"/>
+<img alt="DD Steel Logo" class="h-14 md:h-20 w-auto object-contain" src="images/DD%20Steel%20logo.png" loading="eager"/>
 </a>
 <nav aria-label="Primary" class="hidden md:flex items-center gap-10">
 <a class="text-stone-600 font-medium hover:text-red-800 transition-colors duration-200 uppercase tracking-widest text-xs" href="index.html">Home</a>
@@ -456,7 +462,7 @@
 </header>
 
 <!-- Full Screen Mobile Menu -->
-<div id="mobile-menu" class="md:hidden fixed bg-[linear-gradient(135deg,#140f10_0%,#251717_45%,#7d0a0a_100%)] text-white transition-transform duration-300 ease-in-out overflow-y-auto -mt-px" style="top: 81px; left: 0; right: 0; bottom: 0; z-index: 9000; transform: translateY(-100vh);">
+<div id="mobile-menu" class="md:hidden fixed bg-[linear-gradient(135deg,#140f10_0%,#251717_45%,#7d0a0a_100%)] text-white transition-transform duration-300 ease-in-out overflow-y-auto" style="top: 81px; left: 0; right: 0; bottom: 0; z-index: 9000; transform: translateY(-100vh);">
 <div class="flex flex-col items-center justify-center min-h-full py-8 px-6">
 <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 w-full max-w-md border border-white/20 shadow-2xl">
 <nav class="flex flex-col items-center space-y-3 mb-8">
@@ -512,6 +518,21 @@ function toggleMobileMenu() {
     document.body.style.width = '';
   }
 }
+
+document.addEventListener('click', function(event) {
+  var menu = document.getElementById('mobile-menu');
+  var menuBtn = document.getElementById('mobile-menu-btn');
+
+  if (
+    menu &&
+    menuBtn &&
+    menu.style.transform === 'translateY(0)' &&
+    !menu.contains(event.target) &&
+    !menuBtn.contains(event.target)
+  ) {
+    toggleMobileMenu();
+  }
+});
 </script>
 
     <main>
@@ -1185,5 +1206,4 @@ document.getElementById('lightbox').addEventListener('click', function(e) {
 </script>
 </body>
 </html>
-
 

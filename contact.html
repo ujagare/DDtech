@@ -114,41 +114,29 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
 <!-- Sentry Error Tracking -->
-<script src="https://browser.sentry-cdn.com/7.91.0/bundle.min.js"></script>
+<script src="https://js.sentry-cdn.com/69f257dd3f7b6a212c92ab6046d376d4.min.js" crossorigin="anonymous"></script>
 <script>
   Sentry.init({
-    dsn: "https://YOUR_SENTRY_DSN_HERE@ingest.sentry.io/YOUR_PROJECT_ID",
+    dsn: "https://69f257dd3f7b6a212c92ab6046d376d4@o4511247149301760.ingest.us.sentry.io/4511247155068928",
     environment: "production",
-    tracesSampleRate: 0.1
+    tracesSampleRate: 0.1,
+    integrations: [
+      new Sentry.BrowserTracing(),
+    ],
+    beforeSend(event) {
+      // Filter out common non-critical errors
+      if (event.exception) {
+        const error = event.exception.values[0];
+        if (error && error.type === 'ChunkLoadError') {
+          return null;
+        }
+      }
+      return event;
+    }
   });
+
 </script>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX', {
-    'page_path': window.location.pathname,
-    'anonymize_ip': true
-  });
-</script>
-
-<!-- Google Tag Manager (head) -->
-<script>
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-XXXXXXX');
-</script>
-
-<!-- Umami Analytics - Add your website ID when ready -->
-<!-- <script async src="https://analytics.umami.is/script.js" data-website-id="YOUR_UMAMI_WEBSITE_ID"></script> -->
 
 <style>
       .material-symbols-outlined {
@@ -183,6 +171,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           background: #ffffff !important;
           backdrop-filter: none !important;
           -webkit-backdrop-filter: none !important;
+          position: sticky !important;
+          top: 0 !important;
+          z-index: 9999 !important;
+        }
+        /* Ensure mobile menu appears correctly */
+        #mobile-menu {
+          top: 81px !important;
+          z-index: 9998 !important;
         }
         .hero-inner-mobile { padding-top: 2rem !important; padding-bottom: 2rem !important; }
         .hero-img-mobile { height: 200px !important; }
@@ -230,13 +226,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
       }
     </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7YN505TLDB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7YN505TLDB');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NK9LZQ6L');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body class="bg-surface font-body text-[#1a1c1c] overflow-x-hidden">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK9LZQ6L" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <!-- Top Navigation Bar -->
 <header class="site-header bg-white backdrop-blur-0 md:backdrop-blur-md sticky top-0 z-50 border-b-0 md:border-b md:border-stone-200/60 shadow-sm">
 <div class="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-3 md:py-4 max-w-screen-2xl mx-auto gap-4">
 <a class="flex items-center" href="index.html">
-<img alt="DD Steel Logo" class="h-14 md:h-20 w-auto object-contain" src="images/DD%20Steel%20logo.png" loading="lazy"/>
+<img alt="DD Steel Logo" class="h-14 md:h-20 w-auto object-contain" src="images/DD%20Steel%20logo.png" loading="eager"/>
 </a>
 <nav aria-label="Primary" class="hidden md:flex items-center gap-10">
 <a class="text-stone-600 font-medium hover:text-red-800 transition-colors duration-200 uppercase tracking-widest text-xs" href="index.html">Home</a>
@@ -261,7 +275,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </header>
 
 <!-- Full Screen Mobile Menu -->
-<div id="mobile-menu" class="md:hidden fixed bg-[linear-gradient(135deg,#140f10_0%,#251717_45%,#7d0a0a_100%)] text-white transition-transform duration-300 ease-in-out overflow-y-auto" style="top: 81px; left: 0; right: 0; bottom: 0; z-index: 9000; transform: translateY(-100vh);">
+<div id="mobile-menu" class="md:hidden fixed bg-[linear-gradient(135deg,#140f10_0%,#251717_45%,#7d0a0a_100%)] text-white transition-transform duration-300 ease-in-out overflow-y-auto" style="top: 81px; left: 0; right: 0; bottom: 0; z-index: 9999; transform: translateY(-100vh);">
 <div class="flex flex-col items-center justify-center min-h-full py-8 px-6">
 <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 w-full max-w-md border border-white/20 shadow-2xl">
 <nav class="flex flex-col items-center space-y-3 mb-8">
@@ -317,6 +331,21 @@ function toggleMobileMenu() {
     document.body.style.width = '';
   }
 }
+
+document.addEventListener('click', function(event) {
+  var menu = document.getElementById('mobile-menu');
+  var menuBtn = document.getElementById('mobile-menu-btn');
+
+  if (
+    menu &&
+    menuBtn &&
+    menu.style.transform === 'translateY(0)' &&
+    !menu.contains(event.target) &&
+    !menuBtn.contains(event.target)
+  ) {
+    toggleMobileMenu();
+  }
+});
 </script>
 
 <section class="relative overflow-hidden text-white" style="background: linear-gradient(135deg, #1a0a0a 0%, #7d0a0a 50%, #5a0606 100%);">
@@ -337,7 +366,7 @@ function toggleMobileMenu() {
 </div>
 </div>
 </div>
-</header>
+</section>
 
 <main>
 <section class="max-w-screen-2xl mx-auto px-8 py-16 mb-8">
@@ -417,20 +446,29 @@ function toggleMobileMenu() {
 </div>
 </div>
 <form class="space-y-6" name="contact" method="POST" netlify>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<input name="form-name" type="hidden" value="contact"/>
+<div aria-hidden="true" class="hidden">
+<label for="contact-company">Company</label>
+<input autocomplete="off" id="contact-company" name="company" tabindex="-1" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <div>
 <label class="block text-[10px] font-bold uppercase tracking-widest text-secondary mb-3" for="contact-full-name">Full Name</label>
-<input class="w-full rounded-2xl border border-[#ead8d4] bg-white px-5 py-4 text-[#1a1c1c] placeholder:text-[#9c8a88] focus:border-[#7D0A0A] focus:ring-0" id="contact-full-name" name="full_name" placeholder="Johnathan Doe" type="text"/>
+<input autocomplete="name" class="w-full rounded-2xl border border-[#ead8d4] bg-white px-5 py-4 text-[#1a1c1c] placeholder:text-[#9c8a88] focus:border-[#7D0A0A] focus:ring-0" id="contact-full-name" name="full_name" placeholder="Johnathan Doe" required type="text"/>
+</div>
+<div>
+<label class="block text-[10px] font-bold uppercase tracking-widest text-secondary mb-3" for="contact-email">Email Address</label>
+<input autocomplete="email" class="w-full rounded-2xl border border-[#ead8d4] bg-white px-5 py-4 text-[#1a1c1c] placeholder:text-[#9c8a88] focus:border-[#7D0A0A] focus:ring-0" id="contact-email" name="email" placeholder="you@example.com" required type="email"/>
 </div>
 <div>
 <label class="block text-[10px] font-bold uppercase tracking-widest text-secondary mb-3" for="contact-phone-number">Phone Number</label>
-<input class="w-full rounded-2xl border border-[#ead8d4] bg-white px-5 py-4 text-[#1a1c1c] placeholder:text-[#9c8a88] focus:border-[#7D0A0A] focus:ring-0" id="contact-phone-number" name="phone" placeholder="+91 98XXXXXXXX" type="tel"/>
+<input autocomplete="tel" class="w-full rounded-2xl border border-[#ead8d4] bg-white px-5 py-4 text-[#1a1c1c] placeholder:text-[#9c8a88] focus:border-[#7D0A0A] focus:ring-0" id="contact-phone-number" name="phone" placeholder="+91 98XXXXXXXX" required type="tel"/>
 </div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div>
 <label class="block text-[10px] font-bold uppercase tracking-widest text-secondary mb-3" for="contact-requirement-type">Requirement Type</label>
-<select class="w-full rounded-2xl border border-[#ead8d4] bg-white px-5 py-4 text-[#1a1c1c] focus:border-[#7D0A0A] focus:ring-0 appearance-none" id="contact-requirement-type" name="requirement_type">
+<select class="w-full rounded-2xl border border-[#ead8d4] bg-white px-5 py-4 text-[#1a1c1c] focus:border-[#7D0A0A] focus:ring-0 appearance-none" id="contact-requirement-type" name="requirement_type" required>
 <option>Rebar Couplers</option>
 <option>On-Site Threading</option>
 <option>Forging & Machining</option>
@@ -446,7 +484,7 @@ function toggleMobileMenu() {
 </div>
 <div>
 <label class="block text-[10px] font-bold uppercase tracking-widest text-secondary mb-3" for="contact-message">Message / Technical Details</label>
-<textarea class="w-full rounded-[1.5rem] border border-[#ead8d4] bg-white px-5 py-4 text-[#1a1c1c] placeholder:text-[#9c8a88] focus:border-[#7D0A0A] focus:ring-0 resize-none" id="contact-message" name="message" placeholder="Bar size, quantity, coupler type, threading requirement, TM rental need, site timeline..." rows="6"></textarea>
+<textarea class="w-full rounded-[1.5rem] border border-[#ead8d4] bg-white px-5 py-4 text-[#1a1c1c] placeholder:text-[#9c8a88] focus:border-[#7D0A0A] focus:ring-0 resize-none" id="contact-message" name="message" placeholder="Bar size, quantity, coupler type, threading requirement, TM rental need, site timeline..." required rows="6"></textarea>
 </div>
 <div class="flex flex-col sm:flex-row gap-4 pt-2">
 <button class="inline-flex items-center justify-center rounded-full bg-[#7D0A0A] px-10 py-4 text-xs font-bold uppercase tracking-[0.2em] text-white transition-colors hover:bg-[#5c0707]" type="submit">Submit Inquiry</button>
@@ -697,10 +735,12 @@ function toggleMobileMenu() {
             
             const formData = {
                 full_name: document.getElementById('contact-full-name').value,
+                email: document.getElementById('contact-email').value,
                 phone: document.getElementById('contact-phone-number').value,
                 requirement_type: document.getElementById('contact-requirement-type').value,
                 project_location: document.getElementById('contact-project-location').value,
-                message: document.getElementById('contact-message').value
+                message: document.getElementById('contact-message').value,
+                company: document.getElementById('contact-company').value
             };
             
             // Use Netlify function endpoint
@@ -715,7 +755,7 @@ function toggleMobileMenu() {
             const result = await response.json();
             
             if (response.ok) {
-                alert('✅ Thank you! Your inquiry has been sent successfully. We will contact you within 48 hours.');
+                alert('Thank you! Your inquiry has been sent successfully. We will contact you within 48 hours.');
                 e.target.reset();
                 submitBtn.textContent = 'Inquiry Sent!';
                 setTimeout(() => {
@@ -723,13 +763,13 @@ function toggleMobileMenu() {
                     submitBtn.disabled = false;
                 }, 3000);
             } else {
-                alert('❌ Error: ' + (result.error || 'Failed to send email'));
+                alert('Error: ' + (result.error || 'Failed to send email'));
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
             }
         } catch (error) {
             console.error('Form submission error:', error);
-            alert('❌ Error sending form. Please try calling us directly: +91 7821925836');
+            alert('Error sending form. Please try calling us directly: +91 7821925836');
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
         }
