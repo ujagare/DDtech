@@ -6,7 +6,7 @@ This project uses Resend for contact form delivery.
 
 ```env
 RESEND_API_KEY=your_resend_api_key
-RESEND_FROM_EMAIL=DD Tech <noreply@ddtech.in>
+RESEND_FROM_EMAIL=DD Tech <noreply@send.ddtech.in>
 RESEND_TO_EMAIL=info@ddtech.in
 ALLOWED_ORIGINS=https://ddtech.in,https://www.ddtech.in
 ENABLE_EMAIL_TEST_ENDPOINTS=false

@@ -170,6 +170,92 @@
       *::-webkit-scrollbar-corner {
         background: #efe3e0;
       }
+      .premium-toast-stack {
+        position: fixed;
+        top: 1.25rem;
+        right: 1rem;
+        z-index: 11000;
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+        pointer-events: none;
+      }
+      .premium-toast {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.9rem;
+        width: min(92vw, 25rem);
+        padding: 1rem 1rem 1rem 0.95rem;
+        border-radius: 1.35rem;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background:
+          radial-gradient(circle at top left, rgba(255,255,255,0.18), transparent 32%),
+          linear-gradient(135deg, rgba(17,17,17,0.96), rgba(68,8,8,0.96));
+        color: #fff7f5;
+        box-shadow: 0 24px 60px rgba(20, 12, 12, 0.32);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        transform: translate3d(0, -12px, 0) scale(0.98);
+        opacity: 0;
+        transition: opacity 220ms ease, transform 220ms ease;
+        overflow: hidden;
+      }
+      .premium-toast.is-visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+      .premium-toast__icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.7rem;
+        height: 2.7rem;
+        border-radius: 999px;
+        margin-top: 0.1rem;
+        background: rgba(255,255,255,0.12);
+        color: #ffffff;
+      }
+      .premium-toast__title {
+        margin: 0 0 0.2rem;
+        font-size: 0.95rem;
+        font-weight: 800;
+        letter-spacing: 0.01em;
+      }
+      .premium-toast__message {
+        margin: 0;
+        font-size: 0.84rem;
+        line-height: 1.55;
+        color: rgba(255, 247, 245, 0.82);
+      }
+      .premium-toast::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 100%;
+        background: rgba(255,255,255,0.18);
+        transform-origin: left center;
+        animation: toast-progress 4.4s linear forwards;
+      }
+      .premium-toast--success .premium-toast__icon {
+        background: rgba(73, 201, 132, 0.18);
+        color: #9af0b8;
+      }
+      .premium-toast--success::after {
+        background: linear-gradient(90deg, #9af0b8, #4ccf83);
+      }
+      .premium-toast--error .premium-toast__icon {
+        background: rgba(255, 167, 167, 0.16);
+        color: #ffc4c4;
+      }
+      .premium-toast--error::after {
+        background: linear-gradient(90deg, #ffb0b0, #ff7e7e);
+      }
+      @keyframes toast-progress {
+        from { transform: scaleX(1); }
+        to { transform: scaleX(0); }
+      }
       @media (max-width: 767px) {
         .site-header {
           background: #ffffff !important;
@@ -449,7 +535,7 @@ document.addEventListener('click', function(event) {
 </div>
 </div>
 </div>
-<form class="space-y-6" name="contact" method="POST" netlify>
+<form class="space-y-6" id="contact-inquiry-form" name="contact" method="POST" netlify>
 <input name="form-name" type="hidden" value="contact"/>
 <div aria-hidden="true" class="hidden">
 <label for="contact-company">Company</label>
@@ -697,6 +783,7 @@ document.addEventListener('click', function(event) {
 </div>
 </div>
 </footer>
+<div aria-atomic="true" aria-live="polite" class="premium-toast-stack" id="toast-stack"></div>
 <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
 <script>
     if (typeof Lenis !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -726,8 +813,62 @@ document.addEventListener('click', function(event) {
         });
     }
 
+    async function sendInquiryRequest(formData) {
+        const response = await fetch('/api/send-email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+            },
+            credentials: 'same-origin',
+            cache: 'no-store',
+            body: JSON.stringify(formData)
+        });
+
+        let result = {};
+        try {
+            result = await response.json();
+        } catch (_error) {
+            result = {};
+        }
+
+        if (!response.ok) {
+            throw new Error(result.error || 'Please try again in a moment or call us directly at +91 7821925836.');
+        }
+
+        return result;
+    }
+
+    function showPremiumToast(type, title, message) {
+        const stack = document.getElementById('toast-stack');
+        if (!stack) return;
+
+        const icon = type === 'success' ? 'check_circle' : 'error';
+        const toast = document.createElement('div');
+        toast.className = `premium-toast premium-toast--${type}`;
+        toast.innerHTML = `
+            <div class="premium-toast__icon">
+                <span class="material-symbols-outlined">${icon}</span>
+            </div>
+            <div>
+                <p class="premium-toast__title">${title}</p>
+                <p class="premium-toast__message">${message}</p>
+            </div>
+        `;
+
+        stack.appendChild(toast);
+        requestAnimationFrame(() => toast.classList.add('is-visible'));
+
+        window.setTimeout(() => {
+            toast.classList.remove('is-visible');
+            window.setTimeout(() => toast.remove(), 240);
+        }, 4400);
+    }
+
     // Resend Email Form Handler
-    document.querySelector('form').addEventListener('submit', async (e) => {
+    const contactForm = document.getElementById('contact-inquiry-form');
+    if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
         const submitBtn = e.target.querySelector('button[type="submit"]');
@@ -747,36 +888,30 @@ document.addEventListener('click', function(event) {
                 company: document.getElementById('contact-company').value
             };
             
-            const response = await fetch('/api/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData)
-            });
-            
-            const result = await response.json();
-            
-            if (response.ok) {
-                alert('Thank you! Your inquiry has been sent successfully. We will contact you within 48 hours.');
+            await sendInquiryRequest(formData);
+                showPremiumToast(
+                    'success',
+                    'Inquiry Sent Successfully',
+                    'Thank you for contacting DD Tech. Our team will review your requirement and connect with you within 24 to 48 business hours.'
+                );
                 e.target.reset();
                 submitBtn.textContent = 'Inquiry Sent!';
                 setTimeout(() => {
                     submitBtn.textContent = originalText;
                     submitBtn.disabled = false;
                 }, 3000);
-            } else {
-                alert('Error: ' + (result.error || 'Failed to send email'));
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
-            }
         } catch (error) {
             console.error('Form submission error:', error);
-            alert('Error sending form. Please try calling us directly: +91 7821925836');
+            showPremiumToast(
+                'error',
+                'Submission Error',
+                error.message || 'Please try again shortly or call us directly at +91 7821925836.'
+            );
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
         }
     });
+    }
 
     // GSAP Scroll-based Text Animations
     if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {

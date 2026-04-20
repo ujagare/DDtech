@@ -2,7 +2,7 @@ const { Resend } = require("resend");
 
 async function sendTestEmailToInfo() {
   const apiKey = process.env.RESEND_API_KEY;
-  const fromEmail = process.env.RESEND_FROM_EMAIL || "noreply@ddtech.in";
+  const fromEmail = process.env.RESEND_FROM_EMAIL || "noreply@send.ddtech.in";
   const toEmail = process.env.RESEND_TO_EMAIL || "info@ddtech.in";
 
   if (!apiKey) {

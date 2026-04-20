@@ -36,7 +36,7 @@ exports.handler = async (event) => {
 
     const resend = new Resend(process.env.RESEND_API_KEY);
     const toEmail = process.env.RESEND_TO_EMAIL || "info@ddtech.in";
-    const fromEmail = process.env.RESEND_FROM_EMAIL || "DD Tech <noreply@ddtech.in>";
+    const fromEmail = process.env.RESEND_FROM_EMAIL || "DD Tech <noreply@send.ddtech.in>";
 
     const emailResponse = await resend.emails.send({
       from: fromEmail,
