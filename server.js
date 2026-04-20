@@ -1,6 +1,5 @@
 require("dotenv").config();
 
-const cors = require("cors");
 const express = require("express");
 
 const sendEmailHandler = require("./api/send-email");
@@ -10,8 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const enableTestEndpoints = process.env.ENABLE_EMAIL_TEST_ENDPOINTS === "true";
 
-app.use(cors());
-app.use(express.json());
+app.use(express.json({ limit: "16kb" }));
 app.use(express.static("."));
 
 app.post("/api/send-email", sendEmailHandler);

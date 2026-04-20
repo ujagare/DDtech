@@ -6,21 +6,22 @@ This project uses Resend for contact form delivery.
 
 ```env
 RESEND_API_KEY=your_resend_api_key
-RESEND_FROM_EMAIL=noreply@ddtech.in
+RESEND_FROM_EMAIL=DD Tech <noreply@ddtech.in>
 RESEND_TO_EMAIL=info@ddtech.in
+ALLOWED_ORIGINS=https://ddtech.in,https://www.ddtech.in
 ENABLE_EMAIL_TEST_ENDPOINTS=false
 ```
 
 ## Production defaults
 
-- `/.netlify/functions/send-email` is the public contact endpoint.
+- `/api/send-email` is the public contact endpoint on Vercel.
 - Test endpoints stay disabled unless `ENABLE_EMAIL_TEST_ENDPOINTS=true`.
 - Public diagnostic pages should remain unlinked and `noindex`.
 
 ## Local verification
 
 1. Set the environment variables above in `.env`.
-2. Run `npm run dev` for Netlify local development.
+2. Run `node server.js` or your preferred local server.
 3. Submit the contact form from `contact.html`.
 
 ## Optional test endpoint
@@ -28,5 +29,5 @@ ENABLE_EMAIL_TEST_ENDPOINTS=false
 If you explicitly want to test the email pipeline outside the contact form:
 
 1. Set `ENABLE_EMAIL_TEST_ENDPOINTS=true`.
-2. Call `POST /api/test-email` locally or `POST /.netlify/functions/test-email`.
+2. Call `POST /api/test-email`.
 3. Disable the flag again before production deployment.

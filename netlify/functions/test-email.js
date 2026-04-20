@@ -1,23 +1,22 @@
 const { Resend } = require("resend");
+const {
+  assertAllowedOrigin,
+  assertBodySize,
+  assertJsonRequest,
+} = require("../../lib/request-security");
 
 function jsonResponse(statusCode, payload) {
   return {
     statusCode,
     headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "Content-Type",
-      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Cache-Control": "no-store",
     },
     body: JSON.stringify(payload),
   };
 }
 
 exports.handler = async (event) => {
-  if (event.httpMethod === "OPTIONS") {
-    return jsonResponse(200, { ok: true });
-  }
-
   if (process.env.ENABLE_EMAIL_TEST_ENDPOINTS !== "true") {
     return jsonResponse(404, { error: "Not found" });
   }
@@ -31,9 +30,13 @@ exports.handler = async (event) => {
   }
 
   try {
+    assertAllowedOrigin(event.headers);
+    assertJsonRequest(event.headers);
+    assertBodySize(event.headers, event.body || "");
+
     const resend = new Resend(process.env.RESEND_API_KEY);
     const toEmail = process.env.RESEND_TO_EMAIL || "info@ddtech.in";
-    const fromEmail = process.env.RESEND_FROM_EMAIL || "noreply@ddtech.in";
+    const fromEmail = process.env.RESEND_FROM_EMAIL || "DD Tech <noreply@ddtech.in>";
 
     const emailResponse = await resend.emails.send({
       from: fromEmail,

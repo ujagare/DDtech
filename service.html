@@ -149,11 +149,16 @@
       crossorigin="anonymous"
     ></script>
     <script>
+      const sentryTracingIntegration =
+        typeof Sentry.browserTracingIntegration === "function"
+          ? Sentry.browserTracingIntegration()
+          : null;
+
       Sentry.init({
         dsn: "https://69f257dd3f7b6a212c92ab6046d376d4@o4511247149301760.ingest.us.sentry.io/4511247155068928",
         environment: "production",
         tracesSampleRate: 0.1,
-        integrations: [new Sentry.BrowserTracing()],
+        integrations: sentryTracingIntegration ? [sentryTracingIntegration] : [],
         beforeSend(event) {
           // Filter out common non-critical errors
           if (event.exception) {

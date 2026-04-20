@@ -101,7 +101,7 @@
         result.className = "result";
 
         try {
-          const response = await fetch("/.netlify/functions/test-email", {
+          const response = await fetch("/api/test-email", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
