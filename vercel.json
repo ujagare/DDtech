@@ -1,5 +1,11 @@
 {
+  "version": 2,
   "cleanUrls": true,
+  "functions": {
+    "api/*.js": {
+      "runtime": "@vercel/node"
+    }
+  },
   "headers": [
     {
       "source": "/(.*)",
@@ -21,16 +27,16 @@
   ],
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/index.html"
-    },
-    {
       "source": "/.netlify/functions/(.*)",
       "destination": "/api/$1"
     },
     {
       "source": "/api/(.*)",
       "destination": "/api/$1"
+    },
+    {
+      "source": "/",
+      "destination": "/index.html"
     }
   ]
 }
