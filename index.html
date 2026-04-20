@@ -305,10 +305,73 @@
                 top: 0 !important;
                 z-index: 9999 !important;
             }
+            .mobile-header-inner {
+                padding-top: 0.55rem !important;
+                padding-bottom: 0.55rem !important;
+                gap: 0.75rem !important;
+            }
+            .mobile-header-logo {
+                height: 2.7rem !important;
+            }
+            .mobile-menu-toggle {
+                width: 2.75rem !important;
+                height: 2.75rem !important;
+            }
+            .mobile-menu-toggle svg {
+                width: 1.45rem !important;
+                height: 1.45rem !important;
+            }
             /* Ensure mobile menu appears correctly */
             #mobile-menu {
-                top: 81px !important;
+                top: 56px !important;
                 z-index: 9998 !important;
+            }
+            .mobile-menu-shell {
+                padding: 0.45rem 1rem 1.5rem !important;
+            }
+            .mobile-menu-card {
+                border-radius: 1.6rem !important;
+                padding: 1.15rem 1rem !important;
+            }
+            .mobile-menu-nav {
+                margin-bottom: 1.2rem !important;
+                gap: 0.25rem !important;
+            }
+            .mobile-menu-link {
+                font-size: 1.2rem !important;
+                line-height: 1.2 !important;
+                padding-top: 0.45rem !important;
+                padding-bottom: 0.45rem !important;
+            }
+            .mobile-menu-contact {
+                margin-bottom: 1rem !important;
+                gap: 0.55rem !important;
+            }
+            .mobile-menu-contact h3 {
+                font-size: 0.95rem !important;
+                margin-bottom: 0.35rem !important;
+            }
+            .mobile-menu-contact p,
+            .mobile-menu-contact a.block.text-sm {
+                font-size: 0.75rem !important;
+                line-height: 1.45 !important;
+            }
+            .mobile-menu-phone {
+                font-size: 1rem !important;
+                margin-top: 0.35rem !important;
+            }
+            .mobile-menu-cta {
+                padding: 0.85rem 1rem !important;
+                font-size: 0.75rem !important;
+                margin-bottom: 1rem !important;
+            }
+            .mobile-menu-social a {
+                width: 2.1rem !important;
+                height: 2.1rem !important;
+            }
+            .mobile-menu-social svg {
+                width: 0.9rem !important;
+                height: 0.9rem !important;
             }
             /* Completely remove modal backdrop blur on mobile */
             [data-popup-modal] {
@@ -327,6 +390,53 @@
             }
             [data-popup-modal] > div:last-child {
                 margin-top: 0 !important;
+            }
+            .popup-shell {
+                max-width: 21rem !important;
+                border-radius: 1.4rem !important;
+            }
+            .popup-side {
+                padding: 1rem 1rem 0.75rem !important;
+            }
+            .popup-side .font-headline {
+                font-size: 1.55rem !important;
+                line-height: 1.05 !important;
+                margin-bottom: 0.55rem !important;
+            }
+            .popup-side .inline-flex {
+                margin-bottom: 0.85rem !important;
+                padding: 0.4rem 0.75rem !important;
+                font-size: 0.54rem !important;
+            }
+            .popup-side p {
+                font-size: 0.8rem !important;
+                line-height: 1.45 !important;
+            }
+            .popup-form {
+                padding: 0.9rem 1rem 1rem !important;
+                gap: 0.7rem !important;
+            }
+            .popup-form .grid {
+                gap: 0.7rem !important;
+            }
+            .popup-field {
+                border-radius: 1rem !important;
+                padding: 0.75rem 0.9rem !important;
+                font-size: 0.82rem !important;
+            }
+            .popup-message {
+                min-height: 82px !important;
+            }
+            .popup-submit {
+                padding: 0.85rem 1rem !important;
+                font-size: 0.74rem !important;
+                letter-spacing: 0.16em !important;
+            }
+            .popup-close-btn {
+                top: 0.7rem !important;
+                right: 0.7rem !important;
+                width: 2.3rem !important;
+                height: 2.3rem !important;
             }
         }
         @media (max-width: 480px) {
@@ -735,9 +845,9 @@
 
 <!-- Top Navigation Bar -->
 <header class="site-header bg-white backdrop-blur-0 md:backdrop-blur-md sticky top-0 z-50 border-b-0 md:border-b md:border-stone-200/60 shadow-sm">
-<div class="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-3 md:py-4 max-w-screen-2xl mx-auto gap-4">
+<div class="mobile-header-inner flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-3 md:py-4 max-w-screen-2xl mx-auto gap-4">
 <a class="flex items-center" href="index.html">
-<img alt="DD Steel Logo" class="h-14 md:h-20 w-auto object-contain" src="images/DD%20Steel%20logo.png" loading="eager" itemprop="logo"/>
+<img alt="DD Steel Logo" class="mobile-header-logo h-14 md:h-20 w-auto object-contain" src="images/DD%20Steel%20logo.png" loading="eager" itemprop="logo"/>
 </a>
 <nav aria-label="Primary" class="hidden md:flex items-center gap-10">
 <a class="text-red-900 border-b-2 border-red-900 pb-1 font-bold uppercase tracking-widest text-xs transition-colors duration-200" href="index.html">Home</a>
@@ -749,7 +859,7 @@
 </nav>
 <div class="flex items-center gap-3">
 <a class="hidden md:inline-flex bg-[#7d0a0a] hover:bg-[#5f0707] text-white px-8 py-3 font-bold uppercase tracking-[0.18em] text-xs transition-all duration-200 rounded-full" href="contact.html">Request Consultation</a>
-<button onclick="toggleMobileMenu()" aria-label="Toggle menu" class="md:hidden inline-flex h-12 w-12 items-center justify-center text-[#7d0a0a]" id="mobile-menu-btn" type="button">
+<button onclick="toggleMobileMenu()" aria-label="Toggle menu" class="mobile-menu-toggle md:hidden inline-flex h-12 w-12 items-center justify-center text-[#7d0a0a]" id="mobile-menu-btn" type="button">
 <svg id="hamburger-icon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M3 8.5h18M3 15.5h18"/>
 </svg>
@@ -762,26 +872,26 @@
 </header>
 
 <!-- Full Screen Mobile Menu -->
-<div id="mobile-menu" class="md:hidden fixed bg-[linear-gradient(135deg,#140f10_0%,#251717_45%,#7d0a0a_100%)] text-white transition-transform duration-300 ease-in-out overflow-y-auto" style="top: 81px; left: 0; right: 0; bottom: 0; z-index: 9999; transform: translateY(-100vh);">
-<div class="flex flex-col items-center justify-center min-h-full py-8 px-6">
-<div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 w-full max-w-md border border-white/20 shadow-2xl">
-<nav class="flex flex-col items-center space-y-3 mb-8">
-<a onclick="toggleMobileMenu()" class="text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center" href="index.html">Home</a>
-<a onclick="toggleMobileMenu()" class="text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center" href="about.html">About</a>
-<a onclick="toggleMobileMenu()" class="text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center" href="service.html">Services</a>
-<a onclick="toggleMobileMenu()" class="text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center" href="project.html">Project</a>
-<a onclick="toggleMobileMenu()" class="text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center" href="certification.html">Certifications</a>
-<a onclick="toggleMobileMenu()" class="text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center" href="contact.html">Contact</a>
+<div id="mobile-menu" class="md:hidden fixed bg-[linear-gradient(135deg,#140f10_0%,#251717_45%,#7d0a0a_100%)] text-white transition-transform duration-300 ease-in-out overflow-y-auto" style="top: 56px; left: 0; right: 0; bottom: 0; z-index: 9999; transform: translateY(-100vh);">
+<div class="mobile-menu-shell flex flex-col items-center justify-center min-h-full py-8 px-6">
+<div class="mobile-menu-card bg-white/10 backdrop-blur-md rounded-3xl p-8 w-full max-w-md border border-white/20 shadow-2xl">
+<nav class="mobile-menu-nav flex flex-col items-center space-y-3 mb-8">
+<a onclick="toggleMobileMenu()" class="mobile-menu-link text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center" href="index.html">Home</a>
+<a onclick="toggleMobileMenu()" class="mobile-menu-link text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center" href="about.html">About</a>
+<a onclick="toggleMobileMenu()" class="mobile-menu-link text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center" href="service.html">Services</a>
+<a onclick="toggleMobileMenu()" class="mobile-menu-link text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center" href="project.html">Project</a>
+<a onclick="toggleMobileMenu()" class="mobile-menu-link text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center" href="certification.html">Certifications</a>
+<a onclick="toggleMobileMenu()" class="mobile-menu-link text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center" href="contact.html">Contact</a>
 </nav>
 <div class="w-full h-px bg-gradient-to-r from-transparent via-white/30 to-transparent mb-6"></div>
-<div class="text-center space-y-3 mb-6">
+<div class="mobile-menu-contact text-center space-y-3 mb-6">
 <h3 class="text-lg font-bold text-white mb-3">Contact Information</h3>
 <p class="text-sm text-white/90 leading-relaxed">Sunrise Industrial Park, Nighoje,<br/>Pune, Maharashtra, India - 412115</p>
-<a href="tel:+917821925836" class="block text-xl font-bold text-white hover:text-[#ffb3ad] transition-colors mt-3">+91 7821925836 | +91 97671 64151</a>
+<a href="tel:+917821925836" class="mobile-menu-phone block text-xl font-bold text-white hover:text-[#ffb3ad] transition-colors mt-3">+91 7821925836 | +91 97671 64151</a>
 <a href="mailto:Info@ddtech.in" class="block text-sm text-white/90 hover:text-white transition-colors">Info@ddtech.in</a>
 </div>
-<a onclick="toggleMobileMenu()" class="block w-full text-center rounded-full bg-white text-[#7d0a0a] px-8 py-4 font-bold uppercase tracking-wider text-sm hover:bg-gray-100 hover:shadow-lg transition-all duration-200 mb-6" href="contact.html">Get in Touch</a>
-<div class="flex items-center justify-center gap-3">
+<a onclick="toggleMobileMenu()" class="mobile-menu-cta block w-full text-center rounded-full bg-white text-[#7d0a0a] px-8 py-4 font-bold uppercase tracking-wider text-sm hover:bg-gray-100 hover:shadow-lg transition-all duration-200 mb-6" href="contact.html">Get in Touch</a>
+<div class="mobile-menu-social flex items-center justify-center gap-3">
 <a aria-label="Instagram" class="flex h-9 w-9 items-center justify-center rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all" href="https://www.instagram.com/ddtechindia/" rel="noopener noreferrer" target="_blank">
 <svg class="h-4 w-4" fill="white" viewBox="0 0 24 24">
 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -1650,29 +1760,29 @@ document.addEventListener('click', function(event) {
 <!-- Modal Fix v2.0 - No glass effect on mobile -->
 <div class="fixed left-0 right-0 bottom-0 z-[120] hidden items-start justify-center bg-[#111111]/70 px-4 pt-4 pb-4 sm:inset-0 sm:pt-0 sm:pb-0 sm:items-center sm:backdrop-blur-sm overflow-y-auto" data-popup-modal="" style="top: 100px; align-items: flex-start !important;">
 <div class="absolute inset-0" data-popup-close=""></div>
-<div class="relative w-full max-w-sm sm:max-w-md md:max-w-6xl lg:max-w-7xl overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,#161313_0%,#801B1B_100%)] text-white shadow-[0_35px_90px_rgba(0,0,0,0.35)]">
-<button class="absolute right-5 top-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white transition-colors hover:bg-white/20" type="button" data-popup-close="">
+<div class="popup-shell relative w-full max-w-sm sm:max-w-md md:max-w-6xl lg:max-w-7xl overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,#161313_0%,#801B1B_100%)] text-white shadow-[0_35px_90px_rgba(0,0,0,0.35)]">
+<button class="popup-close-btn absolute right-5 top-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white transition-colors hover:bg-white/20" type="button" data-popup-close="">
 <span class="material-symbols-outlined">close</span>
 </button>
 <div class="grid grid-cols-1 md:grid-cols-[1.2fr_1.8fr]">
-<div class="border-b border-white/10 p-8 md:border-b-0 md:border-r md:p-8 lg:p-10">
+<div class="popup-side border-b border-white/10 p-8 md:border-b-0 md:border-r md:p-8 lg:p-10">
 <span class="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.3em] text-white/65 mb-6">Request Consultation</span>
 <h3 class="font-headline text-3xl md:text-4xl lg:text-5xl font-black tracking-tighter mb-4">Let's discuss your next structural project.</h3>
 <p class="text-sm md:text-base lg:text-lg leading-relaxed text-white/75">Share your requirement and our team will connect with you for engineering consultation, specifications, and execution planning.</p>
 </div>
-<form class="space-y-3 p-5 sm:space-y-4 sm:p-8 md:space-y-4 md:p-8 lg:p-10" data-popup-form="" id="homepage-popup-form">
+<form class="popup-form space-y-3 p-5 sm:space-y-4 sm:p-8 md:space-y-4 md:p-8 lg:p-10" data-popup-form="" id="homepage-popup-form">
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
 <label for="popup-name" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Full Name</label>
-<input class="w-full rounded-2xl border border-white/15 bg-white/10 px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4 text-xs sm:text-sm md:text-base text-white placeholder:text-white/45 focus:border-white/35 focus:ring-0" id="popup-name" name="name" placeholder="Full Name" required="" type="text"/>
+<input class="popup-field w-full rounded-2xl border border-white/15 bg-white/10 px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4 text-xs sm:text-sm md:text-base text-white placeholder:text-white/45 focus:border-white/35 focus:ring-0" id="popup-name" name="name" placeholder="Full Name" required="" type="text"/>
 <label for="popup-phone" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Phone Number</label>
-<input class="w-full rounded-2xl border border-white/15 bg-white/10 px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4 text-xs sm:text-sm md:text-base text-white placeholder:text-white/45 focus:border-white/35 focus:ring-0" id="popup-phone" name="phone" placeholder="Phone Number" required="" type="tel"/>
+<input class="popup-field w-full rounded-2xl border border-white/15 bg-white/10 px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4 text-xs sm:text-sm md:text-base text-white placeholder:text-white/45 focus:border-white/35 focus:ring-0" id="popup-phone" name="phone" placeholder="Phone Number" required="" type="tel"/>
 </div>
 <input autocomplete="off" name="company" tabindex="-1" type="text" style="position:absolute;left:-9999px;opacity:0;pointer-events:none;"/>
 <label for="popup-email" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Email Address</label>
-<input class="w-full rounded-2xl border border-white/15 bg-white/10 px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4 text-xs sm:text-sm md:text-base text-white placeholder:text-white/45 focus:border-white/35 focus:ring-0" id="popup-email" name="email" placeholder="Email Address" required="" type="email"/>
+<input class="popup-field w-full rounded-2xl border border-white/15 bg-white/10 px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4 text-xs sm:text-sm md:text-base text-white placeholder:text-white/45 focus:border-white/35 focus:ring-0" id="popup-email" name="email" placeholder="Email Address" required="" type="email"/>
 <label for="popup-message" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Project Requirement</label>
-<textarea class="min-h-[100px] sm:min-h-[120px] md:min-h-[100px] lg:min-h-[120px] w-full rounded-2xl border border-white/15 bg-white/10 px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4 text-xs sm:text-sm md:text-base text-white placeholder:text-white/45 focus:border-white/35 focus:ring-0" id="popup-message" name="message" placeholder="Tell us about your project requirement"></textarea>
-<button class="inline-flex w-full items-center justify-center rounded-full bg-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-4 lg:py-5 text-xs sm:text-sm md:text-base font-bold uppercase tracking-[0.2em] text-[#801B1B] transition-colors hover:bg-[#F4F4F4]" type="submit">Submit Request</button>
+<textarea class="popup-field popup-message min-h-[100px] sm:min-h-[120px] md:min-h-[100px] lg:min-h-[120px] w-full rounded-2xl border border-white/15 bg-white/10 px-3 py-2 sm:px-4 sm:py-3 md:px-5 md:py-4 text-xs sm:text-sm md:text-base text-white placeholder:text-white/45 focus:border-white/35 focus:ring-0" id="popup-message" name="message" placeholder="Tell us about your project requirement"></textarea>
+<button class="popup-submit inline-flex w-full items-center justify-center rounded-full bg-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-4 lg:py-5 text-xs sm:text-sm md:text-base font-bold uppercase tracking-[0.2em] text-[#801B1B] transition-colors hover:bg-[#F4F4F4]" type="submit">Submit Request</button>
 </form>
 </div>
 </div>

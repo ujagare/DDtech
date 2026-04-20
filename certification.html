@@ -58,11 +58,26 @@
           top: 0 !important;
           z-index: 9999 !important;
         }
+        .mobile-header-inner { padding-top: 0.55rem !important; padding-bottom: 0.55rem !important; gap: 0.75rem !important; }
+        .mobile-header-logo { height: 2.7rem !important; }
+        .mobile-menu-toggle { width: 2.75rem !important; height: 2.75rem !important; }
+        .mobile-menu-toggle svg { width: 1.45rem !important; height: 1.45rem !important; }
         /* Ensure mobile menu appears correctly */
         #mobile-menu {
-          top: 81px !important;
+          top: 56px !important;
           z-index: 9998 !important;
         }
+        .mobile-menu-shell { padding: 0.45rem 1rem 1.5rem !important; }
+        .mobile-menu-card { border-radius: 1.6rem !important; padding: 1.15rem 1rem !important; }
+        .mobile-menu-nav { margin-bottom: 1.2rem !important; gap: 0.25rem !important; }
+        .mobile-menu-link { font-size: 1.2rem !important; line-height: 1.2 !important; padding-top: 0.45rem !important; padding-bottom: 0.45rem !important; }
+        .mobile-menu-contact { margin-bottom: 1rem !important; gap: 0.55rem !important; }
+        .mobile-menu-contact h3 { font-size: 0.95rem !important; margin-bottom: 0.35rem !important; }
+        .mobile-menu-contact p, .mobile-menu-contact a.block.text-sm { font-size: 0.75rem !important; line-height: 1.45 !important; }
+        .mobile-menu-phone { font-size: 1rem !important; margin-top: 0.35rem !important; }
+        .mobile-menu-cta { padding: 0.85rem 1rem !important; font-size: 0.75rem !important; margin-bottom: 1rem !important; }
+        .mobile-menu-social a { width: 2.1rem !important; height: 2.1rem !important; }
+        .mobile-menu-social svg { width: 0.9rem !important; height: 0.9rem !important; }
       }
 
       html {
@@ -202,12 +217,12 @@
       style="z-index: 9999 !important"
     >
       <div
-        class="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-3 md:py-4 max-w-screen-2xl mx-auto gap-4"
+        class="mobile-header-inner flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-3 md:py-4 max-w-screen-2xl mx-auto gap-4"
       >
         <a class="flex items-center" href="index.html">
           <img
             alt="DD Steel Logo"
-            class="h-14 md:h-20 w-auto object-contain"
+            class="mobile-header-logo h-14 md:h-20 w-auto object-contain"
             src="images/DD%20Steel%20logo.png"
             loading="eager"
           />
@@ -253,7 +268,7 @@
           <button
             onclick="toggleMobileMenu()"
             aria-label="Toggle menu"
-            class="md:hidden inline-flex h-12 w-12 items-center justify-center text-[#7d0a0a]"
+            class="mobile-menu-toggle md:hidden inline-flex h-12 w-12 items-center justify-center text-[#7d0a0a]"
             id="mobile-menu-btn"
             type="button"
           >
@@ -295,7 +310,7 @@
       id="mobile-menu"
       class="md:hidden fixed bg-[linear-gradient(135deg,#140f10_0%,#251717_45%,#7d0a0a_100%)] text-white transition-transform duration-300 ease-in-out overflow-y-auto"
       style="
-        top: 81px;
+        top: 56px;
         left: 0;
         right: 0;
         bottom: 0;
@@ -303,44 +318,44 @@
         transform: translateY(-100vh);
       "
     >
-      <div class="flex flex-col items-center justify-center min-h-full py-8 px-6">
+      <div class="mobile-menu-shell flex flex-col items-center justify-center min-h-full py-8 px-6">
         <div
-          class="bg-white/10 backdrop-blur-md rounded-3xl p-8 w-full max-w-md border border-white/20 shadow-2xl"
+          class="mobile-menu-card bg-white/10 backdrop-blur-md rounded-3xl p-8 w-full max-w-md border border-white/20 shadow-2xl"
         >
-          <nav class="flex flex-col items-center space-y-3 mb-8">
+          <nav class="mobile-menu-nav flex flex-col items-center space-y-3 mb-8">
             <a
               onclick="toggleMobileMenu()"
-              class="text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center"
+              class="mobile-menu-link text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center"
               href="index.html"
               >Home</a
             >
             <a
               onclick="toggleMobileMenu()"
-              class="text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center"
+              class="mobile-menu-link text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center"
               href="about.html"
               >About</a
             >
             <a
               onclick="toggleMobileMenu()"
-              class="text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center"
+              class="mobile-menu-link text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center"
               href="service.html"
               >Services</a
             >
             <a
               onclick="toggleMobileMenu()"
-              class="text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center"
+              class="mobile-menu-link text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center"
               href="project.html"
               >Project</a
             >
             <a
               onclick="toggleMobileMenu()"
-              class="text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center"
+              class="mobile-menu-link text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center"
               href="certification.html"
               >Certifications</a
             >
             <a
               onclick="toggleMobileMenu()"
-              class="text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center"
+              class="mobile-menu-link text-2xl font-bold text-white hover:text-[#ffb3ad] transition-all duration-200 py-2 w-full text-center"
               href="contact.html"
               >Contact</a
             >
@@ -348,7 +363,7 @@
           <div
             class="w-full h-px bg-gradient-to-r from-transparent via-white/30 to-transparent mb-6"
           ></div>
-          <div class="text-center space-y-3 mb-6">
+          <div class="mobile-menu-contact text-center space-y-3 mb-6">
             <h3 class="text-lg font-bold text-white mb-3">
               Contact Information
             </h3>
@@ -358,7 +373,7 @@
             </p>
             <a
               href="tel:+919767164151"
-              class="block text-xl font-bold text-white hover:text-[#ffb3ad] transition-colors mt-3"
+              class="mobile-menu-phone block text-xl font-bold text-white hover:text-[#ffb3ad] transition-colors mt-3"
               >+91 7821925836 | +91 97671 64151</a
             >
             <a
@@ -369,11 +384,11 @@
           </div>
           <a
             onclick="toggleMobileMenu()"
-            class="block w-full text-center rounded-full bg-white text-[#7d0a0a] px-8 py-4 font-bold uppercase tracking-wider text-sm hover:bg-gray-100 hover:shadow-lg transition-all duration-200 mb-6"
+            class="mobile-menu-cta block w-full text-center rounded-full bg-white text-[#7d0a0a] px-8 py-4 font-bold uppercase tracking-wider text-sm hover:bg-gray-100 hover:shadow-lg transition-all duration-200 mb-6"
             href="contact.html"
             >Get in Touch</a
           >
-          <div class="flex items-center justify-center gap-3">
+          <div class="mobile-menu-social flex items-center justify-center gap-3">
             <a
               aria-label="Instagram"
               class="flex h-9 w-9 items-center justify-center rounded-lg bg-white/20 backdrop-blur-sm hover:bg-white/30 transition-all"
