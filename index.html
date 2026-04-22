@@ -289,6 +289,83 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
+        [data-popup-modal] {
+            padding-top: 7.5rem;
+            padding-bottom: 2rem;
+            align-items: flex-start;
+        }
+        .popup-shell {
+            margin: 0 auto;
+        }
+        @media (min-width: 768px) {
+            [data-popup-modal] {
+                padding-top: 8.75rem;
+                padding-bottom: 3rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+            .popup-shell {
+                max-width: min(72rem, calc(100vw - 4rem)) !important;
+                border-radius: 2rem !important;
+                border: 1px solid rgba(255, 255, 255, 0.14) !important;
+                background:
+                    radial-gradient(circle at top left, rgba(255, 255, 255, 0.08), transparent 28%),
+                    linear-gradient(135deg, #181111 0%, #6f1717 100%) !important;
+                box-shadow: 0 38px 100px rgba(0, 0, 0, 0.4) !important;
+            }
+            .popup-side {
+                padding: 3rem 2.5rem !important;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+            }
+            .popup-form {
+                padding: 2.2rem !important;
+                background: rgba(12, 9, 9, 0.28);
+            }
+            .popup-form .grid {
+                gap: 1.1rem !important;
+            }
+            .popup-field {
+                border-color: rgba(255, 255, 255, 0.16) !important;
+                background: rgba(255, 255, 255, 0.08) !important;
+                min-height: 3.85rem;
+                padding: 1rem 1.1rem !important;
+                font-size: 0.98rem !important;
+                transition: border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+            }
+            .popup-field::placeholder {
+                color: rgba(255, 255, 255, 0.52);
+            }
+            .popup-field:focus {
+                border-color: rgba(255, 255, 255, 0.34) !important;
+                background: rgba(255, 255, 255, 0.11) !important;
+                box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+                outline: none;
+            }
+            .popup-message {
+                min-height: 8.5rem !important;
+                resize: vertical;
+            }
+            .popup-submit {
+                min-height: 3.9rem;
+                margin-top: 0.4rem;
+                box-shadow: 0 18px 38px rgba(255, 255, 255, 0.16);
+            }
+            .popup-close-btn {
+                top: 1.15rem !important;
+                right: 1.15rem !important;
+            }
+        }
+        @media (min-width: 1280px) {
+            [data-popup-modal] {
+                padding-top: 9.5rem;
+            }
+            .popup-side {
+                padding: 3.4rem 2.85rem !important;
+            }
+            .popup-form {
+                padding: 2.5rem !important;
+            }
+        }
         .editorial-grid {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
@@ -943,9 +1020,9 @@ document.addEventListener('click', function(event) {
 <div class="absolute inset-0" style="background: linear-gradient(90deg, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.78) 42%, rgba(0, 0, 0, 0.62) 100%);"></div>
 <div class="relative max-w-screen-2xl mx-auto min-h-[calc(100vh-76px)] md:min-h-[calc(100vh-89px)] px-4 sm:px-6 lg:px-8 py-8 md:py-12 flex items-center">
 <div class="hero-slide-content w-full">
-<span class="hero-slide-kicker">Coupler Manufacturing</span>
-<h2 class="hero-slide-title font-headline text-[2.2rem] sm:text-[2.75rem] md:text-6xl xl:text-[5.2rem] font-black leading-[0.92] tracking-tighter mb-5 text-white" data-split-text>Precision-machined couplers built for strength, fit, and reliable connection.</h2>
-<p class="max-w-2xl text-sm sm:text-base md:text-lg text-white/78 leading-relaxed mb-8">Finished with consistent internal threading and ready for demanding reinforcement work, our couplers are manufactured to support confident site performance.</p>
+<span class="hero-slide-kicker">Production Readiness</span>
+<h2 class="hero-slide-title font-headline text-[2.2rem] sm:text-[2.75rem] md:text-6xl xl:text-[5.2rem] font-black leading-[0.92] tracking-tighter mb-5 text-white" data-split-text>Couplers ready for dispatch and site use.</h2>
+<p class="max-w-2xl text-sm sm:text-base md:text-lg text-white/78 leading-relaxed mb-8">From precision finishing to organized production lots, DD Tech keeps coupler inventory ready for faster movement into active construction requirements.</p>
 <div class="grid grid-cols-1 sm:grid-cols-[auto_auto] gap-3 sm:w-fit">
 <a class="inline-flex items-center justify-center rounded-full bg-[#7D0A0A] text-white px-8 py-4 font-bold uppercase tracking-[0.2em] text-xs hover:bg-[#5f0707] transition-colors" href="contact.html">Request Consultation</a>
 <a class="inline-flex items-center justify-center rounded-full border border-white bg-white px-8 py-4 font-bold uppercase tracking-[0.2em] text-xs text-[#801B1B] hover:bg-[#F4F4F4] transition-colors" href="service.html">Explore Services</a>
@@ -1064,7 +1141,7 @@ document.addEventListener('click', function(event) {
 <!-- Service 1: Rebar Coupler Manufacturing -->
 <div class="service-card bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-all duration-300 group">
   <div class="aspect-[4/3] overflow-hidden bg-gray-50 relative">
-    <img src="images/8fbe942b-5562-4d45-8299-eacd2ec39d6c.webp" alt="Rebar Coupler Manufacturing" class="h-full w-full transition group-hover:scale-105 object-cover">
+    <img src="images/e3745b05-7665-4446-86ac-41405bb20cc8.webp" alt="Rebar Coupler Manufacturing" class="h-full w-full transition group-hover:scale-105 object-cover">
   </div>
   <div class="service-card-content bg-white">
     <div class="flex items-center justify-between mb-2">
@@ -1281,12 +1358,12 @@ document.addEventListener('click', function(event) {
 <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5">
 <div>
 <p class="text-[10px] uppercase tracking-[0.3em] text-white/45 font-bold mb-3">Portfolio Snapshot</p>
-<h3 class="font-headline text-[1.45rem] sm:text-4xl md:text-5xl font-black tracking-tighter leading-[1.08] mb-3">Real projects backed by practical site support.</h3>
+<h3 class="font-headline text-[1.25rem] sm:text-[2.25rem] md:text-[2.85rem] font-black tracking-tighter leading-[1.08] mb-3">Real projects backed by practical site support.</h3>
 <p class="text-white/65 text-[0.98rem] md:text-lg leading-relaxed max-w-2xl">Each project combines quality-controlled coupler supply, on-site execution alignment, and reliable reinforcement continuity from planning to installation.</p>
 </div>
 <div class="rounded-2xl border border-white/10 bg-black/20 px-5 py-4 min-w-0 w-full md:w-auto md:min-w-[320px] lg:min-w-[360px]">
 <div class="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-2">Featured Cities</div>
-<div class="text-[2.1rem] md:text-[3rem] lg:text-[3.35rem] font-headline font-black leading-[0.92] tracking-[-0.04em] text-[#ffb3ad] break-normal md:whitespace-nowrap">Pune / Mumbai</div>
+<div class="text-[1.7rem] md:text-[2.4rem] lg:text-[2.7rem] font-headline font-black leading-[0.92] tracking-[-0.04em] text-[#ffb3ad] break-normal md:whitespace-nowrap">Pune / Mumbai</div>
 </div>
 </div>
 </div>
@@ -1738,7 +1815,7 @@ document.addEventListener('click', function(event) {
 </footer>
 <div aria-atomic="true" aria-live="polite" class="premium-toast-stack" id="toast-stack"></div>
 <!-- Modal Fix v2.0 - No glass effect on mobile -->
-<div class="fixed left-0 right-0 bottom-0 z-[120] hidden items-start justify-center bg-[#111111]/70 px-4 pt-4 pb-4 sm:inset-0 sm:pt-0 sm:pb-0 sm:items-center sm:backdrop-blur-sm overflow-y-auto" data-popup-modal="" style="top: 100px; align-items: flex-start !important;">
+<div class="fixed inset-0 z-[120] hidden items-start justify-center bg-[#111111]/70 px-4 pt-4 pb-4 sm:backdrop-blur-sm overflow-y-auto" data-popup-modal="">
 <div class="absolute inset-0" data-popup-close=""></div>
 <div class="popup-shell relative w-full max-w-sm sm:max-w-md md:max-w-6xl lg:max-w-7xl overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(135deg,#161313_0%,#801B1B_100%)] text-white shadow-[0_35px_90px_rgba(0,0,0,0.35)]">
 <button class="popup-close-btn absolute right-5 top-5 inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white transition-colors hover:bg-white/20" type="button" data-popup-close="">
