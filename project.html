@@ -1,4 +1,4 @@
-<!doctype html>
+ÿþ<!doctype html>
 <html class="light" lang="en">
   <head>
     <meta charset="utf-8" />
@@ -202,7 +202,7 @@
           // Filter out common non-critical errors
           if (event.exception) {
             const error = event.exception.values[0];
-            if (error && error.type === "ChunkLoadError") {
+            if (error && error.type === "ChunkLoadError"{
               return null;
             }
           }
@@ -241,10 +241,10 @@
           z-index: 9999 !important;
         }
         .mobile-menu-shell { align-items: stretch !important; justify-content: flex-start !important; padding: 1rem 1rem 2rem !important; }
-        .mobile-menu-card { max-width: 30rem !important; margin: 0 auto !important; border-radius: 2rem !important; padding: 1.35rem 1.2rem 1.25rem !important; background: linear-gradient(180deg, rgba(35, 20, 20, 0.96) 0%, rgba(17, 17, 17, 0.98) 100%) !important; border: 1px solid rgba(255,255,255,0.12) !important; box-shadow: 0 28px 70px rgba(0,0,0,0.38) !important; }
+        .mobile-menu-card { max-width: 30rem !important; margin: 0 auto !important; border-radius: 2rem !important; padding: 1.35rem 1.2rem 1.25rem !important; background: linear-gradient(180deg, rgba(35, 20, 20, 0.96) 0%, rgba(17, 17, 17, 0.98100%!important; border: 1px solid rgba(255,255,255,0.12) !important; box-shadow: 0 28px 70px rgba(0,0,0,0.38!important; }
         .mobile-menu-nav { align-items: stretch !important; margin-bottom: 1.45rem !important; gap: 0.05rem !important; }
         .mobile-menu-link { font-size: 1.45rem !important; line-height: 1.1 !important; text-align: left !important; padding: 0.8rem 0.15rem !important; border-bottom: 1px solid rgba(255,255,255,0.08) !important; }
-        .mobile-menu-contact { text-align: left !important; margin-bottom: 1.1rem !important; gap: 0.55rem !important; padding: 1rem !important; border-radius: 1.35rem !important; background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(255,255,255,0.08) !important; }
+        .mobile-menu-contact { text-align: left !important; margin-bottom: 1.1rem !important; gap: 0.55rem !important; padding: 1rem !important; border-radius: 1.35rem !important; background: rgba(255,255,255,0.05!important; border: 1px solid rgba(255,255,255,0.08) !important; }
         .mobile-menu-contact h3 { font-size: 0.78rem !important; letter-spacing: 0.24em !important; text-transform: uppercase !important; color: rgba(255,255,255,0.58) !important; margin-bottom: 0.45rem !important; }
         .mobile-menu-contact p, .mobile-menu-contact a.block.text-sm { font-size: 0.82rem !important; line-height: 1.55 !important; }
         .mobile-menu-phone { font-size: 1.12rem !important; margin-top: 0.45rem !important; }
@@ -309,7 +309,7 @@
       }
     </style>
 
-    <!-- Google tag (gtag.js) -->
+    <!-- Google tag (gtag.js-->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-7YN505TLDB"
@@ -340,7 +340,7 @@
     <!-- End Google Tag Manager -->
   </head>
   <body class="bg-surface font-body text-on-surface overflow-x-hidden">
-    <!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript-->
     <noscript
       ><iframe
         src="https://www.googletagmanager.com/ns.html?id=GTM-NK9LZQ6L"
@@ -349,7 +349,7 @@
         style="display: none; visibility: hidden"
       ></iframe
     ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <!-- End Google Tag Manager (noscript-->
 
     <!-- Top Navigation Bar -->
     <header
@@ -563,7 +563,7 @@
         var isHidden =
           menu.style.transform === "translateY(-100vh)" ||
           menu.style.transform === "";
-        if (isHidden) {
+        if (isHidden{
           menu.style.transform = "translateY(0)";
           hamburger.style.display = "none";
           close.style.display = "block";
@@ -588,7 +588,7 @@
           menu &&
           menuBtn &&
           menu.style.transform === "translateY(0)" &&
-          !menu.contains(event.target) &&
+          !menu.contains(event.target&&
           !menuBtn.contains(event.target)
         ) {
           toggleMobileMenu();
@@ -1328,7 +1328,7 @@
       if (
         typeof Lenis !== "undefined" &&
         !window.matchMedia("(prefers-reduced-motion: reduce)").matches
-      ) {
+      {
         const lenis = new Lenis({
           duration: 1.1,
           smoothWheel: true,
@@ -1350,7 +1350,7 @@
       );
       const mobileMenu = document.querySelector("[data-mobile-menu]");
       if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener("click", () => {
+        mobileMenuButton.addEventListener("click", (=> {
           const isOpen = !mobileMenu.classList.contains("hidden");
           mobileMenu.classList.toggle("hidden", isOpen);
           mobileMenuButton.setAttribute("aria-expanded", String(!isOpen));
@@ -1362,12 +1362,12 @@
         gsap.registerPlugin(ScrollTrigger);
 
         // Text reveal animation
-        gsap.utils.toArray("[data-text-reveal]").forEach((element) => {
+        gsap.utils.toArray("[data-text-reveal]").forEach((element=> {
           const text = element.textContent;
           element.innerHTML = text
             .split("")
             .map(
-              (char, i) =>
+              (char, i=>
                 `<span style="display: inline-block;" data-char="${i}">${char === " " ? "&nbsp;" : char}</span>`,
             )
             .join("");
@@ -1388,7 +1388,7 @@
         });
 
         // Word reveal animation
-        gsap.utils.toArray("[data-word-reveal]").forEach((element) => {
+        gsap.utils.toArray("[data-word-reveal]").forEach((element=> {
           const words = element.textContent.split(" ");
           element.innerHTML = words
             .map(
