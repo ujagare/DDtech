@@ -30,15 +30,15 @@ module.exports = async (req, res) => {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
     const toEmail = process.env.RESEND_TO_EMAIL || "info@ddtech.in";
-    const fromEmail = process.env.RESEND_FROM_EMAIL || "DD Tech <noreply@send.ddtech.in>";
+    const fromEmail = process.env.RESEND_FROM_EMAIL || "DD TECH <noreply@send.ddtech.in>";
 
     const emailResponse = await resend.emails.send({
       from: fromEmail,
       to: [toEmail],
-      subject: "DD Tech test email",
+      subject: "DD TECH test email",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h1 style="color: #7d0a0a;">DD Tech email test</h1>
+          <h1 style="color: #7d0a0a;">DD TECH email test</h1>
           <p>This message confirms the configured Resend integration is working.</p>
           <p>Sent at: ${new Date().toISOString()}</p>
         </div>

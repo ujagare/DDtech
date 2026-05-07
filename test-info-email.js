@@ -16,10 +16,10 @@ async function sendTestEmailToInfo() {
   const emailResponse = await resend.emails.send({
     from: fromEmail,
     to: [toEmail],
-    subject: "DD Tech test email",
+    subject: "DD TECH test email",
     html: `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-        <h1 style="color: #7d0a0a;">DD Tech email test</h1>
+        <h1 style="color: #7d0a0a;">DD TECH email test</h1>
         <p>This confirms the current Resend configuration is working.</p>
         <p>Sent at: ${new Date().toISOString()}</p>
       </div>
