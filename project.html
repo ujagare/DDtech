@@ -331,14 +331,15 @@
       class="site-header bg-white backdrop-blur-0 md:backdrop-blur-md sticky top-0 z-50 border-b-0 md:border-b md:border-stone-200/60 shadow-sm"
     >
       <div
-        class="flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-3 md:py-4 max-w-screen-2xl mx-auto gap-4"
+        class="mobile-header-inner flex justify-between items-center w-full px-4 sm:px-6 lg:px-8 py-3 md:py-4 max-w-screen-2xl mx-auto gap-4"
       >
         <a class="flex items-center" href="index.html">
           <img
             alt="DD Steel Logo"
-            class="h-14 md:h-20 w-auto object-contain"
+            class="mobile-header-logo h-14 md:h-20 w-auto object-contain"
             src="images/DD%20Steel%20logo.png"
-            loading="lazy"
+            loading="eager"
+            itemprop="logo"
           />
         </a>
         <nav aria-label="Primary" class="hidden md:flex items-center gap-10">
@@ -377,13 +378,13 @@
           <button
             onclick="toggleMobileMenu()"
             aria-label="Toggle menu"
-            class="md:hidden inline-flex h-12 w-12 items-center justify-center text-[#7d0a0a]"
+            class="mobile-menu-toggle md:hidden inline-flex h-12 w-12 items-center justify-center text-[#7d0a0a]"
             id="mobile-menu-btn"
             type="button"
           >
             <svg
               id="hamburger-icon"
-              class="w-7 h-7"
+              class="w-9 h-9"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -391,8 +392,8 @@
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                stroke-width="2.5"
-                d="M4 10h16M4 14h16"
+                stroke-width="2.4"
+                d="M2 8.5h20M2 15.5h20"
               />
             </svg>
             <svg
